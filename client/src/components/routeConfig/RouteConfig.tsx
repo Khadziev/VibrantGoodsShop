@@ -1,9 +1,10 @@
 import { RouteProps } from "react-router-dom"
-import RegistrationForm from "../Authorization/RegistrationForm"
-import LoginForm from "../Authorization/LoginForm"
+import RegistrationForm from "../Auth/RegistrationForm"
+import LoginForm from "../Auth/LoginForm"
 import MainPage from "../MainPage"
-import Admin from "../Admin"
-import User from "../User"
+
+import User from "../User/User"
+import Admin from "../Admin/Admin"
 
 export enum AppRoutes {
   //NOT_FOUND = "not_found",

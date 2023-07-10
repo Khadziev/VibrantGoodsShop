@@ -1,8 +1,9 @@
-// LoginForm.tsx
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { UserRole, login, setToken } from '../../redux/authSlice';
 import { useAppSelector, useAppDispatch } from '../../redux/store';
+import { login } from '../../redux/auth/authActions';
+import { setToken } from '../../redux/auth/authSlice';
+import { UserRole } from '../../redux/types/types';
 
 const LoginForm = () => {
   const [loginValue, setLoginValue] = useState('');
@@ -46,7 +47,7 @@ const LoginForm = () => {
 
       navigate('/');
     } catch (error) {
-      setError(`Ошибка при входе: ${(error as Error).message.toString()}`);
+      setError(`неправильный логин: ${(error as Error).message.toString()}`);
     }
   };
 
@@ -55,10 +56,10 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center items-center h-screen">
       <form
         onSubmit={handleSubmit}
-        className="max-w-sm bg-white border border-gray-300 rounded p-6 shadow-lg animate-fade-in"
+        className="max-w-sm bg-white border border-gray-300 rounded p-6 shadow-xl transform hover:scale-105 transition-transform duration-300"
       >
         {error && <div className="text-red-500 mb-4">{error}</div>}
         <input

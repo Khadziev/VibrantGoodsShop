@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../redux/store';
-import { UserRole, register } from '../../redux/authSlice';
+import { register } from '../../redux/auth/authActions';
+import { UserRole } from '../../redux/types/types';
+
 
 const RegistrationForm = () => {
   const [name, setName] = useState('');
@@ -18,7 +20,7 @@ const RegistrationForm = () => {
     e.preventDefault();
 
     try {
-      await dispatch(register({ name, login, password, role: role })); 
+      await dispatch(register({ name, login, password, role: role }));
       navigate('/login', { replace: true });
     } catch (error) {
       console.log('Ошибка при регистрации:', error);
@@ -50,12 +52,12 @@ const RegistrationForm = () => {
           onChange={(e) => setPassword(e.target.value)}
           className="w-full mb-4 p-2 border border-gray-300 rounded"
         />
-      <input
-  type="checkbox" 
-  checked={role === UserRole.ADMIN} 
-  onChange={(e) => setRole(e.target.checked ? UserRole.ADMIN : UserRole.USER)} 
-  className="mb-4"
-/>
+        <input
+          type="checkbox"
+          checked={role === UserRole.ADMIN}
+          onChange={(e) => setRole(e.target.checked ? UserRole.ADMIN : UserRole.USER)}
+          className="mb-4"
+        />
         <button
           type="submit"
           disabled={loading}

@@ -12,9 +12,10 @@ const getAllData = (req: Request, res: Response) => {
 };
 
 const addData = (req: Request, res: Response) => {
-  const { title, ...otherData } = req.body;
-  const newData = new Data({ title, ...otherData });
-  newData.save()
+  const { name, ...otherData } = req.body;
+  const newData = new Data({ name, ...otherData });
+  newData
+    .save()
     .then(() => {
       res.json({ message: 'Данные успешно добавлены' });
     })
@@ -23,4 +24,28 @@ const addData = (req: Request, res: Response) => {
     });
 };
 
-export { getAllData, addData };
+const deleteData = (req: Request, res: Response) => {
+  const { id } = req.params;
+  Data.findByIdAndDelete(id)
+    .then(() => {
+      res.json({ message: 'Данные успешно удалены' });
+    })
+    .catch((error) => {
+      res.status(500).json({ error: 'Произошла ошибка' });
+    });
+};
+
+const updateData = (req: Request, res: Response) => {
+  const { id } = req.params;
+  const updatedData = req.body;
+  Data.findByIdAndUpdate(id, updatedData)
+    .then(() => {
+      res.json({ message: 'Данные успешно обновлены' });
+    })
+    .catch((error) => {
+      res.status(500).json({ error: 'Произошла ошибка' });
+    });
+};
+
+
+export { getAllData, addData, deleteData, updateData };

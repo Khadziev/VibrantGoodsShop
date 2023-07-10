@@ -25,10 +25,31 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importStar(require("mongoose"));
 const dataSchema = new mongoose_1.Schema({
+    name: {
+        type: String,
+        required: false,
+    },
+    price: {
+        type: Number,
+        required: false,
+    },
+    description: {
+        type: String,
+        required: false,
+    },
     title: {
         type: String,
-        required: true,
+        required: false,
     },
-});
+    category: {
+        type: String,
+        required: false,
+        enum: ['Ноутбуки', 'Камеры', 'Наушники', 'Планшеты', 'Сотовые телефоны', 'Аксессуары'],
+    },
+    imageURL: {
+        type: String,
+        required: false,
+    },
+}, { timestamps: true });
 const Data = mongoose_1.default.model('Data', dataSchema);
 exports.default = Data;

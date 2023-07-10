@@ -1,6 +1,7 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import { useDispatch, useSelector, TypedUseSelectorHook } from 'react-redux';
-import authReducer from './authSlice';
+import authReducer from './auth/authSlice';
+import { userApi } from './user/userApi';
 
 // Определение типов
 export type RootState = ReturnType<typeof store.getState>;
@@ -13,7 +14,10 @@ export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
 const store = configureStore({
   reducer: {
     auth: authReducer,
+    [userApi.reducerPath]: userApi.reducer,
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(userApi.middleware),
 });
 
 export default store;
