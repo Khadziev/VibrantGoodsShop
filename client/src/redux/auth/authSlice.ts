@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { register, login, logout } from './authActions';
 import { AuthState, DataAttributes, UserRole } from '../types/types';
-import { deleteData, getData, updateData } from '../admin/admin';
+import { deleteData, getData, updateData } from '../api/adminApi';
 
 
 const initialToken = localStorage.getItem('token');

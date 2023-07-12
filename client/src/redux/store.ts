@@ -1,7 +1,7 @@
 import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import { useDispatch, useSelector, TypedUseSelectorHook } from 'react-redux';
 import authReducer from './auth/authSlice';
-import { userApi } from './user/userApi';
+import { userApi } from './api/userApi';
 
 // Определение типов
 export type RootState = ReturnType<typeof store.getState>;

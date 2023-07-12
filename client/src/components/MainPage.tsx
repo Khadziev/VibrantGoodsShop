@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import User from './User/User';
+import User from './Pages/userPage/User';
 import { useAppSelector } from '../redux/store';
-import Admin from './Admin/Admin';
+import Admin from './Pages/adminPage/Admin';
 import { UserRole } from '../redux/types/types';
 
 
@@ -14,7 +14,7 @@ const MainPage = () => {
     if (userRole && userName) {
       console.log('Роль пользователя:', userRole);
       console.log('Имя пользователя:', userName);
-      localStorage.setItem('userRole', userRole); // Сохранение значения в локальное хранилище
+      localStorage.setItem('userRole', userRole);
 
     }
   }, [userRole, userName]);

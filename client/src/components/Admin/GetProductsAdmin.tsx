@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { DataAttributes } from "../../redux/types/types";
-import { deleteData, getData, updateData } from "../../redux/admin/admin";
+import { deleteData, getData, updateData } from "../../redux/api/adminApi";
 import { RootState, AppDispatch } from "../../redux/store";
 import { ProductCard } from "./ProductCard";
 import ProductEditModal from "./ProductEditModal";

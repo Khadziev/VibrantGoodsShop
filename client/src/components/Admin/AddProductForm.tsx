@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { AppDispatch } from '../../redux/store';
-import { addData, getData } from '../../redux/admin/admin';
+import { addData, getData } from '../../redux/api/adminApi';
 import { DataAttributes } from '../../redux/types/types';
 
 interface AddProductFormProps {

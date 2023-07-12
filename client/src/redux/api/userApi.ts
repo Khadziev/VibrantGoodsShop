@@ -21,9 +21,15 @@ export const userApi = createApi({
       query: () => ({
         url: '/data',
       }),
-      providesTags: (result) => ['data'],
+      providesTags: ['data'],
+    }),
+    fetchProductById: build.query<DataAttributesApi, any>({
+      query: (id) => ({
+        url: `/data/${id}`,
+      }),
+      providesTags: ['data'],
     }),
   }),
 });
 
-export const { useFetchAllProductsQuery } = userApi;
+export const { useFetchAllProductsQuery, useFetchProductByIdQuery } = userApi;

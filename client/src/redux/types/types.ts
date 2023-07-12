@@ -41,7 +41,7 @@ export interface DataAttributes {
 
 
 export interface DataAttributesApi {
-    id: string;
+    _id: string;
     name: string;
     price: number;
     description: string;

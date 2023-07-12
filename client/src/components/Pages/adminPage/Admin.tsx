@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import AddProductForm from './AddProductForm';
-import { useAppSelector, AppDispatch } from '../../redux/store';
-import { addData, getData } from '../../redux/admin/admin';
-import { DataAttributes } from '../../redux/types/types';
-import GetProductsAdmin from './GetProductsAdmin';
+import AddProductForm from '../../Admin/AddProductForm';
+import { useAppSelector, AppDispatch } from '../../../redux/store';
+import { addData, getData } from '../../../redux/api/adminApi';
+import { DataAttributes } from '../../../redux/types/types';
+import GetProductsAdmin from '../../Admin/GetProductsAdmin';
 
 const Admin: React.FC = () => {
   const userName = useAppSelector((state) => state.auth.user?.name) || localStorage.getItem('userName');
