@@ -14,7 +14,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.updateData = exports.deleteData = exports.addData = exports.getAllData = void 0;
+exports.getDataById = exports.updateData = exports.deleteData = exports.addData = exports.getAllData = void 0;
 const Data_model_1 = __importDefault(require("../model/Data.model"));
 const getAllData = (req, res) => {
     Data_model_1.default.find()
@@ -26,6 +26,22 @@ const getAllData = (req, res) => {
     });
 };
 exports.getAllData = getAllData;
+const getDataById = (req, res) => {
+    const { id } = req.params;
+    Data_model_1.default.findById(id)
+        .then((data) => {
+        if (data) {
+            res.json(data); // Отправить данные в формате JSON
+        }
+        else {
+            res.status(404).json({ error: 'Данные не найдены' });
+        }
+    })
+        .catch((error) => {
+        res.status(500).json({ error: 'Произошла ошибка' });
+    });
+};
+exports.getDataById = getDataById;
 const addData = (req, res) => {
     const _a = req.body, { name } = _a, otherData = __rest(_a, ["name"]);
     const newData = new Data_model_1.default(Object.assign({ name }, otherData));

@@ -11,6 +11,22 @@ const getAllData = (req: Request, res: Response) => {
     });
 };
 
+const getDataById = (req: Request, res: Response) => {
+  const { id } = req.params;
+  Data.findById(id)
+    .then((data) => {
+      if (data) {
+        res.json(data); // Отправить данные в формате JSON
+      } else {
+        res.status(404).json({ error: 'Данные не найдены' });
+      }
+    })
+    .catch((error) => {
+      res.status(500).json({ error: 'Произошла ошибка' });
+    });
+};
+
+
 const addData = (req: Request, res: Response) => {
   const { name, ...otherData } = req.body;
   const newData = new Data({ name, ...otherData });
@@ -48,4 +64,4 @@ const updateData = (req: Request, res: Response) => {
 };
 
 
-export { getAllData, addData, deleteData, updateData };
+export { getAllData, addData, deleteData, updateData, getDataById };
