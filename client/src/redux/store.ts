@@ -1,7 +1,8 @@
-import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
+import { configureStore } from '@reduxjs/toolkit';
 import { useDispatch, useSelector, TypedUseSelectorHook } from 'react-redux';
 import authReducer from './auth/authSlice';
 import { userApi } from './api/userApi';
+import apiCart from './api/apiCart';
 
 // Определение типов
 export type RootState = ReturnType<typeof store.getState>;
@@ -15,9 +16,10 @@ const store = configureStore({
   reducer: {
     auth: authReducer,
     [userApi.reducerPath]: userApi.reducer,
+    [apiCart.reducerPath]: apiCart.reducer
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(userApi.middleware),
+    getDefaultMiddleware().concat(userApi.middleware, apiCart.middleware),
 });
 
 export default store;

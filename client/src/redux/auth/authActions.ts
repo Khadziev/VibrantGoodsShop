@@ -7,7 +7,7 @@ import { clearUserData } from "./authSlice";
 export const register = createAsyncThunk(
   'auth/register',
   async (data: UserAttributes) => {
-    const response = await axios.post('http://localhost:4000/api/registration', data);
+    const response = await axios.post('/api/registration', data);
     return response.data;
   }
 );
@@ -15,7 +15,7 @@ export const register = createAsyncThunk(
 export const login = createAsyncThunk(
   'auth/login',
   async (data: LoginData) => {
-    const response = await axios.post('http://localhost:4000/api/login', data);
+    const response = await axios.post('/api/login', data);
     return response.data;
   }
 );

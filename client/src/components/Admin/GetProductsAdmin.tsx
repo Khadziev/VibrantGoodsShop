@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { DataAttributes } from "../../redux/types/types";
+import { DataAttributesApi } from "../../redux/types/types";
 import { deleteData, getData, updateData } from "../../redux/api/adminApi";
 import { RootState, AppDispatch } from "../../redux/store";
 import { ProductCard } from "./ProductCard";
 import ProductEditModal from "./ProductEditModal";
 
 const GetProductsAdmin: React.FC = () => {
-  const data = useSelector<RootState, DataAttributes[]>((state) => state.auth.data);
+  const data = useSelector<RootState, DataAttributesApi[]>((state) => state.auth.data);
   const dispatch = useDispatch<AppDispatch>();
 
-  const [selectedProduct, setSelectedProduct] = useState<DataAttributes | null>(null);
+  const [selectedProduct, setSelectedProduct] = useState<DataAttributesApi | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
@@ -21,12 +21,12 @@ const GetProductsAdmin: React.FC = () => {
     dispatch(deleteData(id));
   };
 
-  const handleEdit = (product: DataAttributes) => {
+  const handleEdit = (product: DataAttributesApi) => {
     setSelectedProduct(product);
     setIsModalOpen(true);
   };
 
-  const handleUpdate = async (updatedData: DataAttributes) => {
+  const handleUpdate = async (updatedData: DataAttributesApi) => {
     if (selectedProduct) {
       await dispatch(updateData({ id: selectedProduct._id || '', newData: updatedData }));
       dispatch(getData());

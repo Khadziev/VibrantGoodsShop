@@ -2,16 +2,16 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { AppDispatch } from '../../redux/store';
 import { addData, getData } from '../../redux/api/adminApi';
-import { DataAttributes } from '../../redux/types/types';
+import { DataAttributesApi } from '../../redux/types/types';
 
 interface AddProductFormProps {
-  onSubmit: (formData: DataAttributes) => void;
+  onSubmit: (formData: DataAttributesApi) => void;
   onCancel: () => void;
 }
 
 
 const AddProductForm: React.FC<AddProductFormProps> = ({ onSubmit, onCancel }) => {
-  const [formData, setFormData] = useState<DataAttributes>({
+  const [formData, setFormData] = useState<DataAttributesApi>({
     name: '',
     price: 0,
     description: '',
@@ -45,7 +45,6 @@ const AddProductForm: React.FC<AddProductFormProps> = ({ onSubmit, onCancel }) =
       const formValues = { ...formData };
       onSubmit(formValues);
     } catch (error) {
-      // eslint-disable-next-line no-console
       console.log('Ошибка при добавлении товара', error);
     }
   };
@@ -85,7 +84,7 @@ const AddProductForm: React.FC<AddProductFormProps> = ({ onSubmit, onCancel }) =
       <div className="mb-4">
         <div className="mb-4">
           <label htmlFor="description" className="block text-sm font-medium text-gray-700">
-    Описание
+              Описание
           </label>
           <textarea
             id="description"

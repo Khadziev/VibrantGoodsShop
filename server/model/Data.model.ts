@@ -7,6 +7,7 @@ export interface DataAttributes {
   title: string;
   category: 'Телефоны' | 'Телевизоры' | 'Бытовая техника';
   imageURL: string;
+  
 }
 
 interface DataDocument extends Document, DataAttributes {}

@@ -2,10 +2,13 @@ import { RouteProps } from "react-router-dom"
 import RegistrationForm from "../Auth/RegistrationForm"
 import LoginForm from "../Auth/LoginForm"
 import MainPage from "../MainPage"
-
 import UserProductDetails from "../User/UserProductDetails"
 import { AdminPageAsync } from "../Pages/adminPage/Admin.async"
 import { UserPageAsync } from "../Pages/userPage/User.async"
+
+
+
+
 
 export enum AppRoutes {
   //NOT_FOUND = "not_found",
@@ -15,6 +18,7 @@ export enum AppRoutes {
   ADMIN = "/admin",
   USER = "/user",
   USERID = "/data/:id",
+  // CART = "/cart",
 }
 
 export const RoutePatch: Record<AppRoutes, string> = {
@@ -24,6 +28,7 @@ export const RoutePatch: Record<AppRoutes, string> = {
   [AppRoutes.ADMIN]: "/admin",
   [AppRoutes.USER]: "/user",
   [AppRoutes.USERID]: "/data/:id",
+  // [AppRoutes.CART]: "/cart",
 }
 
 export const routeConfig: Record<AppRoutes, RouteProps> = {
@@ -50,5 +55,9 @@ export const routeConfig: Record<AppRoutes, RouteProps> = {
   [AppRoutes.USERID]: {
     path: RoutePatch[AppRoutes.USERID],
     element: <UserProductDetails/>
-  }
+  },
+  // [AppRoutes.CART]: {
+  //   path: RoutePatch[AppRoutes.CART],
+  //   element: <CartItem/>
+  // },
 }

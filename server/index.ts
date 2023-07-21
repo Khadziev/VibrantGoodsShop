@@ -3,10 +3,12 @@ dotenv.config();
 import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
-
+import path from 'path'
 
 import usersRoute from './routes/users.route';
-import dataRoute from './routes/data.route'
+import dataRoute from './routes/data.route';
+import userCart from './routes/cart.route';
+
 
 const app = express();
 
@@ -16,14 +18,25 @@ app.use(cors());
 
 app.use(express.json());
 
-app.use('/api', usersRoute);
-app.use('/api', dataRoute)
+
+
+const baseApiUrl = '/api';
+
+app.use(baseApiUrl, usersRoute);
+app.use(baseApiUrl, dataRoute);
+app.use(baseApiUrl, userCart);
+
+app.use(express.static(path.resolve(__dirname, "client", "dist")));
+
+app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "dist", "index.html"));
+});
 
 mongoose
   .connect(process.env.MONGO as string, {})
   .then(() => {
-    app.listen(process.env.PORT as string, () => console.log('Connected...'));
+    app.listen(process.env.PORT as string, () => console.log('Сервер запущен...'));
   })
   .catch((error) => {
-    console.error('Error connecting to MongoDB:', error);
+    console.error('Ошибка подключения к MongoDB:', error);
   });

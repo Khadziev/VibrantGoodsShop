@@ -47,33 +47,23 @@ const UserGetData: React.FC = () => {
     return <div>Данные недоступны</div>;
   }
 
-  const filteredData = selectedField
-    ? data.filter((item: DataAttributesApi) => item.category === selectedField)
-    : data;
+  //const { length: totalItems } = data;
+  const filteredData = selectedField ? data.filter((item: DataAttributesApi) => item.category === selectedField) : data;
 
   const searchedData = searchQuery
-    ? filteredData.filter((item: DataAttributesApi) =>
-      item.name.toLowerCase().startsWith(searchQuery.toLowerCase())
-    )
+    ? filteredData.filter((item: DataAttributesApi) => item.name.toLowerCase().startsWith(searchQuery.toLowerCase()))
     : filteredData;
 
-  const sortedData = [...searchedData].sort((a, b) =>
-    a.category.localeCompare(b.category)
-  );
+  const sortedData = [...searchedData].sort((a, b) => a.category.localeCompare(b.category));
 
   const totalPages = Math.ceil(sortedData.length / itemsPerPage);
-
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-
   const currentItems = sortedData.slice(indexOfFirstItem, indexOfLastItem);
 
   return (
     <>
-      <SortingFields
-        selectedField={selectedField}
-        onFieldChange={handleFieldChange}
-      />
+      <SortingFields selectedField={selectedField} onFieldChange={handleFieldChange} />
       <div className="mt-10">
         <SearchBar value={searchQuery} onChange={handleSearch} />
       </div>
@@ -105,15 +95,9 @@ const UserGetData: React.FC = () => {
         ) : (
           <div>Такого товара нету</div>
         )}
-
         {modalOpen && <Modal product={selectedProduct} onClose={closeModal} />}
-
         <div className="flex justify-center mt-5 w-full">
-          <Pagination
-            totalPages={totalPages}
-            currentPage={currentPage}
-            onPageChange={handlePageChange}
-          />
+          <Pagination totalPages={totalPages} currentPage={currentPage} onPageChange={handlePageChange} />
         </div>
       </div>
     </>

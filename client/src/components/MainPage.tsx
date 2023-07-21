@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import User from './Pages/userPage/User';
 import { useAppSelector } from '../redux/store';
 import Admin from './Pages/adminPage/Admin';
@@ -12,8 +12,8 @@ const MainPage = () => {
 
   useEffect(() => {
     if (userRole && userName) {
-      console.log('Роль пользователя:', userRole);
-      console.log('Имя пользователя:', userName);
+      // console.log('Роль пользователя:', userRole);
+      // console.log('Имя пользователя:', userName);
       localStorage.setItem('userRole', userRole);
 
     }

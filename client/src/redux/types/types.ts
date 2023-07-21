@@ -1,52 +1,39 @@
-
-
 export enum UserRole {
-    ADMIN = 'admin',
-    USER = 'user',
-  }
+  ADMIN = 'admin',
+  USER = 'user',
+}
 
 export interface UserAttributes {
-    name: string;
-    login: string;
-    password: string;
-    role: UserRole;
-  }
+  name: string;
+  login: string;
+  password: string;
+  role: UserRole;
+}
 
 export interface LoginData {
-    login: string;
-    password: string;
-    role: UserRole
-  }
+  login: string;
+  password: string;
+  role: UserRole;
+}
 
 export interface AuthState {
-    data: DataAttributes[];
-    user: UserAttributes | null;
-    loading: boolean;
-    error: string | null;
-    token: string | null;
-    role: UserRole | null;
-    name: string;
-  }
-
-
-export interface DataAttributes {
-    _id?: string;
-    name: string;
-    price: number;
-    description: string;
-    title: string;
-    category: string;
-    imageURL: string;
-  }
+  data: DataAttributesApi[];
+  user: UserAttributes | null;
+  loading: boolean;
+  error: string | null;
+  token: string | null;
+  role: UserRole | null;
+  name: string;
+}
 
 
 export interface DataAttributesApi {
-    _id: string;
-    name: string;
-    price: number;
-    description: string;
-    title: string;
-    category: string;
-    imageURL: string;
-    createdAt: string | number | Date
-  }
+  _id?: string;
+  name: string;
+  price: number;
+  description: string;
+  title: string;
+  category: string;
+  imageURL: string;
+
+}

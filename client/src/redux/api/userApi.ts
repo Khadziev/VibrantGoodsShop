@@ -6,7 +6,7 @@ import { RootState } from '../store';
 export const userApi = createApi({
   reducerPath: 'dataApi',
   baseQuery: fetchBaseQuery({
-    baseUrl: 'http://localhost:4000/api/',
+    baseUrl: '/api/',
     prepareHeaders: (headers, { getState }) => {
       const token = (getState() as RootState).auth.token;
       if (token) {
@@ -29,6 +29,7 @@ export const userApi = createApi({
       }),
       providesTags: ['data'],
     }),
+
   }),
 });
 

@@ -1,16 +1,16 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { RootState } from "../store";
-import { DataAttributes, DataAttributesApi } from "../types/types";
+import { DataAttributesApi } from "../types/types";
 
 
 
-export const getData = createAsyncThunk<DataAttributes[], void>(
+export const getData = createAsyncThunk<DataAttributesApi[], void>(
   'auth/getData',
   async (_, { getState, rejectWithValue }) => {
     try {
       const token = (getState() as RootState).auth.token;
-      const response = await axios.get<DataAttributesApi[]>('http://localhost:4000/api/data', {
+      const response = await axios.get<DataAttributesApi[]>('/api/data', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -29,10 +29,10 @@ export const getData = createAsyncThunk<DataAttributes[], void>(
 
 export const addData = createAsyncThunk(
   'data/addData',
-  async (data: { data: DataAttributes }, { getState }) => {
+  async (data: { data: DataAttributesApi }, { getState }) => {
     try {
       const token = (getState() as RootState).auth.token;
-      const response = await axios.post('http://localhost:4000/api/data', data.data, {
+      const response = await axios.post('/api/data', data.data, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -45,14 +45,12 @@ export const addData = createAsyncThunk(
 );
 
 
-
-
 export const deleteData = createAsyncThunk(
   'data/deleteData',
   async (id: string, { getState }) => {
     try {
       const token = (getState() as RootState).auth.token;
-      await axios.delete(`http://localhost:4000/api/data/${id}`, {
+      await axios.delete(`/api/data/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -67,10 +65,10 @@ export const deleteData = createAsyncThunk(
 
 export const updateData = createAsyncThunk(
   'data/updateData',
-  async (data: { id: string, newData: DataAttributes }, { getState }) => {
+  async (data: { id: string, newData: DataAttributesApi }, { getState }) => {
     try {
       const token = (getState() as RootState).auth.token;
-      const response = await axios.put(`http://localhost:4000/api/data/${data.id}`, data.newData, {
+      const response = await axios.put(`/api/data/${data.id}`, data.newData, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

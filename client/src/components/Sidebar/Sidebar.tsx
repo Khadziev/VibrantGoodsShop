@@ -1,11 +1,11 @@
-import React, { useState } from "react"
-import { HiMenuAlt3, HiCubeTransparent } from "react-icons/hi"
-import { MdOutlineDashboard } from "react-icons/md"
-import { RiSettings4Line } from "react-icons/ri"
-import { TbReportAnalytics } from "react-icons/tb"
-import { AiOutlineUser, AiOutlineHeart, AiOutlineHome } from "react-icons/ai"
-import { FiFolder, FiShoppingCart } from "react-icons/fi"
-import { Link } from "react-router-dom"
+import React, { useState, useEffect } from "react";
+import { HiMenuAlt3, HiCubeTransparent } from "react-icons/hi";
+import { MdOutlineDashboard } from "react-icons/md";
+import { RiSettings4Line } from "react-icons/ri";
+import { TbReportAnalytics } from "react-icons/tb";
+import { AiOutlineUser, AiOutlineHeart, AiOutlineHome } from "react-icons/ai";
+import { FiFolder, FiShoppingCart } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   const menus = [
@@ -14,13 +14,20 @@ const Sidebar = () => {
     { name: "домой", link: "/", icon: AiOutlineHome },
     { name: "аналитика", link: "#", icon: TbReportAnalytics, margin: true },
     { name: "Файловый менеджер", link: "#", icon: FiFolder },
-    { name: "корзина", link: "#", icon: FiShoppingCart },
+    { name: "корзина", link: "/cart", icon: FiShoppingCart },
     { name: "сохранено", link: "#", icon: AiOutlineHeart, margin: true },
     { name: "настройки", link: "#", icon: RiSettings4Line },
     { name: "о сайте", link: "#", icon: HiCubeTransparent },
-  ]
+  ];
 
-  const [open, setOpen] = useState(true)
+  const [open, setOpen] = useState(() => {
+    const storedState = localStorage.getItem("sidebarOpen");
+    return storedState ? JSON.parse(storedState) : true;
+  });
+
+  useEffect(() => {
+    localStorage.setItem("sidebarOpen", JSON.stringify(open));
+  }, [open]);
 
   return (
     <>
@@ -67,8 +74,7 @@ const Sidebar = () => {
         </div>
       </section>
     </>
-  )
-}
-export default Sidebar
+  );
+};
 
-
+export default Sidebar;

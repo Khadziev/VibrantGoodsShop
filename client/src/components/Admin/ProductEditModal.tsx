@@ -1,12 +1,12 @@
 import React from "react";
-import { DataAttributes } from "../../redux/types/types";
+import { DataAttributesApi } from "../../redux/types/types";
 
 type ProductEditModalProps = {
-  selectedProduct: DataAttributes | null;
+  selectedProduct: DataAttributesApi | null;
   isModalOpen: boolean;
-  setSelectedProduct: (product: DataAttributes | null) => void;
+  setSelectedProduct: (product: DataAttributesApi | null) => void;
   setIsModalOpen: (isOpen: boolean) => void;
-  onUpdate: (updatedData: DataAttributes) => void;
+  onUpdate: (updatedData: DataAttributesApi) => void;
 };
 
 const ProductEditModal: React.FC<ProductEditModalProps> = ({

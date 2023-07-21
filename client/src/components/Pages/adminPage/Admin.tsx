@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import AddProductForm from '../../Admin/AddProductForm';
 import { useAppSelector, AppDispatch } from '../../../redux/store';
 import { addData, getData } from '../../../redux/api/adminApi';
-import { DataAttributes } from '../../../redux/types/types';
+import { DataAttributesApi } from '../../../redux/types/types';
 import GetProductsAdmin from '../../Admin/GetProductsAdmin';
 
 const Admin: React.FC = () => {
@@ -20,7 +20,7 @@ const Admin: React.FC = () => {
     setIsModalOpen(false);
   };
 
-  const handleAddData = (formData: DataAttributes) => {
+  const handleAddData = (formData: DataAttributesApi) => {
     dispatch(addData({ data: formData }));
     handleCloseModal();
   };

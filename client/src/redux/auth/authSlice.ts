@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { register, login, logout } from './authActions';
-import { AuthState, DataAttributes, UserRole } from '../types/types';
+import { AuthState, DataAttributesApi, UserRole } from '../types/types';
 import { deleteData, getData, updateData } from '../api/adminApi';
 
 
@@ -14,7 +14,7 @@ const authSlice = createSlice({
     error: null,
     token: initialToken || null,
     role: null,
-    data: [] as DataAttributes[],
+    data: [] as DataAttributesApi[],
   } as AuthState,
 
   reducers: {
@@ -30,10 +30,10 @@ const authSlice = createSlice({
     saveToken (state, action: PayloadAction<string>) {
       state.token = action.payload;
     },
-    addDataSuccess (state, action: PayloadAction<DataAttributes>) {
+    addDataSuccess (state, action: PayloadAction<DataAttributesApi>) {
       state.data.push(action.payload);
     },
-    updateDataSuccess (state, action: PayloadAction<DataAttributes>) {
+    updateDataSuccess (state, action: PayloadAction<DataAttributesApi>) {
       const updatedData = action.payload;
       const index = state.data.findIndex((item) => item._id === updatedData._id);
       if (index !== -1) {

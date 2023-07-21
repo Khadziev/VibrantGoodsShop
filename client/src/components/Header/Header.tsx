@@ -11,7 +11,7 @@ const Header: React.FC = () => {
   const user = useAppSelector((state) => state.auth.token);
   const location = useLocation();
   const navigate = useNavigate();
-  const [showLoginForm, setShowLoginForm] = useState(false);
+  const [showLoginForm] = useState(false);
 
   const handleLogout = async () => {
     try {

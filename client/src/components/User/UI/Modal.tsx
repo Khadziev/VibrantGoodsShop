@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 export const Modal: React.FC<{ product: any; onClose: () => void }> = ({ product, onClose }) => {
   return (

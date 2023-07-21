@@ -1,8 +1,8 @@
-import { useAppSelector } from '../../../redux/store';
+
 import UserGetData from '../../User/UserGetData';
 
 const User = () => {
-  const userName = useAppSelector((state) => state.auth.user?.name) || localStorage.getItem('userName');
+//  const userName = useAppSelector((state) => state.auth.user?.name) || localStorage.getItem('userName');
 
   return (
     <div className="mt-10">
