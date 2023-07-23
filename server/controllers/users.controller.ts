@@ -3,6 +3,24 @@ import bcrypt from 'bcrypt';
 import jwt, { Secret } from 'jsonwebtoken';
 import User from '../model/User.model';
 
+const createToken = (userId: string, login: string) => {
+  const payload = {
+    id: userId,
+    login: login,
+  };
+
+  const secretKey = process.env.SECRET_JWT_KEY as Secret;
+  if (!secretKey) {
+    throw new Error('Отсутствует ключ для JWT');
+  }
+
+  const token = jwt.sign(payload, secretKey, {
+    expiresIn: '24h',
+  });
+
+  return token;
+};
+
 export const usersController = {
   getAllUsers: async (req: Request, res: Response) => {
     try {
@@ -17,15 +35,15 @@ export const usersController = {
     try {
       const { login, password, name } = req.body;
 
-const saltRounds = Number(process.env.BCRYPT_ROUNDS);
-const hash = await bcrypt.hash(password, saltRounds);
+      const saltRounds = Number(process.env.BCRYPT_ROUNDS);
+      const hash = await bcrypt.hash(password, saltRounds);
 
-const user = await User.create({
-  login: login,
-  password: hash,
-  name: name,
-  role: "user",
-});
+      const user = await User.create({
+        login: login,
+        password: hash,
+        name: name,
+        role: "user",
+      });
       res.json(user);
     } catch (error: any) {
       res.status(400).json({ error: 'Ошибка при регистрации: ' + error.toString() });
@@ -48,21 +66,9 @@ const user = await User.create({
         return res.status(401).json('Неверный пароль');
       }
 
-      const payload = {
-        id: candidate._id,
-        login: candidate.login,
-      };
+      const token = createToken(candidate._id, candidate.login);
 
-      const secretKey = process.env.SECRET_JWT_KEY as Secret;
-      if (!secretKey) {
-        return res.status(500).json({ error: 'Отсутствует ключ для JWT' });
-      }
-
-      const token = jwt.sign(payload, secretKey, {
-        expiresIn: '24h',
-      });
-
-      res.json({ token, name: candidate.name, role: candidate.role });
+      res.json({ token, name: candidate.name, role: candidate.role, userId: candidate._id });
     } catch (error: any) { 
       res.status(500).json({ error: 'Ошибка при входе: ' + error.toString() });
     }

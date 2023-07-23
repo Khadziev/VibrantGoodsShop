@@ -16,6 +16,20 @@ exports.usersController = void 0;
 const bcrypt_1 = __importDefault(require("bcrypt"));
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 const User_model_1 = __importDefault(require("../model/User.model"));
+const createToken = (userId, login) => {
+    const payload = {
+        id: userId,
+        login: login,
+    };
+    const secretKey = process.env.SECRET_JWT_KEY;
+    if (!secretKey) {
+        throw new Error('Отсутствует ключ для JWT');
+    }
+    const token = jsonwebtoken_1.default.sign(payload, secretKey, {
+        expiresIn: '24h',
+    });
+    return token;
+};
 exports.usersController = {
     getAllUsers: (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         try {
@@ -54,18 +68,8 @@ exports.usersController = {
             if (!valid) {
                 return res.status(401).json('Неверный пароль');
             }
-            const payload = {
-                id: candidate._id,
-                login: candidate.login,
-            };
-            const secretKey = process.env.SECRET_JWT_KEY;
-            if (!secretKey) {
-                return res.status(500).json({ error: 'Отсутствует ключ для JWT' });
-            }
-            const token = jsonwebtoken_1.default.sign(payload, secretKey, {
-                expiresIn: '24h',
-            });
-            res.json({ token, name: candidate.name, role: candidate.role });
+            const token = createToken(candidate._id, candidate.login);
+            res.json({ token, name: candidate.name, role: candidate.role, userId: candidate._id });
         }
         catch (error) {
             res.status(500).json({ error: 'Ошибка при входе: ' + error.toString() });

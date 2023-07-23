@@ -26,10 +26,10 @@ app.use(baseApiUrl, usersRoute);
 app.use(baseApiUrl, dataRoute);
 app.use(baseApiUrl, userCart);
 
-app.use(express.static(path.resolve(__dirname, "client", "dist")));
+app.use(express.static(path.resolve(process.cwd(), "client", "dist")));
 
 app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, "client", "dist", "index.html"));
+    res.sendFile(path.resolve(process.cwd(), "client", "dist", "index.html"));
 });
 
 mongoose

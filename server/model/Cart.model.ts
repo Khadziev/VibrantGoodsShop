@@ -2,7 +2,9 @@ import mongoose, { Document, Model, Schema } from 'mongoose';
 
 export interface CartItem {
   productId: mongoose.Types.ObjectId;
-  quantity: number;
+  imageURL: string;
+  price: number;
+  
 }
 
 export interface CartAttributes {
@@ -18,12 +20,14 @@ const cartItemSchema = new Schema<CartItem>({
     ref: 'Data',
     required: true,
   },
-  quantity: {
+  imageURL: {     
+    type: String,
+  },
+  price: {       
     type: Number,
-    required: true,
-    default: 1,
   },
 });
+
 
 const cartSchema: Schema<CartDocument> = new Schema(
   {

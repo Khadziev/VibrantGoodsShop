@@ -15,12 +15,14 @@ export const verifyTokenMiddleware = async (req: Request, res: Response, next: N
       login: string;
       role: string;
     };
+
     const user = await User.findOne({ _id: decoded.id });
 
     if (!user) {
       throw new Error('Пользователь не найден');
     }
 
+    (req as any).userId = decoded.id; 
     (req as any).user = user;
 
     next();

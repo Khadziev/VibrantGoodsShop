@@ -30,10 +30,11 @@ const cartItemSchema = new mongoose_1.Schema({
         ref: 'Data',
         required: true,
     },
-    quantity: {
+    imageURL: {
+        type: String,
+    },
+    price: {
         type: Number,
-        required: true,
-        default: 1,
     },
 });
 const cartSchema = new mongoose_1.Schema({

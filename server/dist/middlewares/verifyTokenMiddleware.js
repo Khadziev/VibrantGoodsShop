@@ -27,6 +27,7 @@ const verifyTokenMiddleware = (req, res, next) => __awaiter(void 0, void 0, void
         if (!user) {
             throw new Error('Пользователь не найден');
         }
+        req.userId = decoded.id;
         req.user = user;
         next();
     }

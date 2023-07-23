@@ -16,14 +16,13 @@ const app = (0, express_1.default)();
 app.use(express_1.default.urlencoded({ extended: true }));
 app.use((0, cors_1.default)());
 app.use(express_1.default.json());
-// Определите базовый URL для маршрутов API
 const baseApiUrl = '/api';
 app.use(baseApiUrl, users_route_1.default);
 app.use(baseApiUrl, data_route_1.default);
 app.use(baseApiUrl, cart_route_1.default);
-app.use(express_1.default.static(path_1.default.resolve(__dirname, "client", "build")));
+app.use(express_1.default.static(path_1.default.resolve(process.cwd(), "client", "dist")));
 app.get('*', (req, res) => {
-    res.sendFile(path_1.default.resolve(__dirname, "client", "build", "index.html"));
+    res.sendFile(path_1.default.resolve(process.cwd(), "client", "dist", "index.html"));
 });
 mongoose_1.default
     .connect(process.env.MONGO, {})

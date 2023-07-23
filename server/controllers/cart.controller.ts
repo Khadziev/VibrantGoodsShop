@@ -1,8 +1,10 @@
 import { Request, Response } from 'express';
 import Cart, { CartAttributes, CartItem, CartDocument } from '../model/Cart.model';
 
+
+
 const addToCart = async (req: Request, res: Response) => {
-  const { userId, productId, quantity } = req.body;
+  const { userId, productId, imageURL, price } = req.body;
 
   try {
     let cart: CartDocument | null = await Cart.findOne({ userId });
@@ -10,11 +12,11 @@ const addToCart = async (req: Request, res: Response) => {
     if (!cart) {
       const cartData: CartAttributes = {
         userId,
-        items: [{ productId, quantity }],
+        items: [{ productId, imageURL, price }],
       };
       cart = await Cart.create(cartData);
     } else {
-      const item: CartItem = { productId, quantity };
+      const item: CartItem = { productId, imageURL, price };
       cart.items.push(item);
       await cart.save();
     }
