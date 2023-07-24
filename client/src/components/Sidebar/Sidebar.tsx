@@ -6,8 +6,15 @@ import { TbReportAnalytics } from "react-icons/tb";
 import { AiOutlineUser, AiOutlineHeart, AiOutlineHome } from "react-icons/ai";
 import { FiFolder, FiShoppingCart } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import { useGetCartByUserIdQuery } from "../../redux/api/apiCart";
+import { useAppSelector } from "../../redux/store";
 
 const Sidebar = () => {
+  const userId = useAppSelector((state) => state.auth.userId);
+  const { data: cartData } = useGetCartByUserIdQuery(userId || '');
+
+
+  const cartItemsCount = cartData?.items.length || 0;
   const menus = [
     { name: "панель приборов", link: "#", icon: MdOutlineDashboard },
     { name: "пользователь", link: "#", icon: AiOutlineUser },
@@ -27,15 +34,14 @@ const Sidebar = () => {
 
   useEffect(() => {
     localStorage.setItem("sidebarOpen", JSON.stringify(open));
-  }, [open]);
+  }, [open, cartItemsCount]);
 
   return (
     <>
       <section className="flex gap-6">
         <div
-          className={`bg-[#9f9fa0] min-h-screen ${
-            open ? "w-72" : "w-16"
-          } duration-500 text-gray-100 px-4`}
+          className={`bg-blue-500 p-6 ${open ? "w-96" : "w-16"} duration-500 text-gray-100 px-4 sticky top-0`}
+
         >
           <div className="py-3 flex justify-end">
             <HiMenuAlt3 size={26} className="cursor-pointer" onClick={() => setOpen(!open)} />
@@ -50,7 +56,18 @@ const Sidebar = () => {
                   menu?.margin && "mt-5"
                 } group flex items-center text-sm  gap-3.5 font-medium p-2 hover:bg-gray-800 rounded-md`}
               >
-                <div>{React.createElement(menu?.icon, { size: "20" })}</div>
+                {menu?.name === 'корзина' ? (
+                  <div className='relative'>
+                    {React.createElement(menu?.icon, { size: "20" })}
+                    {cartItemsCount > 0 && (
+                      <span className='absolute top-0 right-0 bg-red-500 rounded-full text-white text-xs w-4 h-4 flex items-center justify-center transform translate-x-1/2 -translate-y-1/2'>
+                        {cartItemsCount}
+                      </span>
+                    )}
+                  </div>
+                ) : (
+                  <div>{React.createElement(menu?.icon, { size: "20" })}</div>
+                )}
                 <h2
                   style={{
                     transitionDelay: `${i + 3}00ms`,
@@ -70,6 +87,7 @@ const Sidebar = () => {
                 </h2>
               </Link>
             ))}
+
           </div>
         </div>
       </section>

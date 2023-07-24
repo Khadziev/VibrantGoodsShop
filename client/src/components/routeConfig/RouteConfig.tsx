@@ -5,9 +5,7 @@ import MainPage from "../MainPage"
 import UserProductDetails from "../User/UserProductDetails"
 import { AdminPageAsync } from "../Pages/adminPage/Admin.async"
 import { UserPageAsync } from "../Pages/userPage/User.async"
-
-
-
+import CartComponent from "../Basket/CartComponent"
 
 
 export enum AppRoutes {
@@ -18,7 +16,7 @@ export enum AppRoutes {
   ADMIN = "/admin",
   USER = "/user",
   USERID = "/data/:id",
-  // CART = "/cart",
+  CART = "/cart",
 }
 
 export const RoutePatch: Record<AppRoutes, string> = {
@@ -28,7 +26,7 @@ export const RoutePatch: Record<AppRoutes, string> = {
   [AppRoutes.ADMIN]: "/admin",
   [AppRoutes.USER]: "/user",
   [AppRoutes.USERID]: "/data/:id",
-  // [AppRoutes.CART]: "/cart",
+  [AppRoutes.CART]: "/cart",
 }
 
 export const routeConfig: Record<AppRoutes, RouteProps> = {
@@ -56,8 +54,8 @@ export const routeConfig: Record<AppRoutes, RouteProps> = {
     path: RoutePatch[AppRoutes.USERID],
     element: <UserProductDetails/>
   },
-  // [AppRoutes.CART]: {
-  //   path: RoutePatch[AppRoutes.CART],
-  //   element: <CartItem/>
-  // },
+  [AppRoutes.CART]: {
+    path: RoutePatch[AppRoutes.CART],
+    element: <CartComponent/>
+  },
 }

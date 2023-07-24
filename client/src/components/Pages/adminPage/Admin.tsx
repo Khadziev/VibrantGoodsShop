@@ -34,22 +34,24 @@ const Admin: React.FC = () => {
   }, [dispatch]);
 
   return (
-    <div>
-      <h1>Добро пожаловать, администратор {userName}!</h1>
-      <button
-        onClick={handleOpenModal}
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-      >
-        Добавить товар
-      </button>
-      <button
-        onClick={handleShowProductList}
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-4"
-      >
-        Список товаров
-      </button>
+    <div className="flex flex-col items-center">
+      <h1 className="my-4 text-center">Добро пожаловать, администратор {userName}!</h1>
+      <div className="flex space-x-4">
+        <button
+          onClick={handleOpenModal}
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Добавить товар
+        </button>
+        <button
+          onClick={handleShowProductList}
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Список товаров
+        </button>
+      </div>
       {isProductListVisible && (
-        <div className="mt-4 mb-4">
+        <div className="mt-4 mb-4 w-full">
           <GetProductsAdmin />
         </div>
       )}

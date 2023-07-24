@@ -5,6 +5,7 @@ import { deleteData, getData, updateData } from '../api/adminApi';
 
 
 const initialToken = localStorage.getItem('token');
+const initialUserId = localStorage.getItem('userId')
 
 const authSlice = createSlice({
   name: 'auth',
@@ -15,6 +16,7 @@ const authSlice = createSlice({
     token: initialToken || null,
     role: null,
     data: [] as DataAttributesApi[],
+    userId: initialUserId || null,
   } as AuthState,
 
   reducers: {
@@ -52,6 +54,7 @@ const authSlice = createSlice({
         state.user = action.payload;
         state.loading = false;
         state.error = null;
+        state.userId = action.payload.userId;
       })
       .addCase(register.rejected, (state) => {
         state.loading = false;
@@ -68,6 +71,8 @@ const authSlice = createSlice({
         state.token = action.payload.token;
         state.role = action.payload.role;
         state.name = action.payload.name;
+        state.userId = action.payload.userId;
+        //localStorage.setItem('userId', action.payload.userId);
       })
       .addCase(login.rejected, (state) => {
         state.loading = false;
@@ -82,6 +87,7 @@ const authSlice = createSlice({
         state.error = null;
         localStorage.removeItem('token');
         state.token = null;
+        state.userId = null;
       })
       .addCase(logout.rejected, (state) => {
         state.loading = false;

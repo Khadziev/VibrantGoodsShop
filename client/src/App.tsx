@@ -13,12 +13,17 @@ function App () {
   return (
     <>
       <Header />
-      <div className="flex">
-        <Sidebar />
-        <MainRouter />
+      <div className="flex h-full">
+        <div>
+          <Sidebar />
+        </div>
+        <div className="flex-grow">
+          <MainRouter />
+        </div>
       </div>
     </>
   );
+
 }
 
 export default App;

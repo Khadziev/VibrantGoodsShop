@@ -16,9 +16,9 @@ export const Modal: React.FC<{ product: any; onClose: () => void }> = ({ product
               <h2 className='font-medium text-xl '>{product.name}</h2>
               <span className='text-xs'>{product.category}</span>
             </div>
-            <p className='flex justify-end px-6'>
+            <div className='flex justify-end px-6'>
               <p className='font-medium text-2xl text-red-800 ml-2'>Price: ${product.price}</p>
-            </p>
+            </div>
             <div className="flex flex-col max-h-64 overflow-y-auto mb-4 rounded-lg scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent">
               <figure className='flex justify-center items-center px-6 relative'>
                 <img src={product.imageURL} alt={product.name} className='h-40 max-w-xs rounded-lg'/>

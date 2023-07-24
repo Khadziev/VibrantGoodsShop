@@ -33,6 +33,7 @@ const LoginForm = () => {
           login: loginValue,
           password,
           role: UserRole.USER,
+          userId: '',
         })
       );
 
@@ -42,6 +43,7 @@ const LoginForm = () => {
 
       localStorage.setItem('userRole', UserRole.USER);
       localStorage.setItem('userName', response.payload.name);
+      localStorage.setItem('userId', response.payload.userId)
 
       setError(null);
 

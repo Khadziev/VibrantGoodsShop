@@ -39,10 +39,12 @@ export const addData = createAsyncThunk(
       });
       return response.data;
     } catch (error) {
+      console.error("Error details:", error);
       throw new Error('Ошибка при добавлении данных');
     }
   }
 );
+
 
 
 export const deleteData = createAsyncThunk(

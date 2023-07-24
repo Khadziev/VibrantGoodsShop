@@ -1,18 +1,12 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { RootState } from '../store';
+import { CartAttributes, RemoveFromCartArgs } from '../types/types';
 
-export interface CartItem {
-  productId: string;
-  quantity: number;
-}
 
-export interface CartAttributes {
-  userId: string;
-  items: CartItem[];
-}
 
 export const apiCart = createApi({
   reducerPath: 'apiCart',
+  tagTypes: ['cart'],
   baseQuery: fetchBaseQuery({
     baseUrl: '/api',
     prepareHeaders: (headers, { getState }) => {
@@ -30,16 +24,18 @@ export const apiCart = createApi({
         method: 'POST',
         body: cartData,
       }),
+      invalidatesTags: ['cart']
     }),
-    removeFromCart: builder.mutation<CartAttributes, Partial<CartAttributes>>({
-      query: (cartData) => ({
-        url: '/cart/remove',
-        method: 'POST',
-        body: cartData,
+    removeFromCart: builder.mutation<CartAttributes, RemoveFromCartArgs>({
+      query: ({ userId, productId }) => ({
+        url: `/cart/${userId}/${productId}`,
+        method: 'DELETE',
       }),
+      invalidatesTags: ['cart']
     }),
     getCartByUserId: builder.query<CartAttributes, string>({
       query: (userId) => `/cart/${userId}`,
+      providesTags: ['cart'],
     }),
   }),
 });
@@ -51,4 +47,3 @@ export const {
 } = apiCart;
 
 export default apiCart;
-

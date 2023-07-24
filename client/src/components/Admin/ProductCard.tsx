@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 export const ProductCard: React.FC<{ product: DataAttributesApi, onDelete: (id: string) => void, onEdit: (product: DataAttributesApi) => void }> = ({ product, onDelete, onEdit }) => {
   return (
     <>
-      <div className="relative bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+      <div className="relative bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 p-4">
         <div className="relative">
           <NavLink to={`/data/${product._id}`}>
             <img src={product.imageURL} alt={product.name} className="object-cover w-full h-40 md:h-60 rounded-t-lg" />
