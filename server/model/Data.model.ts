@@ -5,8 +5,9 @@ export interface DataAttributes {
   price: number;
   description: string;
   title: string;
-  category: 'Телефоны' | 'Телевизоры' | 'Бытовая техника';
+  category: 'Ноутбуки' | 'Камеры' | 'Наушники' | 'Планшеты' | 'Сотовые телефоны' | 'Аксессуары'
   imageURL: string;
+  discount: number;
   
 }
 
@@ -38,6 +39,11 @@ const dataSchema: Schema<DataDocument> = new Schema(
     imageURL: {
       type: String,
       required: false,
+    },
+    discount: {
+      type: Number,
+      required: false,
+      default: 0, 
     },
   },
   { timestamps: true }

@@ -50,6 +50,11 @@ const dataSchema = new mongoose_1.Schema({
         type: String,
         required: false,
     },
+    discount: {
+        type: Number,
+        required: false,
+        default: 0,
+    },
 }, { timestamps: true });
 const Data = mongoose_1.default.model('Data', dataSchema);
 exports.default = Data;
