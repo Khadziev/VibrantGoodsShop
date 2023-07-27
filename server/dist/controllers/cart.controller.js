@@ -15,7 +15,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.deleteFromCart = exports.getCartByUserId = exports.addToCart = void 0;
 const Cart_model_1 = __importDefault(require("../model/Cart.model"));
 const addToCart = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const { userId, productId, imageURL, price } = req.body;
+    const { userId, productId, price } = req.body;
+    let { imageURL } = req.body;
+    if (Array.isArray(imageURL)) {
+        imageURL = imageURL[0];
+    }
     try {
         let cart = yield Cart_model_1.default.findOne({ userId });
         if (!cart) {

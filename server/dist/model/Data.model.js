@@ -39,21 +39,28 @@ const dataSchema = new mongoose_1.Schema({
     },
     title: {
         type: String,
-        required: false,
+        default: null,
     },
     category: {
         type: String,
         required: false,
         enum: ['Ноутбуки', 'Камеры', 'Наушники', 'Планшеты', 'Сотовые телефоны', 'Аксессуары'],
     },
-    imageURL: {
-        type: String,
-        required: false,
-    },
+    imageURL: [{
+            type: String,
+            required: false,
+        }],
     discount: {
         type: Number,
         required: false,
         default: 0,
+    },
+    specifications: {
+        processor: { type: String, default: null },
+        memory: { type: String, default: null },
+        storage: { type: String, default: null },
+        screen: { type: String, default: null },
+        camera: { type: String, default: null }
     },
 }, { timestamps: true });
 const Data = mongoose_1.default.model('Data', dataSchema);

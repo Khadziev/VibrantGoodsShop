@@ -4,7 +4,12 @@ import Cart, { CartAttributes, CartItem, CartDocument } from '../model/Cart.mode
 
 
 const addToCart = async (req: Request, res: Response) => {
-  const { userId, productId, imageURL, price } = req.body;
+  const { userId, productId, price } = req.body;
+let { imageURL } = req.body;
+
+if (Array.isArray(imageURL)) {
+  imageURL = imageURL[0];
+}
 
   try {
     let cart: CartDocument | null = await Cart.findOne({ userId });
