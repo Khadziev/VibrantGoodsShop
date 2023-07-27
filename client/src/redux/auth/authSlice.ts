@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { register, login, logout } from './authActions';
-import { AuthState, DataAttributesApi, UserRole } from '../types/types';
+import { AuthState, DataAttributesApi, UserRole } from '../model/types';
 import { deleteData, getData, updateData } from '../api/adminApi';
 
 

@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
-import User from './Pages/userPage/User';
-import { useAppSelector } from '../redux/store';
-import Admin from './Pages/adminPage/Admin';
-import { UserRole } from '../redux/types/types';
+import User from '../userPage/User';
+import { useAppSelector } from '../../../redux/store';
+import Admin from '../adminPage/Admin';
+import { UserRole } from '../../../redux/model/types';
 
 
 const MainPage = () => {

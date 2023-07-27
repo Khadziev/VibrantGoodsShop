@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { RootState } from '../store';
-import { CartAttributes, RemoveFromCartArgs } from '../types/types';
+import { CartAttributes, RemoveFromCartArgs } from '../model/types';
 
 
 

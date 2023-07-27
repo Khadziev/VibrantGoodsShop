@@ -29,6 +29,14 @@ export interface AuthState {
   userId: string | null;
 }
 
+export interface Specifications {
+  processor?: string;
+  memory?: string;
+  storage?: string;
+  screen?: string;
+  camera?: string;
+}
+
 export interface DataAttributesApi {
   _id?: string;
   name: string;
@@ -36,8 +44,11 @@ export interface DataAttributesApi {
   description: string;
   title: string;
   category: string;
-  imageURL: string;
+  imageURL: string[];
+  discount: number;
+  specifications: Specifications;
 }
+
 
 
 // карзина
@@ -56,4 +67,13 @@ export interface CartAttributes {
 export interface RemoveFromCartArgs {
   userId: string;
   productId: string;
+}
+
+// слайдер
+export interface Slide {
+  ID: number;
+  title: string;
+  description: string;
+  bgImg: string;
+  url: string;
 }

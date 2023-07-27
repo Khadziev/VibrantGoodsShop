@@ -14,9 +14,9 @@ function App () {
     <>
       <Header />
       <div className="flex h-full">
-        <div>
+        {/* <div>
           <Sidebar />
-        </div>
+        </div> */}
         <div className="flex-grow">
           <MainRouter />
         </div>

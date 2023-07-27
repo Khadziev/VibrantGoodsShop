@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-import { UserAttributes, LoginData } from "../types/types";
+import { UserAttributes, LoginData } from "../model/types";
 import { clearUserData } from "./authSlice";
 
 export const register = createAsyncThunk(

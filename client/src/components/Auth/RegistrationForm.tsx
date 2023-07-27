@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../redux/store';
 import { register } from '../../redux/auth/authActions';
-import { UserRole } from '../../redux/types/types';
+import { UserRole } from '../../redux/model/types';
 
 
 const RegistrationForm = () => {

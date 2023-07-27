@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { RootState } from "../store";
-import { DataAttributesApi } from "../types/types";
+import { DataAttributesApi } from "../model/types";
 
 
 

@@ -2,31 +2,42 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { AppDispatch } from '../../redux/store';
 import { addData, getData } from '../../redux/api/adminApi';
-import { DataAttributesApi } from '../../redux/types/types';
+import { DataAttributesApi } from '../../redux/model/types';
+import { InputField, fields } from '../../hooks/InputField';
+import { initialFormData } from '../../redux/model/FormTypes';
+
 
 interface AddProductFormProps {
-  onSubmit: (formData: DataAttributesApi) => void;
   onCancel: () => void;
 }
 
-
-const AddProductForm: React.FC<AddProductFormProps> = ({ onSubmit, onCancel }) => {
-  const [formData, setFormData] = useState<DataAttributesApi>({
-    name: '',
-    price: 0,
-    description: '',
-    title: '',
-    category: '',
-    imageURL: '',
-  });
-
+const AddProductForm: React.FC<AddProductFormProps> = ({ onCancel }) => {
+  const [formData, setFormData] = useState<DataAttributesApi>(initialFormData);
   const dispatch = useDispatch<AppDispatch>();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    if (e.target.name.startsWith('imageURL')) {
+      const index = parseInt(e.target.name.replace('imageURL', ''), 10);
+      const newImageURL = [...formData.imageURL];
+      newImageURL[index] = e.target.value;
+      setFormData({
+        ...formData,
+        imageURL: newImageURL,
+      });
+    } else if (e.target.name.startsWith('specifications')) {
+      setFormData({
+        ...formData,
+        specifications: {
+          ...formData.specifications,
+          [e.target.name.split('.')[1]]: e.target.value,
+        },
+      });
+    } else {
+      setFormData({
+        ...formData,
+        [e.target.name]: e.target.value,
+      });
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -34,134 +45,67 @@ const AddProductForm: React.FC<AddProductFormProps> = ({ onSubmit, onCancel }) =
     try {
       await dispatch(addData({ data: formData })).unwrap();
       dispatch(getData());
-      setFormData({
-        name: '',
-        price: 0,
-        description: '',
-        title: '',
-        category: '',
-        imageURL: '',
-      });
-      const formValues = { ...formData };
-      onSubmit(formValues);
+      setFormData(initialFormData);
     } catch (error) {
-      console.log('Ошибка при добавлении товара', error);
+      console.log('Ошибка при добавлении данных', error);
     }
   };
 
+  const handleOutsideClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (e.currentTarget === e.target) {
+      onCancel();
+    }
+  }
 
   return (
-    <form onSubmit={handleSubmit} className="w-64 mx-auto">
-      <h2 className="text-lg font-bold mb-4">Добавить товар</h2>
-      <div className="mb-4">
-        <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-          Название
-        </label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-          className="mt-1 p-2 border border-gray-300 rounded-md w-full"
-        />
-      </div>
-      <div className="mb-4">
-        <label htmlFor="price" className="block text-sm font-medium text-gray-700">
-          Цена
-        </label>
-        <input
-          type="number"
-          id="price"
-          name="price"
-          value={formData.price}
-          onChange={handleChange}
-          required
-          className="mt-1 p-2 border border-gray-300 rounded-md w-full"
-        />
-      </div>
-      <div className="mb-4">
-        <div className="mb-4">
-          <label htmlFor="description" className="block text-sm font-medium text-gray-700">
-              Описание
-          </label>
-          <textarea
-            id="description"
-            name="description"
-            value={formData.description}
-            onChange={handleChange}
-            className="mt-1 p-2 border border-gray-300 rounded-md w-full"
-          />
-        </div>
-
-      </div>
-
-      <div className="mb-4">
-        <label htmlFor="title" className="block text-sm font-medium text-gray-700">
-          Заголовок
-        </label>
-        <input
-          type="text"
-          id="title"
-          name="title"
-          value={formData.title}
-          onChange={handleChange}
-          required
-          className="mt-1 p-2 border border-gray-300 rounded-md w-full"
-        />
-      </div>
-      <div className="mb-4">
-        <label htmlFor="category" className="block text-sm font-medium text-gray-700">
-          Категория
-        </label>
-        <select
-          id="category"
-          name="category"
-          value={formData.category}
-          onChange={handleChange}
-          required
-          className="mt-1 p-2 border border-gray-300 rounded-md w-full"
+    <div className="fixed inset-0" onClick={handleOutsideClick}>
+      <div className="w-full max-w-xl mx-auto overflow-y-auto bg-white" style={{ maxHeight: "80vh" }}>
+        <form
+          onSubmit={handleSubmit}
+          className="w-full max-w-xl mx-auto overflow-y-auto"
+          style={{ maxHeight: "80vh" }}
         >
-          <option value="">Выберите категорию</option>
-          <option value="Ноутбуки">Ноутбуки</option>
-          <option value="Камеры">Камеры</option>
-          <option value="Наушники">Наушники</option>
-          <option value="Планшеты">Планшеты</option>
-          <option value="Сотовые телефоны">Сотовые телефоны</option>
-          <option value="Аксессуары">Аксессуары</option>
-        </select>
-      </div>
-      <div className="mb-4">
-        <label htmlFor="imageURL" className="block text-sm font-medium text-gray-700">
-          URL изображения
-        </label>
-        <input
-          type="text"
-          id="imageURL"
-          name="imageURL"
-          value={formData.imageURL}
-          onChange={handleChange}
-          required
-          className="mt-1 p-2 border border-gray-300 rounded-md w-full"
-        />
-      </div>
-      <div className="flex justify-end">
-        <button
-          type="submit"
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
+          <h2 className="text-lg font-bold mb-4">Добавить товар</h2>
+          <div className="flex flex-wrap -mx-2">
+            {fields.map((field) => (
+              <div className="w-full px-2 mb-4" key={field.id}>
+                <InputField
+                  id={field.id}
+                  type={field.type}
+                  name={field.name}
+                  label={field.label}
+                  required={field.required}
+                  value={
+                    field.name.startsWith('imageURL')
+                      ? formData.imageURL[parseInt(field.name.replace('imageURL', ''), 10)]
+                      : field.name.startsWith('specifications')
+                        ? formData.specifications[field.name.split('.')[1]]
+                        : formData[field.name]
+                  }
+                  onChange={handleChange}
+                  className="mt-1 p-2 border border-gray-300 rounded-md w-full"
+                />
+              </div>
+            ))}
+          </div>
+          <div className="flex justify-end">
+            <button
+              type="submit"
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            >
           Добавить
-        </button>
-        <button
-          type="button"
-          onClick={onCancel}
-          className="ml-2 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded"
-        >
+            </button>
+            <button
+              type="button"
+              onClick={onCancel}
+              className="ml-2 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded"
+            >
           Отмена
-        </button>
+            </button>
+          </div>
+        </form>
       </div>
-    </form>
+    </div>
   );
 };
 

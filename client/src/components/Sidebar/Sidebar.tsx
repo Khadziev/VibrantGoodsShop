@@ -16,15 +16,15 @@ const Sidebar = () => {
 
   const cartItemsCount = cartData?.items.length || 0;
   const menus = [
-    { name: "панель приборов", link: "#", icon: MdOutlineDashboard },
+    // { name: "панель приборов", link: "#", icon: MdOutlineDashboard },
     { name: "пользователь", link: "#", icon: AiOutlineUser },
-    { name: "домой", link: "/", icon: AiOutlineHome },
+    { name: "главная", link: "/", icon: AiOutlineHome },
     { name: "аналитика", link: "#", icon: TbReportAnalytics, margin: true },
-    { name: "Файловый менеджер", link: "#", icon: FiFolder },
+    //{ name: "Файловый менеджер", link: "#", icon: FiFolder },
     { name: "корзина", link: "/cart", icon: FiShoppingCart },
-    { name: "сохранено", link: "#", icon: AiOutlineHeart, margin: true },
-    { name: "настройки", link: "#", icon: RiSettings4Line },
-    { name: "о сайте", link: "#", icon: HiCubeTransparent },
+    //{ name: "сохранено", link: "#", icon: AiOutlineHeart, margin: true },
+    //{ name: "настройки", link: "#", icon: RiSettings4Line },
+    //{ name: "о сайте", link: "#", icon: HiCubeTransparent },
   ];
 
   const [open, setOpen] = useState(() => {

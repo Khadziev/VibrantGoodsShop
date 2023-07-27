@@ -1,11 +1,13 @@
 import { RouteProps } from "react-router-dom"
 import RegistrationForm from "../Auth/RegistrationForm"
 import LoginForm from "../Auth/LoginForm"
-import MainPage from "../MainPage"
+import MainPage from "../Pages/mainPage/MainPage"
 import UserProductDetails from "../User/UserProductDetails"
 import { AdminPageAsync } from "../Pages/adminPage/Admin.async"
 import { UserPageAsync } from "../Pages/userPage/User.async"
 import CartComponent from "../Basket/CartComponent"
+import DiscountedProducts from "../Discounted/DiscountedProducts"
+import GetAllProducts from "../User/GetAllProducts"
 
 
 export enum AppRoutes {
@@ -17,6 +19,8 @@ export enum AppRoutes {
   USER = "/user",
   USERID = "/data/:id",
   CART = "/cart",
+  DISCOUNT="/discount",
+  DATAALL="/data/all"
 }
 
 export const RoutePatch: Record<AppRoutes, string> = {
@@ -27,6 +31,8 @@ export const RoutePatch: Record<AppRoutes, string> = {
   [AppRoutes.USER]: "/user",
   [AppRoutes.USERID]: "/data/:id",
   [AppRoutes.CART]: "/cart",
+  [AppRoutes.DISCOUNT]: "/discount",
+  [AppRoutes.DATAALL]: "/data/all"
 }
 
 export const routeConfig: Record<AppRoutes, RouteProps> = {
@@ -58,4 +64,12 @@ export const routeConfig: Record<AppRoutes, RouteProps> = {
     path: RoutePatch[AppRoutes.CART],
     element: <CartComponent/>
   },
+  [AppRoutes.DISCOUNT]: {
+    path: RoutePatch[AppRoutes.DISCOUNT],
+    element: <DiscountedProducts/>
+  },
+  [AppRoutes.DATAALL]: {
+    path: RoutePatch[AppRoutes.DATAALL],
+    element: <GetAllProducts/>
+  }
 }

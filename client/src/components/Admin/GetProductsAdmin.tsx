@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { DataAttributesApi } from "../../redux/types/types";
+import { DataAttributesApi } from "../../redux/model/types";
 import { deleteData, getData, updateData } from "../../redux/api/adminApi";
 import { RootState, AppDispatch } from "../../redux/store";
 import { ProductCard } from "./ProductCard";
 import ProductEditModal from "./ProductEditModal";
+import Scrollable from "../UI/Scrollable";
 
 const GetProductsAdmin: React.FC = () => {
   const data = useSelector<RootState, DataAttributesApi[]>((state) => state.auth.data);
@@ -35,24 +36,26 @@ const GetProductsAdmin: React.FC = () => {
   };
 
   return (
-    <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-      {data.map((product) => (
-        <ProductCard
-          key={product._id}
-          product={product}
-          onDelete={handleDelete}
-          onEdit={handleEdit}
-        />
-      ))}
+    <Scrollable>
+      <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
+        {data.map((product) => (
+          <ProductCard
+            key={product._id}
+            product={product}
+            onDelete={handleDelete}
+            onEdit={handleEdit}
+          />
+        ))}
 
-      <ProductEditModal
-        selectedProduct={selectedProduct}
-        isModalOpen={isModalOpen}
-        setSelectedProduct={setSelectedProduct}
-        setIsModalOpen={setIsModalOpen}
-        onUpdate={handleUpdate}
-      />
-    </div>
+        <ProductEditModal
+          selectedProduct={selectedProduct}
+          isModalOpen={isModalOpen}
+          setSelectedProduct={setSelectedProduct}
+          setIsModalOpen={setIsModalOpen}
+          onUpdate={handleUpdate}
+        />
+      </div>
+    </Scrollable>
   );
 };
 

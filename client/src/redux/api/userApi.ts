@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { DataAttributesApi } from '../types/types';
+import { DataAttributesApi } from '../model/types';
 import { RootState } from '../store';
 
 
@@ -29,8 +29,13 @@ export const userApi = createApi({
       }),
       providesTags: ['data'],
     }),
-
+    fetchDiscountedProducts: build.query<DataAttributesApi[], null>({
+      query: () => ({
+        url: '/discount',
+      }),
+      providesTags: ['data'],
+    }),
   }),
 });
 
-export const { useFetchAllProductsQuery, useFetchProductByIdQuery } = userApi;
+export const { useFetchAllProductsQuery, useFetchProductByIdQuery, useFetchDiscountedProductsQuery } = userApi;

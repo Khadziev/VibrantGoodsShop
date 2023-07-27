@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import AddProductForm from '../../Admin/AddProductForm';
 import { useAppSelector, AppDispatch } from '../../../redux/store';
-import { addData, getData } from '../../../redux/api/adminApi';
-import { DataAttributesApi } from '../../../redux/types/types';
+import { getData } from '../../../redux/api/adminApi';
 import GetProductsAdmin from '../../Admin/GetProductsAdmin';
 
 const Admin: React.FC = () => {
@@ -18,11 +17,6 @@ const Admin: React.FC = () => {
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
-  };
-
-  const handleAddData = (formData: DataAttributesApi) => {
-    dispatch(addData({ data: formData }));
-    handleCloseModal();
   };
 
   const handleShowProductList = () => {
@@ -41,13 +35,13 @@ const Admin: React.FC = () => {
           onClick={handleOpenModal}
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
         >
-          Добавить товар
+          Добавить данные
         </button>
         <button
           onClick={handleShowProductList}
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
         >
-          Список товаров
+          Список данных
         </button>
       </div>
       {isProductListVisible && (
@@ -58,7 +52,7 @@ const Admin: React.FC = () => {
       {isModalOpen && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white rounded-lg p-6">
-            <AddProductForm onSubmit={handleAddData} onCancel={handleCloseModal} />
+            <AddProductForm onCancel={handleCloseModal} />
           </div>
         </div>
       )}

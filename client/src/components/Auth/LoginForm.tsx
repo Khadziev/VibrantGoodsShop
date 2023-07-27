@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAppSelector, useAppDispatch } from '../../redux/store';
 import { login } from '../../redux/auth/authActions';
 import { setToken } from '../../redux/auth/authSlice';
-import { UserRole } from '../../redux/types/types';
+import { UserRole } from '../../redux/model/types';
 
 const LoginForm = () => {
   const [loginValue, setLoginValue] = useState('');
