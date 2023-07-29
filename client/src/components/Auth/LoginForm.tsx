@@ -49,7 +49,7 @@ const LoginForm = () => {
 
       navigate('/');
     } catch (error) {
-      setError(`неправильный логин: ${(error as Error).message.toString()}`);
+      setError(`Неверный логин или пароль`);
     }
   };
 

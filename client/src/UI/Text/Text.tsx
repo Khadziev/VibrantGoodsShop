@@ -3,7 +3,7 @@ import React from 'react';
 interface TextProps {
   text: string;
   size?: 'sm' | 'md' | 'lg' | 'xl';
-  color?: 'blue' | 'green' | 'white';
+  color?: 'blue' | 'green' | 'white' | 'black';
   align?: 'left' | 'center' | 'right';
   isBlinking?: boolean;
 }
@@ -39,6 +39,9 @@ const Text: React.FC<TextProps> = ({ text, size = 'md', color, align = 'left', i
     break;
   case 'white':
     textColorClass = 'text-white';
+    break;
+  case 'black':
+    textColorClass = 'text-black';
     break;
   default:
     break;

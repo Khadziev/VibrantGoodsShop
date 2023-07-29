@@ -1,0 +1,9 @@
+.background-image {
+    background-image: url('https://img.freepik.com/premium-photo/stack-of-electronic-devices-isolated-on-a-white-background_392895-366087.jpg?w=996');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Установите высоту и ширину в соответствии с вашими требованиями */
+    height: 100vh; /* Полная высота экрана */
+    width: 100vw; /* Полная ширина экрана */
+  }
+  

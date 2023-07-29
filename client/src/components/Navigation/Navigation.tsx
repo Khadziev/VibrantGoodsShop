@@ -14,15 +14,15 @@ const Navigation = () => {
     <nav className="flex justify-center p-4 text-black">
       <Link to="/" className="mx-4 focus:outline-none text-center">
         <div><MdHome size={32} className="m-auto"/></div>
-        <Button text='Главная'/>
+        <Button text='Главная' color='black'/>
       </Link>
       <Link to="/data/all" className="mx-4 focus:outline-none text-center">
         <div><MdViewList size={32} className="m-auto"/></div>
-        <Button text='Все товары' />
+        <Button text='Все товары' color='black' />
       </Link>
       <Link to="/cart" className="mx-4 focus:outline-none text-center relative">
         <div><MdShoppingCart size={32} className="m-auto"/></div>
-        <Button text='Корзина'/>
+        <Button text='Корзина' color='black'/>
         {cartItemsCount > 0 &&
           <div className="absolute top-0 right-0 bg-red-500 rounded-full text-white text-sm w-5 h-5 flex items-center justify-center">
             {cartItemsCount}

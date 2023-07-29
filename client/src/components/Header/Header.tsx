@@ -6,6 +6,7 @@ import LoginForm from '../Auth/LoginForm';
 import { logout } from '../../apiServices/auth/authActions';
 import { setToken } from '../../apiServices/auth/authSlice';
 import Button from '../../UI/Button/Button';
+import Text from '../../UI/Text/Text';
 
 const Header: React.FC = memo(() => {
   const dispatch = useDispatch<AppDispatch>();
@@ -36,17 +37,17 @@ const Header: React.FC = memo(() => {
 
   return (
     <div>
-      <nav className="flex items-center justify-between flex-wrap bg-blue-500 p-6">
+      <nav className="flex items-center justify-between flex-wrap bg-transparent p-6">
         {user && (
           <div className="flex items-center flex-shrink-0 text-white mr-6">
             <Link to="/" className="font-semibold text-xl tracking-tight">
-              VibrantGoods
+              <Text text='VibrantGoods' color='black'/>
             </Link>
           </div>
         )}
         <div>
           {user && (
-            <Button text="Выйти" onClick={handleLogout} />
+            <Button text="Выйти" color='black' onClick={handleLogout} />
           )}
         </div>
       </nav>
