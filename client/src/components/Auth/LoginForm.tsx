@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAppSelector, useAppDispatch } from '../../redux/store';
-import { login } from '../../redux/auth/authActions';
-import { setToken } from '../../redux/auth/authSlice';
-import { UserRole } from '../../redux/model/types';
+import { useAppSelector, useAppDispatch } from '../../app/providers/store';
+import { login } from '../../apiServices/auth/authActions';
+import { setToken } from '../../apiServices/auth/authSlice';
+import { UserRole } from '../../apiServices/model/types';
 
 const LoginForm = () => {
   const [loginValue, setLoginValue] = useState('');

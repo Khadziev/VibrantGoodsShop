@@ -1,14 +1,14 @@
 import React from 'react';
-import { useFetchAllProductsQuery } from '../../redux/api/userApi';
-import { DataAttributesApi } from '../../redux/model/types';
-import Loading from '../CommonComponents/Loading';
-import ProductItem from './ProductItem';
+import { useFetchAllProductsQuery } from '../../apiServices/api/userApi';
+import { DataAttributesApi } from '../../apiServices/model/types';
+import ProductItem from '../Data/ProductItem';
 import AddToCartComponent from '../Basket/AddToCartComponent';
-import Slider from '../carousel/Slider';
 import DiscountedProducts from '../Discounted/DiscountedProducts';
 import { sliderContent } from '../../mock/Slider'
 import { Link } from 'react-router-dom';
 import Navigation from '../Navigation/Navigation';
+import Slider from '../../widgets/carousel/Slider';
+import Loading from '../../UI/Loading/Loading';
 
 
 const UserGetData: React.FC = () => {

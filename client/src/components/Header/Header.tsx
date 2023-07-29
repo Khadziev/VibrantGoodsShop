@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { memo, useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { AppDispatch, useAppSelector } from '../../redux/store';
+import { AppDispatch, useAppSelector } from '../../app/providers/store';
 import LoginForm from '../Auth/LoginForm';
-import { logout } from '../../redux/auth/authActions';
-import { setToken } from '../../redux/auth/authSlice';
+import { logout } from '../../apiServices/auth/authActions';
+import { setToken } from '../../apiServices/auth/authSlice';
+import Button from '../../UI/Button/Button';
 
-const Header: React.FC = () => {
+const Header: React.FC = memo(() => {
   const dispatch = useDispatch<AppDispatch>();
   const user = useAppSelector((state) => state.auth.token);
   const location = useLocation();
@@ -45,18 +46,13 @@ const Header: React.FC = () => {
         )}
         <div>
           {user && (
-            <button
-              onClick={handleLogout}
-              className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-blue-500 hover:bg-white mt-4 lg:mt-0"
-            >
-              Выйти
-            </button>
+            <Button text="Выйти" onClick={handleLogout} />
           )}
         </div>
       </nav>
       {showLoginForm && <LoginForm />}
     </div>
   );
-};
+});
 
 export default Header;

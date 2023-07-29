@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { AppDispatch } from '../../redux/store';
-import { addData, getData } from '../../redux/api/adminApi';
-import { DataAttributesApi } from '../../redux/model/types';
-import { InputField, fields } from '../../hooks/InputField';
-import { initialFormData } from '../../redux/model/FormTypes';
+import { AppDispatch } from '../../app/providers/store';
+import { addData, getData } from '../../apiServices/api/adminApi';
+import { DataAttributesApi } from '../../apiServices/model/types';
+import { InputField, fields } from '../../apiServices/model/InputField';
+import { initialFormData } from '../../apiServices/model/FormTypes';
 
 
 interface AddProductFormProps {

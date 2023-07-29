@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { DataAttributesApi } from '../../redux/model/types';
-import { useAddToCartMutation, useGetCartByUserIdQuery } from '../../redux/api/apiCart';
-import { useAppSelector } from '../../redux/store';
-import { FaShoppingCart } from 'react-icons/fa';
+import { DataAttributesApi } from '../../apiServices/model/types';
+import { useAddToCartMutation, useGetCartByUserIdQuery } from '../../apiServices/api/apiCart';
+import { useAppSelector } from '../../app/providers/store';
+import { MdShoppingCart } from 'react-icons/md';
 
 
 
@@ -49,9 +49,9 @@ const AddToCartComponent: React.FC<AddToCartComponentProps> = ({ product }) => {
   };
 
   return (
-    <div>
+    <div className="border border-black rounded-full p-1 inline-flex items-center justify-center mt-4">
       <button onClick={handleAddToCart} disabled={isLoading || isInCart} >
-        {isLoading ? 'Добавление...' : isInCart ? 'добавлено' : <FaShoppingCart/>}
+        {isLoading ? 'Добавление...' : isInCart ? 'добавлено' : <MdShoppingCart size={30} />}
       </button>
       {isError && <p>Произошла ошибка при добавлении в корзину</p>}
     </div>

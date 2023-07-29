@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { DataAttributesApi } from '../../redux/model/types';
+import { DataAttributesApi } from '../../apiServices/model/types';
 
 export const useProductData = (data: DataAttributesApi[]) => {
   const [selectedField, setSelectedField] = useState('');

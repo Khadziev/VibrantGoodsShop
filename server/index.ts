@@ -9,6 +9,7 @@ import fs from 'fs';
 import usersRoute from './routes/users.route';
 import dataRoute from './routes/data.route';
 import userCart from './routes/cart.route';
+import reviewRoute from './routes/review.route';
 
 
 const app = express();
@@ -21,6 +22,7 @@ const baseApiUrl = '/api';
 app.use(baseApiUrl, usersRoute);
 app.use(baseApiUrl, dataRoute);
 app.use(baseApiUrl, userCart);
+app.use(baseApiUrl, reviewRoute)
 
 const clientDistPath = path.resolve(__dirname, "..", "..", "client", "dist");
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { DataAttributesApi } from "../../redux/model/types";
+import { DataAttributesApi } from "../../apiServices/model/types";
 import { AiOutlineDelete } from 'react-icons/ai';
 import { BsPencil } from 'react-icons/bs';
 import { NavLink } from "react-router-dom";

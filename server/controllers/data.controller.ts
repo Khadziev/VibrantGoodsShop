@@ -75,5 +75,20 @@ const updateData = (req: Request, res: Response) => {
     });
 };
 
+const getSimilarData = async (req: Request, res: Response) => {
+  const { id } = req.params;
+  
+  const data = await Data.findById(id);
+  
+  if (!data) {
+    return res.status(404).json({ error: 'Данные не найдены' });
+  }
 
-export { getAllData, addData, deleteData, updateData, getDataById, getDiscountedData };
+  const similarData = await Data.find({ category: data.category, _id: { $ne: id } }).limit(10);
+  
+  res.json(similarData);
+};
+
+
+
+export { getAllData, addData, deleteData, updateData, getDataById, getDiscountedData, getSimilarData };

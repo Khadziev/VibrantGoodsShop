@@ -1,17 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import store from './redux/store';
-import App from './App.tsx';
-import './styles/index.css';
+import store from './app/providers/store.ts';
+import App from './app/App.tsx';
+import './app/styles/index.css';
 import { BrowserRouter } from 'react-router-dom';
+import ErrorBoundary from './pages/ErrorBoundary/ErrorBoundary.tsx';
 
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
-        <App />
+        <ErrorBoundary>
+          <App />
+        </ErrorBoundary>
       </BrowserRouter>
     </Provider>
   </React.StrictMode>,

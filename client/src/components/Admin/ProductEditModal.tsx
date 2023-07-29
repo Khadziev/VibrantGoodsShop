@@ -1,6 +1,6 @@
 import React from "react";
-import { DataAttributesApi } from "../../redux/model/types";
-import { generalFields, specificationFields } from "../../hooks/InputField";
+import { DataAttributesApi } from "../../apiServices/model/types";
+import { generalFields, specificationFields } from "../../apiServices/model/InputField";
 
 type ProductEditModalProps = {
   selectedProduct: DataAttributesApi | null;

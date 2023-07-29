@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { DataAttributesApi } from "../../redux/model/types";
-import { deleteData, getData, updateData } from "../../redux/api/adminApi";
-import { RootState, AppDispatch } from "../../redux/store";
+import { DataAttributesApi } from "../../apiServices/model/types";
+import { deleteData, getData, updateData } from "../../apiServices/api/adminApi";
+import { RootState, AppDispatch } from "../../app/providers/store";
 import { ProductCard } from "./ProductCard";
 import ProductEditModal from "./ProductEditModal";
-import Scrollable from "../UI/Scrollable";
+import Scrollable from "../../UI/Scroll/Scrollable";
 
 const GetProductsAdmin: React.FC = () => {
   const data = useSelector<RootState, DataAttributesApi[]>((state) => state.auth.data);

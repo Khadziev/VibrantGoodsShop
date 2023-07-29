@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
-import { useGetCartByUserIdQuery } from '../../redux/api/apiCart';
-import { useAppSelector } from '../../redux/store';
+import { useGetCartByUserIdQuery } from '../../apiServices/api/apiCart';
+import { useAppSelector } from '../../app/providers/store';
 import CartItemsList from './CartItemsList';
-import Loading from '../CommonComponents/Loading';
+import Loading2 from '../../UI/Loading/Loading2';
+
 
 const CartComponent: React.FC = () => {
   const userId = useAppSelector((state) => state.auth.userId);
@@ -14,7 +15,7 @@ const CartComponent: React.FC = () => {
   }, [userId]);
 
   if (isLoading) {
-    return <div className="flex justify-center items-center h-screen"><Loading/></div>;
+    return <div className="flex justify-center items-center h-screen"><Loading2/></div>;
   }
 
   if (isError) {

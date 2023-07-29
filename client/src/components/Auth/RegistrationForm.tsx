@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAppDispatch, useAppSelector } from '../../redux/store';
-import { register } from '../../redux/auth/authActions';
-import { UserRole } from '../../redux/model/types';
+import { useAppDispatch, useAppSelector } from '../../app/providers/store';
+import { register } from '../../apiServices/auth/authActions';
+import { UserRole } from '../../apiServices/model/types';
 
 
 const RegistrationForm = () => {

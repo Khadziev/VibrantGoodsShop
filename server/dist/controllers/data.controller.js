@@ -1,4 +1,13 @@
 "use strict";
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 var __rest = (this && this.__rest) || function (s, e) {
     var t = {};
     for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
@@ -14,7 +23,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getDiscountedData = exports.getDataById = exports.updateData = exports.deleteData = exports.addData = exports.getAllData = void 0;
+exports.getSimilarData = exports.getDiscountedData = exports.getDataById = exports.updateData = exports.deleteData = exports.addData = exports.getAllData = void 0;
 const Data_model_1 = __importDefault(require("../model/Data.model"));
 const getAllData = (req, res) => {
     Data_model_1.default.find()
@@ -89,3 +98,13 @@ const updateData = (req, res) => {
     });
 };
 exports.updateData = updateData;
+const getSimilarData = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const { id } = req.params;
+    const data = yield Data_model_1.default.findById(id);
+    if (!data) {
+        return res.status(404).json({ error: 'Данные не найдены' });
+    }
+    const similarData = yield Data_model_1.default.find({ category: data.category, _id: { $ne: id } }).limit(10);
+    res.json(similarData);
+});
+exports.getSimilarData = getSimilarData;
