@@ -40,6 +40,20 @@ exports.usersController = {
             res.status(500).json({ error: 'Ошибка при получении пользователей' });
         }
     }),
+    getUserById: (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+        try {
+            const id = req.params.id;
+            const user = yield User_model_1.default.findById(id);
+            if (!user) {
+                return res.status(404).json({ error: 'Пользователь не найден' });
+            }
+            const userResponse = Object.assign(Object.assign({}, user.toObject()), { password: undefined });
+            res.json(userResponse);
+        }
+        catch (error) {
+            res.status(500).json({ error: 'Ошибка при получении пользователя' });
+        }
+    }),
     registerUser: (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         try {
             const { login, password, name } = req.body;
@@ -73,6 +87,39 @@ exports.usersController = {
         }
         catch (error) {
             res.status(500).json({ error: 'Ошибка при входе: ' + error.toString() });
+        }
+    }),
+    updateUser: (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+        const userId = req.params.id;
+        const dataToUpdate = req.body;
+        try {
+            const user = yield User_model_1.default.findByIdAndUpdate(userId, dataToUpdate, { new: true }); // new: true returns the updated user
+            if (user) {
+                res.json(user);
+            }
+            else {
+                res.status(404).send('User not found');
+            }
+        }
+        catch (error) {
+            console.log("Error while updating user: ", error); // added console.log
+            res.status(500).json({ error: 'An error occurred while updating the user: ' + error.toString() });
+        }
+    }),
+    deleteUser: (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+        const userId = req.params.id;
+        try {
+            const user = yield User_model_1.default.findByIdAndDelete(userId);
+            if (user) {
+                res.json({ message: 'User deleted successfully' });
+            }
+            else {
+                res.status(404).send('User not found');
+            }
+        }
+        catch (error) {
+            console.log("Error while deleting user: ", error); // added console.log
+            res.status(500).json({ error: 'An error occurred while deleting the user: ' + error.toString() });
         }
     }),
 };

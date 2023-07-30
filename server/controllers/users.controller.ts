@@ -30,7 +30,20 @@ export const usersController = {
       res.status(500).json({ error: 'Ошибка при получении пользователей' });
     }
   },
-
+  getUserById: async (req: Request, res: Response) => {
+    try {
+      const id = req.params.id;
+      const user = await User.findById(id);
+      if (!user) {
+        return res.status(404).json({ error: 'Пользователь не найден' });
+      }
+      const userResponse = { ...user.toObject(), password: undefined };
+      res.json(userResponse);
+    } catch (error: any) {
+      res.status(500).json({ error: 'Ошибка при получении пользователя' });
+    }
+  },
+  
   registerUser: async (req: Request, res: Response) => {
     try {
       const { login, password, name } = req.body;
@@ -73,4 +86,39 @@ export const usersController = {
       res.status(500).json({ error: 'Ошибка при входе: ' + error.toString() });
     }
   },
+
+  updateUser: async (req: Request, res: Response) => {
+    const userId = req.params.id;
+    const dataToUpdate = req.body;
+  
+    try {
+      const user = await User.findByIdAndUpdate(userId, dataToUpdate, { new: true }); 
+      if (user) {
+        res.json(user);
+      } else {
+        res.status(404).send('Пользователь не найден');
+      }
+    } catch (error: any) {
+      console.log("Ошибка при обновлении пользователя: ", error); 
+      res.status(500).json({ error: 'Произошла ошибка при обновлении пользователя: ' + error.toString() });
+    }
+  },
+  
+  deleteUser: async (req: Request, res: Response) => {
+    const userId = req.params.id;
+  
+    try {
+      const user = await User.findByIdAndDelete(userId);
+      if (user) {
+        res.json({ message: 'Пользователь успешно удален' });
+      } else {
+        res.status(404).send('Пользователь не найден');
+      }
+    } catch (error: any) {
+      console.log("Ошибка при удалении пользователя: ", error); 
+      res.status(500).json({ error: 'Произошла ошибка при удалении пользователя: ' + error.toString() });
+    }
+  },
+  
+
 };

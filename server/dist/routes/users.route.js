@@ -2,8 +2,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
 const users_controller_1 = require("../controllers/users.controller");
+const verifyTokenMiddleware_1 = require("../middlewares/verifyTokenMiddleware");
 const router = (0, express_1.Router)();
-router.get('/users', users_controller_1.usersController.getAllUsers);
+router.get('/users', verifyTokenMiddleware_1.verifyTokenMiddleware, users_controller_1.usersController.getAllUsers);
+router.get('/users/:id', verifyTokenMiddleware_1.verifyTokenMiddleware, users_controller_1.usersController.getUserById);
 router.post('/registration', users_controller_1.usersController.registerUser);
 router.post('/login', users_controller_1.usersController.login);
+router.put('/users/:id', verifyTokenMiddleware_1.verifyTokenMiddleware, users_controller_1.usersController.updateUser);
+router.delete('/users/:id', verifyTokenMiddleware_1.verifyTokenMiddleware, users_controller_1.usersController.deleteUser);
 exports.default = router;

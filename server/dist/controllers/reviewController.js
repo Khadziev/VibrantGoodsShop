@@ -19,9 +19,7 @@ const User_model_1 = __importDefault(require("../model/User.model"));
 const getReviews = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const { productId } = req.params;
-        // Найти все отзывы для данного продукта
         const reviews = yield Review_model_1.default.find({ productId });
-        // Для каждого отзыва выполнить запрос, чтобы найти имя пользователя
         const reviewData = yield Promise.all(reviews.map((review) => __awaiter(void 0, void 0, void 0, function* () {
             const user = yield User_model_1.default.findById(review.userId);
             return Object.assign(Object.assign({}, review.toObject()), { userName: (user === null || user === void 0 ? void 0 : user.name) || "" });
@@ -34,7 +32,7 @@ const getReviews = (req, res) => __awaiter(void 0, void 0, void 0, function* () 
             res.status(500).json({ error: error.toString() });
         }
         else {
-            res.status(500).json({ error: 'An unknown error occurred.' });
+            res.status(500).json({ error: 'Произошла неизвестная ошибка.' });
         }
     }
 });
@@ -45,7 +43,6 @@ const createReview = (req, res) => __awaiter(void 0, void 0, void 0, function* (
         const { productId } = req.params;
         const { rating, text } = req.body;
         const userId = (_a = req.user) === null || _a === void 0 ? void 0 : _a._id;
-        // Создать новый отзыв
         const review = new Review_model_1.default({
             userId,
             productId,
@@ -53,7 +50,6 @@ const createReview = (req, res) => __awaiter(void 0, void 0, void 0, function* (
             text,
         });
         yield review.save();
-        // Обновить рейтинг продукта
         const reviews = yield Review_model_1.default.find({ productId });
         const newRating = reviews.reduce((sum, review) => sum + review.rating, 0) / reviews.length;
         yield Data_model_1.default.updateOne({ _id: productId }, { rating: newRating });
@@ -61,11 +57,11 @@ const createReview = (req, res) => __awaiter(void 0, void 0, void 0, function* (
     }
     catch (error) {
         if (error instanceof Error) {
-            console.error(error); // Вывод ошибки в консоль
+            console.error(error);
             res.status(500).json({ error: error.toString() });
         }
         else {
-            res.status(500).json({ error: 'An unknown error occurred.' });
+            res.status(500).json({ error: 'Произошла неизвестная ошибка.' });
         }
     }
 });
