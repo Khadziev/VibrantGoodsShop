@@ -1,16 +1,17 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { register, login, logout } from './authActions';
+import { register, login, logout, loadUser, deleteUser, updateUser } from './authActions';
 import { AuthState, DataAttributesApi, UserRole } from '../model/types';
-import { deleteData, getData, updateData } from '../api/adminApi';
 
 
 const initialToken = localStorage.getItem('token');
 const initialUserId = localStorage.getItem('userId')
+const initialUser = JSON.parse(localStorage.getItem('user') || 'null');
+
 
 const authSlice = createSlice({
   name: 'auth',
   initialState: {
-    user: null,
+    user: initialUser,
     loading: false,
     error: null,
     token: initialToken || null,
@@ -50,12 +51,11 @@ const authSlice = createSlice({
         state.loading = true;
         state.error = null;
       })
-      .addCase(register.fulfilled, (state, action) => {
-        state.user = action.payload;
+      .addCase(register.fulfilled, (state) => {
         state.loading = false;
         state.error = null;
-        state.userId = action.payload.userId;
       })
+
       .addCase(register.rejected, (state) => {
         state.loading = false;
       })
@@ -88,42 +88,58 @@ const authSlice = createSlice({
         localStorage.removeItem('token');
         state.token = null;
         state.userId = null;
+        localStorage.removeItem('user');
       })
       .addCase(logout.rejected, (state) => {
         state.loading = false;
       })
-      .addCase(getData.pending, (state) => {
-        state.loading = true;
-        state.error = null;
-      })
-      .addCase(getData.fulfilled, (state, action) => {
-        state.data = action.payload;
-        state.loading = false;
-        state.error = null;
-      })
 
-      .addCase(getData.rejected, (state) => {
-        state.loading = false;
-      })
-      .addCase(deleteData.fulfilled, (state, action) => {
-        const id = String(action.payload);
-        state.data = state.data.filter((product) => product._id !== id);
-      })
-      .addCase(updateData.pending, (state) => {
+      .addCase(loadUser.pending, (state) => {
         state.loading = true;
         state.error = null;
       })
-      .addCase(updateData.fulfilled, (state, action) => {
+      .addCase(loadUser.fulfilled, (state, action) => {
+        state.user = action.payload;
         state.loading = false;
         state.error = null;
-        const updatedData = action.payload;
-        const index = state.data.findIndex((item) => item._id === updatedData._id);
-        if (index !== -1) {
-          state.data[index] = updatedData;
-        }
+        localStorage.setItem('user', JSON.stringify(action.payload));
+
       })
-      .addCase(updateData.rejected, (state) => {
+      .addCase(loadUser.rejected, (state, action) => {
         state.loading = false;
+        state.error = action.error.message;
+      })
+      .addCase(updateUser.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(updateUser.fulfilled, (state, action) => {
+        state.user = action.payload;
+        state.loading = false;
+        state.error = null;
+        localStorage.setItem('user', JSON.stringify(action.payload));
+
+      })
+      .addCase(updateUser.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.error.message;
+      })
+      .addCase(deleteUser.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(deleteUser.fulfilled, (state) => {
+        state.user = null;
+        state.loading = false;
+        state.error = null;
+        state.token = null;
+        state.userId = null;
+        // удалить данные пользователя из localStorage
+        localStorage.removeItem('user');
+      })
+      .addCase(deleteUser.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.error.message;
       });
 
   },
@@ -131,5 +147,4 @@ const authSlice = createSlice({
 
 export const { clearUserData, setToken, setRole, updateDataSuccess } = authSlice.actions;
 export default authSlice.reducer;
-
 

@@ -9,6 +9,7 @@ export interface UserAttributes {
   password: string;
   role: UserRole;
   userId?: string;
+  token?: string;
 }
 
 export interface LoginData {
@@ -17,6 +18,7 @@ export interface LoginData {
   role: UserRole;
   userId: string;
 }
+
 
 export interface AuthState {
   data: DataAttributesApi[];
@@ -49,7 +51,13 @@ export interface DataAttributesApi {
   specifications: Specifications;
 }
 
-
+// удаления изменения
+export interface UserUpdateAttributes {
+  name?: string;
+  login?: string;
+  password?: string;
+  userId?: string
+}
 
 // карзина
 export interface CartItem {

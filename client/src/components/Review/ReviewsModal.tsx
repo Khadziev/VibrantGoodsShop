@@ -20,7 +20,7 @@ const ReviewsModal: React.FC<ReviewsModalProps> = memo(({ productId, isOpen, onC
 
   return (
     <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50" onClick={handleClose}>
-      <div className="bg-white rounded p-8">
+      <div className="bg-white rounded p-8 w-1/2 h-1/2 overflow-auto max-h-full">
         <button onClick={onClose} className="float-right">X</button>
         <Reviews productId={productId} />
       </div>

@@ -1,25 +1,21 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useState } from "react";
 import { DataAttributesApi } from "../../apiServices/model/types";
-import { deleteData, getData, updateData } from "../../apiServices/api/adminApi";
-import { RootState, AppDispatch } from "../../app/providers/store";
 import { ProductCard } from "./ProductCard";
 import ProductEditModal from "./ProductEditModal";
 import Scrollable from "../../UI/Scroll/Scrollable";
+import { useGetDataQuery, useDeleteDataMutation, useUpdateDataMutation } from "../../apiServices/api/adminApi";
 
 const GetProductsAdmin: React.FC = () => {
-  const data = useSelector<RootState, DataAttributesApi[]>((state) => state.auth.data);
-  const dispatch = useDispatch<AppDispatch>();
+  const { data = [], refetch } = useGetDataQuery();
+  const [deleteData] = useDeleteDataMutation();
+  const [updateData] = useUpdateDataMutation();
 
   const [selectedProduct, setSelectedProduct] = useState<DataAttributesApi | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  useEffect(() => {
-    dispatch(getData());
-  }, [dispatch]);
-
-  const handleDelete = (id: string) => {
-    dispatch(deleteData(id));
+  const handleDelete = async (id: string) => {
+    await deleteData(id);
+    refetch();
   };
 
   const handleEdit = (product: DataAttributesApi) => {
@@ -29,8 +25,8 @@ const GetProductsAdmin: React.FC = () => {
 
   const handleUpdate = async (updatedData: DataAttributesApi) => {
     if (selectedProduct) {
-      await dispatch(updateData({ id: selectedProduct._id || '', newData: updatedData }));
-      dispatch(getData());
+      await updateData({ id: selectedProduct._id || '', newData: updatedData });
+      refetch();
     }
     setIsModalOpen(false);
   };

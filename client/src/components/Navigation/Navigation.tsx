@@ -3,6 +3,7 @@ import { MdHome, MdShoppingCart, MdViewList } from 'react-icons/md';
 import { useGetCartByUserIdQuery } from '../../apiServices/api/apiCart';
 import { useAppSelector } from '../../app/providers/store';
 import Button from '../../UI/Button/Button';
+import { CgProfile } from 'react-icons/cg'
 
 const Navigation = () => {
   const userId = useAppSelector((state) => state.auth.userId);
@@ -28,6 +29,10 @@ const Navigation = () => {
             {cartItemsCount}
           </div>
         }
+      </Link>
+      <Link to="/users/:id" className="mx-4 focus:outline-none text-center">
+        <div><CgProfile size={32} className="m-auto"/></div>
+        <Button text='Профиль' color='black' />
       </Link>
     </nav>
   );

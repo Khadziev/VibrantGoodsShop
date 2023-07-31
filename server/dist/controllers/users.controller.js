@@ -93,17 +93,17 @@ exports.usersController = {
         const userId = req.params.id;
         const dataToUpdate = req.body;
         try {
-            const user = yield User_model_1.default.findByIdAndUpdate(userId, dataToUpdate, { new: true }); // new: true returns the updated user
+            const user = yield User_model_1.default.findByIdAndUpdate(userId, dataToUpdate, { new: true });
             if (user) {
                 res.json(user);
             }
             else {
-                res.status(404).send('User not found');
+                res.status(404).send('Пользователь не найден');
             }
         }
         catch (error) {
-            console.log("Error while updating user: ", error); // added console.log
-            res.status(500).json({ error: 'An error occurred while updating the user: ' + error.toString() });
+            console.log("Ошибка при обновлении пользователя: ", error);
+            res.status(500).json({ error: 'Произошла ошибка при обновлении пользователя: ' + error.toString() });
         }
     }),
     deleteUser: (req, res) => __awaiter(void 0, void 0, void 0, function* () {
@@ -111,15 +111,15 @@ exports.usersController = {
         try {
             const user = yield User_model_1.default.findByIdAndDelete(userId);
             if (user) {
-                res.json({ message: 'User deleted successfully' });
+                res.json({ message: 'Пользователь успешно удален' });
             }
             else {
-                res.status(404).send('User not found');
+                res.status(404).send('Пользователь не найден');
             }
         }
         catch (error) {
-            console.log("Error while deleting user: ", error); // added console.log
-            res.status(500).json({ error: 'An error occurred while deleting the user: ' + error.toString() });
+            console.log("Ошибка при удалении пользователя: ", error);
+            res.status(500).json({ error: 'Произошла ошибка при удалении пользователя: ' + error.toString() });
         }
     }),
 };

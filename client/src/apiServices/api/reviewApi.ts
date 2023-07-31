@@ -1,9 +1,11 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { RootState } from '../../app/providers/store';
 
+
+
 export interface ReviewAttributes {
     userId: string;
-    userName: string; // добавить новое поле userName здесь
+    userName: string;
     rating: number;
     text: string;
 }
@@ -31,16 +33,19 @@ export const reviewApi = createApi({
       return headers;
     },
   }),
+  tagTypes: ['Reviews'],
   endpoints: (builder) => ({
     createReview: builder.mutation<void, ReviewRequest>({
       query: ({ productId, review }) => ({
         url: `/data/${productId}/reviews`,
         method: 'POST',
         body: review
-      })
+      }),
+      invalidatesTags: [{ type: 'Reviews', id: 'LIST' }],
     }),
     getReviews: builder.query<ReviewResponse[], string>({
       query: (productId) => `/data/${productId}/reviews`,
+      providesTags: [{ type: 'Reviews', id: 'LIST' }],
     }),
   })
 });

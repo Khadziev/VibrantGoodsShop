@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { AppDispatch } from '../../app/providers/store';
-import { addData, getData } from '../../apiServices/api/adminApi';
 import { DataAttributesApi } from '../../apiServices/model/types';
 import { InputField, fields } from '../../apiServices/model/InputField';
 import { initialFormData } from '../../apiServices/model/FormTypes';
+import { useAddDataMutation } from '../../apiServices/api/adminApi';
 
 
 interface AddProductFormProps {
@@ -13,7 +11,7 @@ interface AddProductFormProps {
 
 const AddProductForm: React.FC<AddProductFormProps> = ({ onCancel }) => {
   const [formData, setFormData] = useState<DataAttributesApi>(initialFormData);
-  const dispatch = useDispatch<AppDispatch>();
+  const [addData] = useAddDataMutation();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     if (e.target.name.startsWith('imageURL')) {
@@ -43,8 +41,7 @@ const AddProductForm: React.FC<AddProductFormProps> = ({ onCancel }) => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      await dispatch(addData({ data: formData })).unwrap();
-      dispatch(getData());
+      await addData(formData).unwrap();
       setFormData(initialFormData);
     } catch (error) {
       console.log('Ошибка при добавлении данных', error);
@@ -59,16 +56,12 @@ const AddProductForm: React.FC<AddProductFormProps> = ({ onCancel }) => {
 
   return (
     <div className="fixed inset-0" onClick={handleOutsideClick}>
-      <div className="w-full max-w-xl mx-auto overflow-y-auto bg-white" style={{ maxHeight: "80vh" }}>
-        <form
-          onSubmit={handleSubmit}
-          className="w-full max-w-xl mx-auto overflow-y-auto"
-          style={{ maxHeight: "80vh" }}
-        >
+      <div className="w-11/12 h-5/6 mx-auto mt-10 p-4 overflow-y-auto bg-white rounded-lg">
+        <form onSubmit={handleSubmit}>
           <h2 className="text-lg font-bold mb-4">Добавить товар</h2>
           <div className="flex flex-wrap -mx-2">
             {fields.map((field) => (
-              <div className="w-full px-2 mb-4" key={field.id}>
+              <div className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 px-2 mb-4" key={field.id}>
                 <InputField
                   id={field.id}
                   type={field.type}
@@ -93,14 +86,14 @@ const AddProductForm: React.FC<AddProductFormProps> = ({ onCancel }) => {
               type="submit"
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             >
-          Добавить
+              Добавить
             </button>
             <button
               type="button"
               onClick={onCancel}
               className="ml-2 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded"
             >
-          Отмена
+              Отмена
             </button>
           </div>
         </form>

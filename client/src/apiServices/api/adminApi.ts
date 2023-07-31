@@ -1,84 +1,44 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import { RootState } from "../../app/providers/store";
 import { DataAttributesApi } from "../model/types";
 
-
-
-export const getData = createAsyncThunk<DataAttributesApi[], void>(
-  'auth/getData',
-  async (_, { getState, rejectWithValue }) => {
-    try {
+export const AdminApi = createApi({
+  reducerPath: 'api',
+  baseQuery: fetchBaseQuery({
+    baseUrl: '/api',
+    prepareHeaders: (headers, { getState }) => {
       const token = (getState() as RootState).auth.token;
-      const response = await axios.get<DataAttributesApi[]>('/api/data', {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
-      return response.data;
-    } catch (error) {
-      if (axios.isAxiosError(error)) {
-        return rejectWithValue(error.response?.data);
-      } else {
-        return rejectWithValue(error);
+      if (token) {
+        headers.set('authorization', `Bearer ${token}`);
       }
-    }
-  }
-);
+      return headers;
+    },
+  }),
+  endpoints: (builder) => ({
+    getData: builder.query<DataAttributesApi[], void>({
+      query: () => '/data',
+    }),
+    addData: builder.mutation<DataAttributesApi, DataAttributesApi>({
+      query: (newData) => ({
+        url: '/data',
+        method: 'POST',
+        body: newData,
+      }),
+    }),
+    deleteData: builder.mutation<void, string>({
+      query: (id) => ({
+        url: `/data/${id}`,
+        method: 'DELETE',
+      }),
+    }),
+    updateData: builder.mutation<DataAttributesApi, { id: string; newData: DataAttributesApi }>({
+      query: ({ id, newData }) => ({
+        url: `/data/${id}`,
+        method: 'PUT',
+        body: newData,
+      }),
+    }),
+  }),
+})
 
-
-export const addData = createAsyncThunk(
-  'data/addData',
-  async (data: { data: DataAttributesApi }, { getState }) => {
-    try {
-      const token = (getState() as RootState).auth.token;
-      const response = await axios.post('/api/data', data.data, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
-      return response.data;
-    } catch (error) {
-      console.error("Error details:", error);
-      throw new Error('Ошибка при добавлении данных');
-    }
-  }
-);
-
-
-
-export const deleteData = createAsyncThunk(
-  'data/deleteData',
-  async (id: string, { getState }) => {
-    try {
-      const token = (getState() as RootState).auth.token;
-      await axios.delete(`/api/data/${id}`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
-      return id;
-    } catch (error) {
-      throw new Error('Ошибка при удалении данных');
-    }
-  }
-);
-
-
-export const updateData = createAsyncThunk(
-  'data/updateData',
-  async (data: { id: string, newData: DataAttributesApi }, { getState }) => {
-    try {
-      const token = (getState() as RootState).auth.token;
-      const response = await axios.put(`/api/data/${data.id}`, data.newData, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
-      return response.data;
-    } catch (error) {
-      throw new Error('Ошибка при обновлении данных');
-    }
-  }
-);
-
+export const { useGetDataQuery, useAddDataMutation, useDeleteDataMutation, useUpdateDataMutation } = AdminApi;

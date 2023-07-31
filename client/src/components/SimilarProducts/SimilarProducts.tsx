@@ -26,7 +26,6 @@ const SimilarProducts: React.FC<{ productId: string }> = memo(({ productId }) =>
           ))}
         </div>
       </div>
-      <HorizontalLine/>
     </>
   );
 });

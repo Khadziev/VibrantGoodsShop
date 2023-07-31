@@ -1,8 +1,10 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-
-import { UserAttributes, LoginData } from "../model/types";
+import { UserAttributes, LoginData, UserUpdateAttributes } from "../model/types";
 import { clearUserData } from "./authSlice";
+
+
+
 
 export const register = createAsyncThunk(
   'auth/register',
@@ -12,10 +14,16 @@ export const register = createAsyncThunk(
   }
 );
 
+
 export const login = createAsyncThunk(
   'auth/login',
   async (data: LoginData) => {
-    const response = await axios.post('/api/login', data);
+    const token = localStorage.getItem('token');
+    const response = await axios.post('/api/login', data, {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    });
     return response.data;
   }
 );
@@ -32,3 +40,54 @@ export const logout = createAsyncThunk(
     }
   }
 );
+
+
+
+export const loadUser = createAsyncThunk(
+  'auth/loadUser',
+  async (userId: string) => {
+    const token = localStorage.getItem('token');
+    const response = await axios.get(`/api/users/${userId}`, {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    });
+    return response.data;
+  }
+);
+
+export const updateUser = createAsyncThunk(
+  'auth/updateUser',
+  async ({ userId, dataToUpdate }: { userId: string, dataToUpdate: UserUpdateAttributes }) => {
+    const token = localStorage.getItem('token');
+    const response = await axios.put(`/api/users/${userId}`, dataToUpdate, {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    });
+    return response.data;
+  }
+);
+
+
+
+export const deleteUser = createAsyncThunk(
+  'auth/deleteUser',
+  async (userId: string) => {
+    const token = localStorage.getItem('token');
+    await axios.delete(`/api/users/${userId}`, {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    });
+    return userId;
+  }
+);
+
+
+
+
+
+
+
+

@@ -8,6 +8,7 @@ import { UserPageAsync } from "../../pages/userPage/User.async"
 import CartComponent from "../../components/Basket/CartComponent"
 import DiscountedProducts from "../../components/Discounted/DiscountedProducts"
 import GetAllProducts from "../../components/Data/GetAllProducts"
+import Profile from "../../pages/Profile/Profile"
 
 
 export enum AppRoutes {
@@ -20,7 +21,8 @@ export enum AppRoutes {
   USERID = "/data/:id",
   CART = "/cart",
   DISCOUNT="/discount",
-  DATAALL="/data/all"
+  DATAALL="/data/all",
+  PROFILE="/data/all/users/:id"
 }
 
 export const RoutePatch: Record<AppRoutes, string> = {
@@ -32,7 +34,8 @@ export const RoutePatch: Record<AppRoutes, string> = {
   [AppRoutes.USERID]: "/data/:id",
   [AppRoutes.CART]: "/cart",
   [AppRoutes.DISCOUNT]: "/discount",
-  [AppRoutes.DATAALL]: "/data/all"
+  [AppRoutes.DATAALL]: "/data/all",
+  [AppRoutes.PROFILE]:"/users/:id"
 }
 
 export const routeConfig: Record<AppRoutes, RouteProps> = {
@@ -71,5 +74,9 @@ export const routeConfig: Record<AppRoutes, RouteProps> = {
   [AppRoutes.DATAALL]: {
     path: RoutePatch[AppRoutes.DATAALL],
     element: <GetAllProducts/>
+  },
+  [AppRoutes.PROFILE]:{
+    path: RoutePatch[AppRoutes.PROFILE],
+    element: <Profile/>
   }
 }

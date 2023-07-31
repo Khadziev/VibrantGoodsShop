@@ -1,23 +1,27 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAppSelector, useAppDispatch } from '../../app/providers/store';
+import { useAppDispatch } from '../../app/providers/store';
 import { login } from '../../apiServices/auth/authActions';
 import { setToken } from '../../apiServices/auth/authSlice';
 import { UserRole } from '../../apiServices/model/types';
+
+
 
 const LoginForm = () => {
   const [loginValue, setLoginValue] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState<string | null>(null);
-  const user = useAppSelector((state) => state.auth.user);
+  //const user = useAppSelector((state) => state.auth.user);
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    if (user) {
-      navigate('/');
-    }
-  }, [user, navigate]);
+
+
+  // useEffect(() => {
+  //   if (user) {
+  //     navigate('/');
+  //   }
+  // }, [user, navigate]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -96,3 +100,8 @@ const LoginForm = () => {
 };
 
 export default LoginForm;
+
+
+
+
+

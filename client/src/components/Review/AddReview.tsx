@@ -18,6 +18,7 @@ const AddReview: React.FC<AddReviewProps> = memo(({ productId }) => {
     event.preventDefault();
 
     createReview({ productId, review: { userId, userName: name, rating, text } });
+    setText('')
   };
 
   return (

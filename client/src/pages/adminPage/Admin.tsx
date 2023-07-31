@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
+import React, { useState } from 'react';
 import AddProductForm from '../../components/Admin/AddProductForm';
-import { useAppSelector, AppDispatch } from '../../app/providers/store';
-import { getData } from '../../apiServices/api/adminApi';
+import { useAppSelector } from '../../app/providers/store';
 import GetProductsAdmin from '../../components/Admin/GetProductsAdmin';
+import { useGetDataQuery } from '../../apiServices/api/adminApi';
 
 const Admin: React.FC = () => {
   const userName = useAppSelector((state) => state.auth.user?.name) || localStorage.getItem('userName');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isProductListVisible, setIsProductListVisible] = useState(false);
-  const dispatch = useDispatch<AppDispatch>();
+
+  const { refetch } = useGetDataQuery();
 
   const handleOpenModal = () => {
     setIsModalOpen(true);
@@ -21,14 +21,11 @@ const Admin: React.FC = () => {
 
   const handleShowProductList = () => {
     setIsProductListVisible(!isProductListVisible);
+    refetch();
   };
 
-  useEffect(() => {
-    dispatch(getData());
-  }, [dispatch]);
-
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center" style={{ maxHeight: 'calc(100vh - размерФутера)', overflowY: 'auto' }}>
       <h1 className="my-4 text-center">Добро пожаловать, администратор {userName}!</h1>
       <div className="flex space-x-4">
         <button

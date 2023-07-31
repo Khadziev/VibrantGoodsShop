@@ -13,21 +13,21 @@ function App () {
       <Header />
       <ScrollToTop />
       <div className="flex-grow">
-        {token ? (
-          <div className="flex h-full">
-            <div className="flex-grow">
-              <MainRouter />
-            </div>
-          </div>
-        ) : (
-          <MainRouter />
-        )}
+        <div className="mb-10">
+          {token ? (
+            <MainRouter />
+          ) : (
+            <MainRouter />
+          )}
+        </div>
       </div>
-      <HorizontalLine/>
-      <Footer/>
+      <div style={{ marginTop: '350px' }}>
+        <HorizontalLine/>
+        <Footer/>
+      </div>
     </div>
   );
 }
 
-
 export default App;
+

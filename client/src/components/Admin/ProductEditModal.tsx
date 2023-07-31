@@ -49,12 +49,12 @@ const ProductEditModal: React.FC<ProductEditModalProps> = ({
   return (
     <div onClick={handleOutsideClick} className={`fixed inset-0 z-50 ${isModalOpen ? "flex" : "hidden"}`}>
       <div className="flex items-center justify-center min-h-screen px-4">
-        <div onClick={(e) => e.stopPropagation()} className="bg-white rounded-lg shadow-md p-6 max-w-md w-full max-h-80 overflow-y-auto">
-          <h2 className="text-2xl font-semibold mb-4">Редактировать продукт</h2>
+        <div onClick={(e) => e.stopPropagation()} className="bg-white rounded-lg shadow-md p-6 max-w-full h-5/6 overflow-y-auto">
           <form>
+            <h2 className="text-2xl font-semibold mb-4">Редактировать продукт</h2>
             <div className="flex flex-wrap -m-2">
               {generalFields.map(field => (
-                <div className="w-full md:w-1/2 p-2">
+                <div className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-2">
                   <label className="block text-gray-700 font-bold mb-2">
                     {field.label}:
                   </label>
