@@ -1,6 +1,5 @@
 import React from 'react';
 import { useFetchAllProductsQuery } from '../../apiServices/api/userApi';
-import { DataAttributesApi } from '../../apiServices/model/types';
 import ProductItem from '../Data/ProductItem';
 import AddToCartComponent from '../Basket/AddToCartComponent';
 import DiscountedProducts from '../Discounted/DiscountedProducts';
@@ -9,6 +8,7 @@ import { Link } from 'react-router-dom';
 import Navigation from '../Navigation/Navigation';
 import Slider from '../../widgets/carousel/Slider';
 import Loading from '../../UI/Loading/Loading';
+import { DataAttributesApi } from '../../apiServices/model/ProductTypes';
 
 
 const UserGetData: React.FC = () => {

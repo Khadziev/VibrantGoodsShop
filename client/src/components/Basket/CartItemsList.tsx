@@ -1,9 +1,9 @@
 import React from 'react';
 import { useRemoveFromCartMutation } from '../../apiServices/api/apiCart';
 import { useAppSelector } from '../../app/providers/store';
-import { CartItem } from '../../apiServices/model/types';
 import { NavLink } from 'react-router-dom';
 import BackButton from '../../UI/BackButton/BackButton';
+import { CartItem } from '../../apiServices/model/CartTypes';
 
 
 interface CartItemsListProps {
@@ -14,6 +14,8 @@ const CartItemsList: React.FC<CartItemsListProps> = ({ cartItems }) => {
   const [removeFromCart, { isLoading: isRemoving }] = useRemoveFromCartMutation();
   const userId = useAppSelector((state) => state.auth.userId);
 
+
+
   const handleRemoveFromCart = (productId: string) => {
     if (!userId) {
       console.error('userId не определен');
@@ -22,9 +24,6 @@ const CartItemsList: React.FC<CartItemsListProps> = ({ cartItems }) => {
 
     removeFromCart({ userId, productId })
       .unwrap()
-      // .then((response) => {
-      //   console.log('Товар успешно удален из корзины:', response);
-      // })
       .catch((error) => {
         console.error('Произошла ошибка при удалении из корзины:', error);
       });
@@ -34,6 +33,7 @@ const CartItemsList: React.FC<CartItemsListProps> = ({ cartItems }) => {
     <div className="flex flex-col">
       <BackButton/>
       <h2>Список товаров в корзине:</h2>
+
       <ul className="flex flex-row justify-start items-start flex-wrap gap-4">
         {cartItems.map((item, index) => (
           <li key={index} className="my-2">

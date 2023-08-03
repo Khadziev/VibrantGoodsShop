@@ -9,6 +9,8 @@ import CartComponent from "../../components/Basket/CartComponent"
 import DiscountedProducts from "../../components/Discounted/DiscountedProducts"
 import GetAllProducts from "../../components/Data/GetAllProducts"
 import Profile from "../../pages/Profile/Profile"
+import { MessagePageAsync } from "../../pages/MessagePage/Message.async"
+
 
 
 export enum AppRoutes {
@@ -22,7 +24,8 @@ export enum AppRoutes {
   CART = "/cart",
   DISCOUNT="/discount",
   DATAALL="/data/all",
-  PROFILE="/data/all/users/:id"
+  PROFILE="/data/all/users/:id",
+  MESSAGE="/message",
 }
 
 export const RoutePatch: Record<AppRoutes, string> = {
@@ -35,7 +38,8 @@ export const RoutePatch: Record<AppRoutes, string> = {
   [AppRoutes.CART]: "/cart",
   [AppRoutes.DISCOUNT]: "/discount",
   [AppRoutes.DATAALL]: "/data/all",
-  [AppRoutes.PROFILE]:"/users/:id"
+  [AppRoutes.PROFILE]:"/users/:id",
+  [AppRoutes.MESSAGE]: "/message",
 }
 
 export const routeConfig: Record<AppRoutes, RouteProps> = {
@@ -78,5 +82,9 @@ export const routeConfig: Record<AppRoutes, RouteProps> = {
   [AppRoutes.PROFILE]:{
     path: RoutePatch[AppRoutes.PROFILE],
     element: <Profile/>
+  },
+  [AppRoutes.MESSAGE]: {
+    path: RoutePatch[AppRoutes.MESSAGE],
+    element: <MessagePageAsync/>
   }
 }

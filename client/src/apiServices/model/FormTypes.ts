@@ -1,4 +1,5 @@
-import { DataAttributesApi } from "./types";
+import { DataAttributesApi } from "./ProductTypes";
+
 
 export const initialFormData: DataAttributesApi = {
   name: '',

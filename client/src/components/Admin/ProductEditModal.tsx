@@ -1,6 +1,6 @@
 import React from "react";
-import { DataAttributesApi } from "../../apiServices/model/types";
 import { generalFields, specificationFields } from "../../apiServices/model/InputField";
+import { DataAttributesApi } from "../../apiServices/model/ProductTypes";
 
 type ProductEditModalProps = {
   selectedProduct: DataAttributesApi | null;

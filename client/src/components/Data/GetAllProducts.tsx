@@ -2,12 +2,12 @@ import React, { memo } from 'react';
 import { useFetchAllProductsQuery } from '../../apiServices/api/userApi';
 import SortingFields from '../DataControls/SortingFields';
 import SearchBar from '../DataControls/SearchBar';
-import { DataAttributesApi } from '../../apiServices/model/types';
 import { useProductData } from '../User/useProductData';
 import ProductItem from './ProductItem';
 import BackButton from '../../UI/BackButton/BackButton';
 import Loading2 from '../../UI/Loading/Loading2';
 import Text from '../../UI/Text/Text';
+import { DataAttributesApi } from '../../apiServices/model/ProductTypes';
 
 
 function shuffleArray (array: Array<DataAttributesApi>) {
@@ -39,7 +39,9 @@ const GetAllProducts: React.FC = memo(() => {
     <>
       <div><BackButton/></div>
       <div className='mt-10'>
-        <SortingFields selectedField={selectedField} onFieldChange={setSelectedField} />
+        <div className='mb-4'>
+          <SortingFields selectedField={selectedField} onFieldChange={setSelectedField} />
+        </div>
         <SearchBar value={searchQuery} onChange={setSearchQuery} />
       </div>
       {shuffledData.length > 0 ? (

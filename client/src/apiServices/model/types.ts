@@ -1,3 +1,6 @@
+import { DataAttributesApi } from "./ProductTypes";
+
+
 export enum UserRole {
   ADMIN = 'admin',
   USER = 'user',
@@ -31,27 +34,8 @@ export interface AuthState {
   userId: string | null;
 }
 
-export interface Specifications {
-  processor?: string;
-  memory?: string;
-  storage?: string;
-  screen?: string;
-  camera?: string;
-}
 
-export interface DataAttributesApi {
-  _id?: string;
-  name: string;
-  price: number;
-  description: string;
-  title: string;
-  category: string;
-  imageURL: string[];
-  discount: number;
-  specifications: Specifications;
-}
-
-// удаления изменения
+// удаления изменения пользователя
 export interface UserUpdateAttributes {
   name?: string;
   login?: string;
@@ -59,24 +43,8 @@ export interface UserUpdateAttributes {
   userId?: string
 }
 
-// карзина
-export interface CartItem {
-  _id: string;
-  productId: string;
-  imageURL: string;
-  price: number;
-  product: DataAttributesApi;
-}
 
-export interface CartAttributes {
-  userId: string;
-  items: CartItem[];
-}
 
-export interface RemoveFromCartArgs {
-  userId: string;
-  productId: string;
-}
 
 // слайдер
 export interface Slide {

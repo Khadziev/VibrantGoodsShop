@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { DataAttributesApi } from '../../apiServices/model/types';
 import { useAddToCartMutation, useGetCartByUserIdQuery } from '../../apiServices/api/apiCart';
 import { useAppSelector } from '../../app/providers/store';
 import { MdShoppingCart } from 'react-icons/md';
+import { DataAttributesApi } from '../../apiServices/model/ProductTypes';
 
 
 

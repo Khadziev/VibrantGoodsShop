@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { DataAttributesApi } from '../../apiServices/model/types';
 import { InputField, fields } from '../../apiServices/model/InputField';
 import { initialFormData } from '../../apiServices/model/FormTypes';
 import { useAddDataMutation } from '../../apiServices/api/adminApi';
+import { DataAttributesApi } from '../../apiServices/model/ProductTypes';
 
 
 interface AddProductFormProps {

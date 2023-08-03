@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
-import { DataAttributesApi } from '../../apiServices/model/types';
 import { NavLink } from 'react-router-dom';
 import { MdOutlineDiscount } from 'react-icons/md';
+import { DataAttributesApi } from '../../apiServices/model/ProductTypes';
 
 interface ProductItemProps {
   item: DataAttributesApi;

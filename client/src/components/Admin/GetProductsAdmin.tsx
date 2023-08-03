@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { DataAttributesApi } from "../../apiServices/model/types";
 import { ProductCard } from "./ProductCard";
 import ProductEditModal from "./ProductEditModal";
 import Scrollable from "../../UI/Scroll/Scrollable";
 import { useGetDataQuery, useDeleteDataMutation, useUpdateDataMutation } from "../../apiServices/api/adminApi";
+import { DataAttributesApi } from "../../apiServices/model/ProductTypes";
 
 const GetProductsAdmin: React.FC = () => {
   const { data = [], refetch } = useGetDataQuery();

@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const messages_controller_1 = require("../controllers/messages.controller");
+const verifyTokenMiddleware_1 = require("../middlewares/verifyTokenMiddleware");
+const adminOnlyMiddleware_1 = require("../middlewares/adminOnlyMiddleware");
+const router = (0, express_1.Router)();
+router.get('/messages', verifyTokenMiddleware_1.verifyTokenMiddleware, messages_controller_1.messageController.getAllMessages);
+router.post('/broadcast', verifyTokenMiddleware_1.verifyTokenMiddleware, adminOnlyMiddleware_1.adminOnlyMiddleware, messages_controller_1.messageController.broadcastMessage);
+exports.default = router;

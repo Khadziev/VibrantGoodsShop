@@ -1,8 +1,8 @@
 import React from "react";
-import { DataAttributesApi } from "../../apiServices/model/types";
 import { AiOutlineDelete } from 'react-icons/ai';
 import { BsPencil } from 'react-icons/bs';
 import { NavLink } from "react-router-dom";
+import { DataAttributesApi } from "../../apiServices/model/ProductTypes";
 
 export const ProductCard: React.FC<{ product: DataAttributesApi, onDelete: (id: string) => void, onEdit: (product: DataAttributesApi) => void }> = ({ product, onDelete, onEdit }) => {
   return (

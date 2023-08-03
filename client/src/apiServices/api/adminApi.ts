@@ -1,6 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import { RootState } from "../../app/providers/store";
-import { DataAttributesApi } from "../model/types";
+import { DataAttributesApi } from '../model/ProductTypes';
+
 
 export const AdminApi = createApi({
   reducerPath: 'api',

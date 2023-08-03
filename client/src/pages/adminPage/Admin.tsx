@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
-import AddProductForm from '../../components/Admin/AddProductForm';
 import { useAppSelector } from '../../app/providers/store';
+import AddProductForm from '../../components/Admin/AddProductForm';
 import GetProductsAdmin from '../../components/Admin/GetProductsAdmin';
 import { useGetDataQuery } from '../../apiServices/api/adminApi';
+import BroadcastMessageSender from '../../components/Admin/Message/BroadcastMessageSender';
 
 const Admin: React.FC = () => {
   const userName = useAppSelector((state) => state.auth.user?.name) || localStorage.getItem('userName');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isProductListVisible, setIsProductListVisible] = useState(false);
+  const [isBroadcastOpen, setIsBroadcastOpen] = useState(false);
 
   const { refetch } = useGetDataQuery();
 
@@ -22,6 +24,10 @@ const Admin: React.FC = () => {
   const handleShowProductList = () => {
     setIsProductListVisible(!isProductListVisible);
     refetch();
+  };
+
+  const handleOpenBroadcast = () => {
+    setIsBroadcastOpen(prevState => !prevState); // Toggle the state
   };
 
   return (
@@ -40,7 +46,18 @@ const Admin: React.FC = () => {
         >
           Список данных
         </button>
+        <button
+          onClick={handleOpenBroadcast}
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Отправить сообщение
+        </button>
       </div>
+      {isBroadcastOpen && (
+        <div className="mt-4 flex flex-col">
+          <BroadcastMessageSender />
+        </div>
+      )}
       {isProductListVisible && (
         <div className="mt-4 mb-4 w-full">
           <GetProductsAdmin />
