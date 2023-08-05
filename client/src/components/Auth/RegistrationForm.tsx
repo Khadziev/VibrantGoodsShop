@@ -28,8 +28,8 @@ const RegistrationForm = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-100">
-      <form onSubmit={handleSubmit} className="max-w-sm bg-white border border-gray-300 rounded p-6 shadow-lg">
+    <div className="flex justify-center items-center h-screen bg-opacity-50"> {/* Прозрачность применена тут */}
+      <form onSubmit={handleSubmit} className="max-w-sm bg-white bg-opacity-80 border border-gray-300 rounded p-6 shadow-lg"> {/* Прозрачность применена тут */}
         {error && <div className="text-red-500 mb-4">{error}</div>}
         <input
           type="text"

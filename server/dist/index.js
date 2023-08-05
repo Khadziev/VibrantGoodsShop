@@ -27,6 +27,7 @@ app.use(baseApiUrl, cart_route_1.default);
 app.use(baseApiUrl, review_route_1.default);
 app.use(baseApiUrl, pay_routes_1.default);
 app.use(baseApiUrl, message_route_1.default);
+app.use('/uploads', express_1.default.static('uploads'));
 const clientDistPath = path_1.default.resolve(__dirname, "..", "..", "client", "dist");
 app.use(express_1.default.static(clientDistPath));
 app.get('*', (req, res) => {

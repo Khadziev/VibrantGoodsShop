@@ -1,91 +1,86 @@
 import React, { useState, useEffect } from "react";
-import { HiMenuAlt3 } from "react-icons/hi";
-import { TbReportAnalytics } from "react-icons/tb";
-import { AiOutlineUser, AiOutlineHome } from "react-icons/ai";
-import { FiShoppingCart } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { useGetCartByUserIdQuery } from "../../apiServices/api/apiCart";
 import { useAppSelector } from "../../app/providers/store";
+import { HiMenuAlt3 } from "react-icons/hi";
+import { MdOutlineDashboard } from "react-icons/md";
+import { RiSettings4Line } from "react-icons/ri";
+import { AiOutlineHome, AiOutlineMessage } from "react-icons/ai";
+import { FiShoppingCart } from "react-icons/fi";
+import { UserRole } from "../../apiServices/model/types";
 
 const Sidebar = () => {
   const userId = useAppSelector((state) => state.auth.userId);
+  const userRole = useAppSelector((state) => state.auth.role) || localStorage.getItem('userRole');
   const { data: cartData } = useGetCartByUserIdQuery(userId || '');
 
-
   const cartItemsCount = cartData?.items.length || 0;
-  const menus = [
-    // { name: "панель приборов", link: "#", icon: MdOutlineDashboard },
-    { name: "пользователь", link: "#", icon: AiOutlineUser },
-    { name: "главная", link: "/", icon: AiOutlineHome },
-    { name: "аналитика", link: "#", icon: TbReportAnalytics, margin: true },
-    //{ name: "Файловый менеджер", link: "#", icon: FiFolder },
-    { name: "корзина", link: "/cart", icon: FiShoppingCart },
-    //{ name: "сохранено", link: "#", icon: AiOutlineHeart, margin: true },
-    //{ name: "настройки", link: "#", icon: RiSettings4Line },
-    //{ name: "о сайте", link: "#", icon: HiCubeTransparent },
+  const allMenus = [
+    { name: "домой", link: "/", icon: AiOutlineHome, margin: true },
+    { name: "все товары", link: "/data/all", icon: MdOutlineDashboard, margin: true },
+    { name: "акции и скидки", link: "/message", icon: AiOutlineMessage, margin: true },
+    { name: "корзина", link: "/cart", icon: FiShoppingCart, margin: true, count: cartItemsCount },
+    { name: "настройки профиля", link: "/users/:id", icon: RiSettings4Line, margin: true },
   ];
 
   const [open, setOpen] = useState(() => {
     const storedState = localStorage.getItem("sidebarOpen");
-    return storedState ? JSON.parse(storedState) : true;
+    return storedState ? JSON.parse(storedState) : false;
   });
 
   useEffect(() => {
     localStorage.setItem("sidebarOpen", JSON.stringify(open));
-  }, [open, cartItemsCount]);
+  }, [open]);
+  console.log(userRole)
+
+
+  const menus = userRole === UserRole.ADMIN
+    ? allMenus.filter(menu => menu.name !== "корзина" && menu.name !== "настройки профиля" && menu.name !== "все товары")
+    : allMenus;
+
 
   return (
     <>
-      <section className="flex gap-6">
+      <section className="flex gap-6 relative z-50">
+        <HiMenuAlt3
+          size={26}
+          className="cursor-pointer absolute mt-9 left-4 z-50"
+          onClick={() => setOpen(!open)}
+        />
         <div
-          className={`bg-blue-500 p-6 ${open ? "w-96" : "w-16"} duration-500 text-gray-100 px-4 sticky top-0`}
-
+          className={`bg-[#0E182F] bg-opacity-50 ${
+            open ? "w-full h-21" : "w-16 h-21"
+          } duration-500 text-gray-100 px-4 sticky top-20 left-0 right-0 z-40 overflow-hidden`}
         >
-          <div className="py-3 flex justify-end">
-            <HiMenuAlt3 size={26} className="cursor-pointer" onClick={() => setOpen(!open)} />
-          </div>
-
-          <div className="mt-4 flex flex-col gap-4 relative">
-            {menus?.map((menu, i) => (
-              <Link
-                to={menu?.link}
-                key={i}
-                className={` ${
-                  menu?.margin && "mt-5"
-                } group flex items-center text-sm  gap-3.5 font-medium p-2 hover:bg-gray-800 rounded-md`}
-              >
-                {menu?.name === 'корзина' ? (
-                  <div className='relative'>
-                    {React.createElement(menu?.icon, { size: "20" })}
-                    {cartItemsCount > 0 && (
-                      <span className='absolute top-0 right-0 bg-red-500 rounded-full text-white text-xs w-4 h-4 flex items-center justify-center transform translate-x-1/2 -translate-y-1/2'>
-                        {cartItemsCount}
-                      </span>
-                    )}
-                  </div>
-                ) : (
+          <div className="py-3 flex justify-start items-center ml-8">
+            <div className="flex justify-around flex-grow">
+              {menus?.map((menu, i) => (
+                <Link
+                  to={menu?.link}
+                  key={i}
+                  className={` ${
+                    menu?.margin && "mt-1"
+                  } group flex flex-col items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-800 rounded-md relative`}
+                >
                   <div>{React.createElement(menu?.icon, { size: "20" })}</div>
-                )}
-                <h2
-                  style={{
-                    transitionDelay: `${i + 3}00ms`,
-                  }}
-                  className={`whitespace-pre duration-500 ${
-                    !open && "opacity-0 translate-x-28 overflow-hidden"
-                  }`}
-                >
-                  {menu?.name}
-                </h2>
-                <h2
-                  className={`${
-                    open && "hidden"
-                  } absolute left-48 bg-white font-semibold whitespace-pre text-gray-900 rounded-md drop-shadow-lg px-0 py-0 w-0 overflow-hidden group-hover:px-2 group-hover:py-1 group-hover:left-14 group-hover:duration-300 group-hover:w-fit  `}
-                >
-                  {menu?.name}
-                </h2>
-              </Link>
-            ))}
-
+                  <h2
+                    style={{
+                      transitionDelay: `${i + 3}00ms`,
+                    }}
+                    className={`whitespace-pre duration-500 ${
+                      !open ? "opacity-0" : ""
+                    } group-hover:opacity-100`}
+                  >
+                    {menu?.name}
+                  </h2>
+                  {menu?.count > 0 && (
+                    <div className="absolute top-0 right-0 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                      {menu?.count}
+                    </div>
+                  )}
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </section>

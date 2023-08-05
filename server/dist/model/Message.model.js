@@ -25,13 +25,13 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importStar(require("mongoose"));
 const broadcastMessageSchema = new mongoose_1.Schema({
-    // from: {
-    //   type: String,
-    //   required: true,
-    // },
     body: {
         type: String,
         required: true,
+    },
+    image: {
+        type: String,
+        required: false,
     },
 }, { timestamps: true });
 const BroadcastMessage = mongoose_1.default.model('BroadcastMessage', broadcastMessageSchema);

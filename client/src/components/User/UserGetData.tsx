@@ -5,7 +5,6 @@ import AddToCartComponent from '../Basket/AddToCartComponent';
 import DiscountedProducts from '../Discounted/DiscountedProducts';
 import { sliderContent } from '../../mock/Slider'
 import { Link } from 'react-router-dom';
-import Navigation from '../Navigation/Navigation';
 import Slider from '../../widgets/carousel/Slider';
 import Loading from '../../UI/Loading/Loading';
 import { DataAttributesApi } from '../../apiServices/model/ProductTypes';
@@ -19,8 +18,7 @@ const UserGetData: React.FC = () => {
   }
 
   return (
-    <>
-      <Navigation/>
+    <div className="pt-15">
       <div className="border border-black">
         <Slider items={sliderContent} />
       </div>
@@ -39,8 +37,9 @@ const UserGetData: React.FC = () => {
       <div className="flex justify-center mt-5 w-full">
         <Link to="/data/all" className="px-6 py-2 text-white bg-blue-500 rounded">Посмотреть все</Link>
       </div>
-    </>
+    </div>
   );
 };
 
 export default UserGetData;
+

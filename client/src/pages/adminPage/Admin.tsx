@@ -32,7 +32,7 @@ const Admin: React.FC = () => {
 
   return (
     <div className="flex flex-col items-center" style={{ maxHeight: 'calc(100vh - размерФутера)', overflowY: 'auto' }}>
-      <h1 className="my-4 text-center">Добро пожаловать, администратор {userName}!</h1>
+      <h1 className="my-4 text-center">Вы вошли как администратор {userName}!</h1>
       <div className="flex space-x-4">
         <button
           onClick={handleOpenModal}

@@ -6,7 +6,7 @@ const BackButton: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <button onClick={() => navigate(-1)} className="absolute top-15 left-0 p-4">
+    <button onClick={() => navigate(-1)} className="left-0 p-2 fixed ml-12 ">
       <MdNavigateBefore size={40}/>
     </button>
   );

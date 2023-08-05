@@ -4,29 +4,46 @@ import { useBroadcastMessageMutation } from '../../../apiServices/api/apiMessage
 const BroadcastMessageSender: React.FC = () => {
   const [broadcastMessage, { isLoading }] = useBroadcastMessageMutation();
 
-  const [message, setMessage] = useState({
-    body: '',
-  });
+  const [message, setMessage] = useState('');
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
-    await broadcastMessage(message);
-    setMessage({ body: '' });
+
+    const formData = new FormData();
+    formData.append('body', message);
+    if (selectedFile) {
+      formData.append('image', selectedFile);
+    }
+
+    await broadcastMessage(formData);
+    setMessage('');
+    setSelectedFile(null);
   };
 
   const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setMessage({ ...message, [event.target.name]: event.target.value });
+    setMessage(event.target.value);
+  };
+
+  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (event.target.files) {
+      setSelectedFile(event.target.files[0]);
+    }
   };
 
   return (
     <form className="w-full max-w-lg mx-auto mt-5" onSubmit={handleSubmit}>
       <div className="mb-6">
         <textarea
-          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-center" // добавлен text-center
+          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-center"
           name="body"
-          value={message.body}
+          value={message}
           onChange={handleChange}
           placeholder="...текст"
+        />
+        <input
+          type="file"
+          onChange={handleFileChange}
         />
       </div>
       <div className="flex items-center justify-between">

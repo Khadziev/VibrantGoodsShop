@@ -30,8 +30,8 @@ const Slider: React.FC<SliderProps> = ({ items }) => {
     <div id="default-carousel" className="relative w-full h-[70vh] bg-[#FFFFFF]" data-carousel="slide">
       <div className="relative h-full overflow-hidden rounded-lg">
         {items.map((item, index) => (
-          <div key={index} className={`absolute top-0 left-0 duration-700 ease-in-out w-full h-full flex items-center justify-center transition-transform transform
-           ${index === currentSlide ? 'translate-x-0 opacity-100' : index < currentSlide ? '-translate-x-full opacity-50' : 'translate-x-full opacity-50'}`}
+          <div key={index} className={`opacity-75 absolute top-0 left-0 duration-700 ease-in-out w-full h-full flex items-center justify-center transition-transform transform
+          ${index === currentSlide ? 'translate-x-0 opacity-100' : index < currentSlide ? '-translate-x-full opacity-50' : 'translate-x-full opacity-50'}`}
           data-carousel-item>
             <NavLink to={item.url}>
               <img src={item.bgImg} className="max-w-full max-h-full object-contain" />

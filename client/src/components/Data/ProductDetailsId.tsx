@@ -2,7 +2,6 @@ import React, { memo, useState } from 'react';
 import { useFetchProductByIdQuery } from '../../apiServices/api/userApi';
 import { useParams } from 'react-router-dom';
 import AddToCartComponent from '../Basket/AddToCartComponent';
-import AddReview from '../Review/AddReview';
 import ReviewsModal from '../Review/ReviewsModal';
 import BackButton from '../../UI/BackButton/BackButton';
 import SimilarProducts from '../SimilarProducts/SimilarProducts';
@@ -41,9 +40,9 @@ const UserProductDetails: React.FC = memo(() => {
   };
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-4 pt-23">
       <BackButton/>
-      <div className="flex bg-white shadow-lg rounded-lg overflow-hidden">
+      <div className="flex bg-white shadow-lg rounded-lg overflow-hidden pt-7">
         <div className="w-1/2 p-8">
           <h1 className="text-3xl font-bold mb-4">{product.title}</h1>
           <img
@@ -72,10 +71,9 @@ const UserProductDetails: React.FC = memo(() => {
           <p className="text-gray-700 mb-4">Экран: {product.specifications.screen || "Нет"}</p>
           <p className="text-gray-700 mb-4">Хранилище: {product.specifications.storage || "Нет"}</p>
           <AddToCartComponent product={product} />
-        </div>
-        <div className="mt-8">
-          <AddReview productId={product._id} />
-          <button onClick={handleOpenModal} className="bg-blue-500 text-white p-2 rounded mt-20">Смотреть отзывы пользователей</button>
+          <div className="mt-8 flex justify-center">
+            <button onClick={handleOpenModal} className="bg-blue-500 text-white p-2 rounded">Смотреть отзывы пользователей</button>
+          </div>
         </div>
       </div>
       <div className="mt-8">

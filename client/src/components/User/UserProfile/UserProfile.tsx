@@ -5,7 +5,6 @@ import { unwrapResult } from '@reduxjs/toolkit';
 import UserProfileForm from './UserProfileForm';
 import UserProfileData from './UserProfileData';
 import BackButton from '../../../UI/BackButton/BackButton';
-import Loading2 from '../../../UI/Loading/Loading2';
 import { loadUser, updateUser, deleteUser } from '../../../apiServices/auth/authActions';
 import { AppDispatch, useAppSelector } from '../../../app/providers/store';
 import { useNavigate } from 'react-router-dom';
@@ -13,7 +12,7 @@ import { useNavigate } from 'react-router-dom';
 
 const UserProfile = () => {
   const dispatch = useDispatch<AppDispatch>();
-  const { user, loading, error } = useAppSelector((state) => state.auth);
+  const { user, error } = useAppSelector((state) => state.auth);
   const [newName, setNewName] = useState("");
   const [newLogin, setNewLogin] = useState("");
   const [newPassword, setNewPassword] = useState("");
@@ -61,9 +60,7 @@ const UserProfile = () => {
     }
   };
 
-  if (loading) {
-    return <div><Loading2/></div>;
-  }
+
 
   if (error) {
     return <div>Error: {error}</div>;

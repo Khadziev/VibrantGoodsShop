@@ -19,6 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 app.use(express.json());
 
+
 const baseApiUrl = '/api';
 app.use(baseApiUrl, usersRoute);
 app.use(baseApiUrl, dataRoute);
@@ -27,6 +28,7 @@ app.use(baseApiUrl, reviewRoute)
 app.use(baseApiUrl, payProduct)
 app.use(baseApiUrl, messageRoute)
 
+app.use('/uploads', express.static('uploads'));
 
 const clientDistPath = path.resolve(__dirname, "..", "..", "client", "dist");
 
@@ -43,6 +45,7 @@ fs.readdir(clientDistPath, (err, files) => {
         console.log(`Файлы в директории ${clientDistPath}:`, files);
     }
 });
+
 
 mongoose
   .connect(process.env.MONGO as string, {})

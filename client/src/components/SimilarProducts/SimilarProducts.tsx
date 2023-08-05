@@ -3,12 +3,13 @@ import ProductItem from '../Data/ProductItem';
 import { useFetchSimilarProductsQuery } from '../../apiServices/api/userApi';
 import Text from '../../UI/Text/Text';
 import HorizontalLine from '../../UI/HorizontalLine/HorizontalLine';
+import Loading2 from '../../UI/Loading/Loading2';
 
 
 const SimilarProducts: React.FC<{ productId: string }> = memo(({ productId }) => {
   const { data: similarProducts, isLoading, isError } = useFetchSimilarProductsQuery(productId);
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <div><Loading2/></div>;
   if (isError || !similarProducts) return <div>Error occurred</div>;
 
   const displayProducts = similarProducts.slice(0, 4);

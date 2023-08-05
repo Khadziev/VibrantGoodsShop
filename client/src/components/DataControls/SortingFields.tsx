@@ -8,7 +8,7 @@ interface SortingFieldsProps {
 const SortingFields: React.FC<SortingFieldsProps> = ({ selectedField, onFieldChange }) => {
   return (
     <div>
-      <ul className="flex space-x-4 justify-center">
+      <ul className="flex flex-wrap space-x-4 justify-center">
         <li>
           <button
             type="button"

@@ -3,13 +3,15 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 
 // Get the absolute file path
-const __dirname = path.dirname(new URL(import.meta.url).pathname);
-
 export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
       '/api': {
+        target: 'http://localhost:4000',
+        changeOrigin: true,
+      },
+      '/uploads': {
         target: 'http://localhost:4000',
         changeOrigin: true,
       },
@@ -21,3 +23,4 @@ export default defineConfig({
     },
   },
 });
+

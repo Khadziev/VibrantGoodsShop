@@ -137,6 +137,11 @@ const authSlice = createSlice({
         state.userId = null;
         // удалить данные пользователя из localStorage
         localStorage.removeItem('user');
+        localStorage.removeItem('token');
+        localStorage.removeItem('userId');
+        localStorage.removeItem('userRole');
+        localStorage.removeItem('userName');
+
       })
       .addCase(deleteUser.rejected, (state, action) => {
         state.loading = false;

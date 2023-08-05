@@ -26,7 +26,7 @@ exports.messageController = {
     }),
     deleteAllMessages: (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         try {
-            yield Message_model_1.default.deleteMany(); // это удалит все сообщения
+            yield Message_model_1.default.deleteMany();
             res.status(200).json({ message: 'Все сообщения были успешно удалены' });
         }
         catch (error) {
@@ -35,10 +35,11 @@ exports.messageController = {
     }),
     broadcastMessage: (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         try {
-            const { from, body } = req.body;
+            const { body } = req.body;
+            const image = req.file ? req.file.path : null;
             const message = yield Message_model_1.default.create({
-                // from,
                 body,
+                image,
             });
             res.json(message);
         }
@@ -47,40 +48,3 @@ exports.messageController = {
         }
     }),
 };
-// на будущее если будет нужно вывести сообщение только один раз
-// import { Request, Response } from 'express';
-// import BroadcastMessage from '../model/Message.model';
-// import User from '../model/User.model';
-// declare module 'express-serve-static-core' {
-//   export interface Request {
-//     user?: any; 
-//   }
-// }
-// export const messageController = {
-//   getAllMessages: async (req: Request, res: Response) => {
-//     try {
-//         const userId = req.user._id;
-//         const messages = await BroadcastMessage.find({userId: userId, viewed: false}).sort({ createdAt: -1 }); 
-//         await BroadcastMessage.updateMany({userId: userId}, {$set: {viewed: true}}); 
-//         res.json(messages);
-//     } catch (error: any) {
-//         res.status(500).json({ error: 'Ошибка при получении сообщений: ' + error.toString() });
-//     }
-// },
-// broadcastMessage: async (req: Request, res: Response) => {
-//     try {
-//         const { body } = req.body;
-//         const users = await User.find({}); 
-//         for (let user of users) {
-//             await BroadcastMessage.create({
-//                 userId: user._id,
-//                 body,
-//                 viewed: false
-//             });
-//         }
-//         res.json({message: "Message broadcasted successfully"});
-//     } catch (error: any) {
-//         res.status(500).json({ error: 'Ошибка при отправке сообщения: ' + error.toString() });
-//     }
-// },
-// };

@@ -11,7 +11,6 @@ const AddReview: React.FC<AddReviewProps> = memo(({ productId }) => {
   const [createReview] = useCreateReviewMutation();
   const [rating, setRating] = useState(0);
   const [text, setText] = useState('');
-
   const { userId, name } = useAppSelector((state) => state.auth);
 
   const handleSubmit = (event: React.FormEvent) => {
@@ -22,7 +21,7 @@ const AddReview: React.FC<AddReviewProps> = memo(({ productId }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="flex flex-col items-center">
       <StarRatings
         rating={rating}
         starRatedColor="blue"

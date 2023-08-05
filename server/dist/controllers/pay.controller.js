@@ -24,7 +24,7 @@ const getAllPayments = (req, res) => __awaiter(void 0, void 0, void 0, function*
             res.status(500).json({ message: error.message });
         }
         else {
-            res.status(500).json({ message: 'Unexpected error' });
+            res.status(500).json({ message: 'Неожиданная ошибка' });
         }
     }
 });
@@ -41,7 +41,7 @@ const createPayment = (req, res) => __awaiter(void 0, void 0, void 0, function* 
             res.status(500).json({ message: error.message });
         }
         else {
-            res.status(500).json({ message: 'Unexpected error' });
+            res.status(500).json({ message: 'Неожиданная ошибка' });
         }
     }
 });
