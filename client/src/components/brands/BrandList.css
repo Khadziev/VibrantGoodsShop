@@ -1,0 +1,30 @@
+.brand-container {
+  overflow: hidden;
+}
+
+.brand-items {
+  display: flex;
+  overflow: hidden;
+}
+
+.brand-item {
+  margin: 10px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.brand-image {
+  width: 130px;
+  height: 80px;
+  object-fit: cover;
+  animation: moveSlowly 20s linear infinite;
+}
+
+@keyframes moveSlowly {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

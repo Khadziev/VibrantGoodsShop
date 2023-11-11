@@ -1,11 +1,11 @@
-import React, { memo, useState } from 'react';
-import { useFetchProductByIdQuery } from '../../apiServices/api/userApi';
-import { useParams } from 'react-router-dom';
-import AddToCartComponent from '../Basket/AddToCartComponent';
-import ReviewsModal from '../Review/ReviewsModal';
-import BackButton from '../../UI/BackButton/BackButton';
-import SimilarProducts from '../SimilarProducts/SimilarProducts';
-import Loading2 from '../../UI/Loading/Loading2';
+import React, { memo, useState } from "react";
+import { useFetchProductByIdQuery } from "../../apiServices/api/userApi";
+import { useParams } from "react-router-dom";
+import AddToCartComponent from "../Basket/AddToCartComponent";
+import ReviewsModal from "../Review/ReviewsModal";
+import BackButton from "../../UI/BackButton/BackButton";
+import SimilarProducts from "../SimilarProducts/SimilarProducts";
+import Loading2 from "../../UI/Loading/Loading2";
 
 const UserProductDetails: React.FC = memo(() => {
   const { id } = useParams<{ id: string }>();
@@ -14,7 +14,11 @@ const UserProductDetails: React.FC = memo(() => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   if (isLoading) {
-    return <div><Loading2/></div>;
+    return (
+      <div>
+        <Loading2 />
+      </div>
+    );
   }
 
   if (isError) {
@@ -41,22 +45,21 @@ const UserProductDetails: React.FC = memo(() => {
 
   return (
     <div className="container mx-auto p-4 pt-23">
-      <BackButton/>
+      <BackButton />
       <div className="flex bg-white shadow-lg rounded-lg overflow-hidden pt-7">
         <div className="w-1/2 p-8">
           <h1 className="text-3xl font-bold mb-4">{product.title}</h1>
-          <img
-            src={product.imageURL[selectedImage]}
-            className="object-contain w-full h-96 rounded-md shadow-lg"
-          />
+          <img src={product.imageURL[selectedImage]} className="object-contain w-full h-96 rounded-md shadow-lg" />
           <div className="flex space-x-2 mt-2">
             {product.imageURL.map((img, index) => (
               <div
                 key={index}
-                className={`h-16 w-16 rounded-full border-2 ${index === selectedImage ? 'border-blue-500' : 'border-gray-300'} cursor-pointer`}
+                className={`h-16 w-16 rounded-full border-2 ${
+                  index === selectedImage ? "border-blue-500" : "border-gray-300"
+                } cursor-pointer`}
                 onClick={() => handleImageChange(index)}
               >
-                <img src={img} alt={`product ${index}`} className="object-contain w-full h-full rounded-full"/>
+                <img src={img} alt={`product ${index}`} className="object-contain w-full h-full rounded-full" />
               </div>
             ))}
           </div>
@@ -72,13 +75,15 @@ const UserProductDetails: React.FC = memo(() => {
           <p className="text-gray-700 mb-4">Хранилище: {product.specifications.storage || "Нет"}</p>
           <AddToCartComponent product={product} />
           <div className="mt-8 flex justify-center">
-            <button onClick={handleOpenModal} className="bg-blue-500 text-white p-2 rounded">Смотреть отзывы пользователей</button>
+            <button onClick={handleOpenModal} className="bg-blue-500 text-white p-2 rounded">
+              Смотреть отзывы пользователей
+            </button>
           </div>
         </div>
       </div>
       <div className="mt-8">
-        <h2 className="font-bold text-2xl mb-4">Описание</h2>
-        <p className="text-gray-700">{product.description}</p>
+        <h2 className="font-bold text-2xl mb-4 text-customColorTextBase">Описание</h2>
+        <p className=" text-customColorTextBase">{product.description}</p>
       </div>
       <ReviewsModal productId={id} isOpen={isModalOpen} onClose={handleCloseModal} />
       <SimilarProducts productId={id} />

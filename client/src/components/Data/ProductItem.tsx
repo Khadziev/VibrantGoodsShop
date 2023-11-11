@@ -1,24 +1,45 @@
-import React, { memo } from 'react';
-import { NavLink } from 'react-router-dom';
-import { MdOutlineDiscount } from 'react-icons/md';
-import { DataAttributesApi } from '../../apiServices/model/ProductTypes';
+import React, { memo, useState } from "react";
+import { NavLink } from "react-router-dom";
+import DiscountIcon from "../../assets/discount-icon/discount.webp";
+
+import { DataAttributesApi } from "../../apiServices/model/ProductTypes";
+import AddToCartComponent from "../Basket/AddToCartComponent";
 
 interface ProductItemProps {
   item: DataAttributesApi;
 }
 
-
 const ProductItem: React.FC<ProductItemProps> = memo(({ item }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
-    <div className="fondo2 cursor-pointer w-56 h-60 rounded-lg relative border" >
+    <div
+      className="fondo2 cursor-pointer w-56 h-60 rounded-lg relative border"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       <figure className="relative mb-2 w-full h-4/5">
         <NavLink to={`/data/${item._id}`}>
-          <img src={item.imageURL[0]} alt={`imageURL ${item.title}`} className="w-full h-full object-cover rounded-lg transform transition duration-500 hover:scale-110" />
+          <img
+            src={item.imageURL[0]}
+            alt={`imageURL ${item.title}`}
+            className="w-full h-full object-cover rounded-lg transform transition duration-500 hover:scale-110"
+          />
         </NavLink>
         {item.discount > 0 && (
-          <div style={{ position: 'absolute', top: '10px', left: '10px', background: 'white', borderRadius: '5px', padding: '2px' }}>
-            <MdOutlineDiscount style={{ fontSize: '24px', color: 'red' }} />
-            <span>Действует скидка</span>
+          <div className="absolute top-0 left-0 p-2">
+            <img
+              src={DiscountIcon}
+              alt="Discount Icon"
+              className="text-red-500"
+              style={{ width: "30px", height: "30px" }}
+            />
+          </div>
+        )}
+
+        {isHovered && (
+          <div className="absolute top-1/2 left-0 transform -translate-y-1/2 p-2 text-customColorTextBase">
+            <AddToCartComponent product={item} />
           </div>
         )}
       </figure>
@@ -26,11 +47,10 @@ const ProductItem: React.FC<ProductItemProps> = memo(({ item }) => {
         {item.category}
       </span>
       <p className="flex justify-between px-1">
-        <span className="text-sm font-light">{item.name}</span>
-        <span className="text-lg font-medium">${item.price}</span>
+        <span className="text-sm font-light text-customColorTextBase">{item.name}</span>
+        <span className="text-lg font-medium text-customColorPrimary">${item.price}</span>
       </p>
     </div>
-
   );
 });
 

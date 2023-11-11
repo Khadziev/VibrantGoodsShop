@@ -27,7 +27,7 @@ const Admin: React.FC = () => {
   };
 
   const handleOpenBroadcast = () => {
-    setIsBroadcastOpen(prevState => !prevState); // Toggle the state
+    setIsBroadcastOpen(prevState => !prevState);
   };
 
   return (

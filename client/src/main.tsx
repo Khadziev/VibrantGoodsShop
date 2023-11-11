@@ -1,12 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import store from './app/providers/store.ts';
-import App from './app/App.tsx';
-import './app/styles/index.css';
-import { BrowserRouter } from 'react-router-dom';
-import ErrorBoundary from './pages/ErrorBoundary/ErrorBoundary.tsx';
-
+import React from "react";
+import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import store from "./app/providers/store.ts";
+import App from "./app/App.tsx";
+import { BrowserRouter } from "react-router-dom";
+import ErrorBoundary from "./pages/ErrorBoundary/ErrorBoundary.tsx";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -18,5 +16,5 @@ ReactDOM.render(
       </BrowserRouter>
     </Provider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );

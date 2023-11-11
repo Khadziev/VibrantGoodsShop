@@ -3,56 +3,56 @@ import { AiFillInstagram } from "react-icons/ai";
 
 export const footerContent = [
   {
-    title: "zishopMap",
+    title: "Карта VibrantGoods",
     subtitles: [
       {
-        text: "aboutUs",
+        text: "О нас",
         href: "/about",
       },
       {
-        text: "contactUs",
+        text: "Свяжитесь с нами",
         href: "/blank",
       },
       {
-        text: "saleInZishop",
+        text: "Продажи в VibrantGoods",
         href: "/blank",
       },
       {
-        text: "careerOpportunities",
-        href: "/blank",
-      },
-    ],
-  },
-  {
-    title: "customerServices",
-    subtitles: [
-      {
-        text: "commonQuestions",
-        href: "/blank",
-      },
-      {
-        text: "returnProcedures",
-        href: "/blank",
-      },
-      {
-        text: "privacy",
+        text: "Вакансии",
         href: "/blank",
       },
     ],
   },
   {
-    title: "shoppingGuide",
+    title: "Служба поддержки",
     subtitles: [
       {
-        text: "howToPlaceAnOrder",
+        text: "Общие вопросы",
         href: "/blank",
       },
       {
-        text: "orderSubmissionProcedure",
+        text: "Процедура возврата",
         href: "/blank",
       },
       {
-        text: "paymentMethods",
+        text: "Конфиденциальность",
+        href: "/blank",
+      },
+    ],
+  },
+  {
+    title: "Руководство по покупкам",
+    subtitles: [
+      {
+        text: "Как сделать заказ",
+        href: "/blank",
+      },
+      {
+        text: "Процедура подачи заказа",
+        href: "/blank",
+      },
+      {
+        text: "Способы оплаты",
         href: "/blank",
       },
     ],

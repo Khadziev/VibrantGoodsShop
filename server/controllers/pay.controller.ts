@@ -14,6 +14,7 @@ export const getAllPayments = async (req: Request, res: Response): Promise<void>
   }
 };
 
+
 export const createPayment = async (req: Request, res: Response): Promise<void> => {
   try {
     const { amount, description, street, houseNumber, apartmentNumber, city, zip } = req.body;
@@ -30,4 +31,5 @@ export const createPayment = async (req: Request, res: Response): Promise<void> 
     }
   }
 };
+
 

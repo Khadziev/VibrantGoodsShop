@@ -11,8 +11,8 @@ import { UserRole } from "../../apiServices/model/types";
 
 const Sidebar = () => {
   const userId = useAppSelector((state) => state.auth.userId);
-  const userRole = useAppSelector((state) => state.auth.role) || localStorage.getItem('userRole');
-  const { data: cartData } = useGetCartByUserIdQuery(userId || '');
+  const userRole = useAppSelector((state) => state.auth.role) || localStorage.getItem("userRole");
+  const { data: cartData } = useGetCartByUserIdQuery(userId || "");
 
   const cartItemsCount = cartData?.items.length || 0;
   const allMenus = [
@@ -31,20 +31,21 @@ const Sidebar = () => {
   useEffect(() => {
     localStorage.setItem("sidebarOpen", JSON.stringify(open));
   }, [open]);
-  console.log(userRole)
+  // console.log(userRole);
 
-
-  const menus = userRole === UserRole.ADMIN
-    ? allMenus.filter(menu => menu.name !== "корзина" && menu.name !== "настройки профиля" && menu.name !== "все товары")
-    : allMenus;
-
+  const menus =
+    userRole === UserRole.ADMIN
+      ? allMenus.filter(
+        (menu) => menu.name !== "корзина" && menu.name !== "настройки профиля" && menu.name !== "все товары"
+      )
+      : allMenus;
 
   return (
     <>
-      <section className="flex gap-6 relative z-50">
+      <div className="flex gap-6 relative z-50 mt-10">
         <HiMenuAlt3
           size={26}
-          className="cursor-pointer absolute mt-9 left-4 z-50"
+          className="cursor-pointer absolute mt-9 left-4 z-50 text-white"
           onClick={() => setOpen(!open)}
         />
         <div
@@ -67,9 +68,7 @@ const Sidebar = () => {
                     style={{
                       transitionDelay: `${i + 3}00ms`,
                     }}
-                    className={`whitespace-pre duration-500 ${
-                      !open ? "opacity-0" : ""
-                    } group-hover:opacity-100`}
+                    className={`whitespace-pre duration-500 ${!open ? "opacity-0" : ""} group-hover:opacity-100`}
                   >
                     {menu?.name}
                   </h2>
@@ -83,7 +82,7 @@ const Sidebar = () => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </>
   );
 };

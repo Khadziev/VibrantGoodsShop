@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useAppDispatch, useAppSelector } from '../../app/providers/store';
-import { register } from '../../apiServices/auth/authActions';
-import { UserRole } from '../../apiServices/model/types';
-
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useAppDispatch, useAppSelector } from "../../app/providers/store";
+import { register } from "../../apiServices/auth/authActions";
+import { UserRole } from "../../apiServices/model/types";
+import styles from "./styles.module.css";
 
 const RegistrationForm = () => {
-  const [name, setName] = useState('');
-  const [login, setLogin] = useState('');
-  const [password, setPassword] = useState('');
-  const [role, setRole] = useState(UserRole.USER);
+  const [name, setName] = useState("");
+  const [login, setLogin] = useState("");
+  const [password, setPassword] = useState("");
+  const [role, ] = useState(UserRole.USER);
 
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
@@ -21,60 +21,56 @@ const RegistrationForm = () => {
 
     try {
       await dispatch(register({ name, login, password, role: role }));
-      navigate('/login', { replace: true });
+      navigate("/login", { replace: true });
     } catch (error) {
-      console.log('Ошибка при регистрации:', error);
+      console.log("Ошибка при регистрации:", error);
     }
   };
+  const spans = Array.from({ length: 300 }, (_, index) => <span key={index} className={styles.square}></span>);
 
   return (
-    <div className="flex justify-center items-center h-screen bg-opacity-50"> {/* Прозрачность применена тут */}
-      <form onSubmit={handleSubmit} className="max-w-sm bg-white bg-opacity-80 border border-gray-300 rounded p-6 shadow-lg"> {/* Прозрачность применена тут */}
-        {error && <div className="text-red-500 mb-4">{error}</div>}
-        <input
-          type="text"
-          placeholder="Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          className="w-full mb-4 p-2 border border-gray-300 rounded"
-        />
-        <input
-          type="text"
-          placeholder="Login"
-          value={login}
-          onChange={(e) => setLogin(e.target.value)}
-          className="w-full mb-4 p-2 border border-gray-300 rounded"
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          className="w-full mb-4 p-2 border border-gray-300 rounded"
-        />
-        <input
-          type="checkbox"
-          checked={role === UserRole.ADMIN}
-          onChange={(e) => setRole(e.target.checked ? UserRole.ADMIN : UserRole.USER)}
-          className="mb-4"
-        />
-        <button
-          type="submit"
-          disabled={loading}
-          className="w-full bg-blue-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-        >
-          Регистрация
-        </button>
-        <button className="mt-2 text-blue-500 hover:underline focus:outline-none">
-          Уже есть аккаунт? Войти
-        </button>
-      </form>
-    </div>
+    <section className={styles.section}>
+      {spans}
+      <div className={styles.signin}>
+        <div className={styles.content}>
+          <h2>РЕГИСТРАЦИЯ</h2>
+          <form onSubmit={handleSubmit} className={styles.form}>
+            {error && <div className="text-red-500 mb-4">{error}</div>}
+            <div className={styles.inputBox}>
+              <input
+                type="text"
+                placeholder="имя"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                className="w-full mb-4 p-2 border border-gray-300 rounded"
+              />
+              <i>ваше имя</i>
+              <input
+                type="text"
+                placeholder="логин"
+                value={login}
+                onChange={(e) => setLogin(e.target.value)}
+                className="w-full mb-4 p-2 border border-gray-300 rounded"
+              />
+              <i>ваш логин</i>
+              <input
+                type="password"
+                placeholder="пароль"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className="w-full mb-4 p-2 border border-gray-300 rounded"
+              />
+              <i>ваш пароль</i>
+            </div>
+            <button type="submit" disabled={loading} className={styles.loginButton}>
+              Регистрация
+            </button>
+            <button className={styles.loginButton}>Уже есть аккаунт? Войти</button>
+          </form>
+        </div>
+      </div>
+    </section>
   );
 };
 
 export default RegistrationForm;
-
-
-
-

@@ -1,9 +1,8 @@
-import React, { useEffect } from 'react';
-import { useGetCartByUserIdQuery } from '../../apiServices/api/apiCart';
-import { useAppSelector } from '../../app/providers/store';
-import CartItemsList from './CartItemsList';
-import Loading2 from '../../UI/Loading/Loading2';
-
+import React, { useEffect } from "react";
+import { useGetCartByUserIdQuery } from "../../apiServices/api/apiCart";
+import { useAppSelector } from "../../app/providers/store";
+import CartItemsList from "./CartItemsList";
+import Loading2 from "../../UI/Loading/Loading2";
 
 const CartComponent: React.FC = () => {
   const userId = useAppSelector((state) => state.auth.userId);
@@ -15,7 +14,11 @@ const CartComponent: React.FC = () => {
   }, [userId]);
 
   if (isLoading) {
-    return <div className="flex justify-center items-center h-screen"><Loading2/></div>;
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <Loading2 />
+      </div>
+    );
   }
 
   if (isError) {
@@ -23,7 +26,7 @@ const CartComponent: React.FC = () => {
   }
 
   if (!cart || cart.items.length === 0) {
-    return <div className="flex justify-center items-center h-screen">Корзина пуста.</div>;
+    return <div className="flex justify-center items-center h-screen text-customColorTextBase">Корзина пуста.</div>;
   }
 
   const cartItems = cart.items;
