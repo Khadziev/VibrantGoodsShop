@@ -1,9 +1,9 @@
 import React, { memo } from "react";
 import ProductItem from "../Data/ProductItem";
-import { useFetchSimilarProductsQuery } from "../../apiServices/api/userApi";
-import Text from "../../UI/Text/Text";
-import HorizontalLine from "../../UI/HorizontalLine/HorizontalLine";
-import Loading2 from "../../UI/Loading/Loading2";
+import { useFetchSimilarProductsQuery } from "@/apiServices/api/userApi";
+import Text from "@/UI/Text/Text";
+import HorizontalLine from "@/UI/HorizontalLine/HorizontalLine";
+import Loading2 from "@/UI/Loading/Loading2";
 
 const SimilarProducts: React.FC<{ productId: string }> = memo(({ productId }) => {
   const { data: similarProducts, isLoading, isError } = useFetchSimilarProductsQuery(productId);

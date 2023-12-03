@@ -1,6 +1,6 @@
+import { bannerContent } from "@/mock/banner";
+import SectionTitle from "@/UI/SectionTitle/SectionTitle";
 import BannerBox from "./banner-box/BannerBox";
-import { bannerContent } from "../../mock/banner";
-import SectionTitle from "../../UI/SectionTitle";
 
 const Banner = () => {
   return (

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useCreatePaymentMutation } from '../../apiServices/api/paymentsApi';
+import { useCreatePaymentMutation } from '@/apiServices/api/paymentsApi';
 
 
 

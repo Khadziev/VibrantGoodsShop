@@ -1,12 +1,12 @@
 import React, { memo, useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { AppDispatch, useAppSelector } from "../../app/providers/store";
+import { AppDispatch, useAppSelector } from "@/app/providers/store";
 import LoginForm from "../Auth/LoginForm";
-import { logout } from "../../apiServices/auth/authActions";
-import { setToken } from "../../apiServices/auth/authSlice";
-import Button from "../../UI/Button/Button";
-import Text from "../../UI/Text/Text";
+import { logout } from "@/apiServices/auth/authActions";
+import { setToken } from "@/apiServices/auth/authSlice";
+import Button from "@/UI/Button/Button";
+import Text from "@/UI/Text/Text";
 
 const Header: React.FC = memo(() => {
   const dispatch = useDispatch<AppDispatch>();
@@ -35,7 +35,7 @@ const Header: React.FC = memo(() => {
 
   return (
     <div>
-      <nav className="flex items-center justify-between flex-wrap bg-transparent ">
+      <nav className="flex items-center justify-between flex-wrap bg-transparent mx-10">
         {user && (
           <div className="flex items-center flex-shrink-0 text-white mr-6">
             <Link to="/" className="font-semibold text-xl tracking-tight mt-9">

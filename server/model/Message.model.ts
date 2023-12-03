@@ -1,8 +1,8 @@
-import mongoose, { Document, Model, Schema } from 'mongoose';
+import mongoose, { Document, Model, Schema } from "mongoose";
 
 interface IBroadcastMessage {
   body: string;
-  image: string; 
+  image: string;
 }
 
 interface BroadcastMessageDocument extends Document, IBroadcastMessage {}
@@ -14,13 +14,16 @@ const broadcastMessageSchema: Schema<BroadcastMessageDocument> = new Schema(
       required: true,
     },
     image: {
-      type: String, 
-      required: false, 
+      type: String,
+      required: false,
     },
   },
   { timestamps: true }
 );
 
-const BroadcastMessage: Model<BroadcastMessageDocument> = mongoose.model<BroadcastMessageDocument>('BroadcastMessage', broadcastMessageSchema);
+const BroadcastMessage: Model<BroadcastMessageDocument> = mongoose.model<BroadcastMessageDocument>(
+  "BroadcastMessage",
+  broadcastMessageSchema
+);
 
 export default BroadcastMessage;

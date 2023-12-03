@@ -1,8 +1,8 @@
 import React, { memo } from 'react';
-import { useGetReviewsQuery } from '../../apiServices/api/reviewApi';
-import Loading2 from '../../UI/Loading/Loading2';
-import HorizontalLine from '../../UI/HorizontalLine/HorizontalLine';
-import Text from '../../UI/Text/Text';
+import { useGetReviewsQuery } from '@/apiServices/api/reviewApi';
+import Loading2 from '@/UI/Loading/Loading2';
+import HorizontalLine from '@/UI/HorizontalLine/HorizontalLine';
+import Text from '@/UI/Text/Text';
 
 interface ReviewsProps {
   productId: string;

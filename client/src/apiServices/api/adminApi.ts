@@ -1,6 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import { RootState } from "../../app/providers/store";
-import { DataAttributesApi } from '../model/ProductTypes';
+import { RootState } from "@/app/providers/store";
+import { DataAttributesApi } from "@/components/Admin/product/model/model";
+
 
 
 export const AdminApi = createApi({

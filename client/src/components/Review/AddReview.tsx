@@ -1,7 +1,7 @@
 import React, { memo, useState } from 'react';
-import { useCreateReviewMutation } from '../../apiServices/api/reviewApi';
+import { useCreateReviewMutation } from '@/apiServices/api/reviewApi';
 import StarRatings from 'react-star-ratings';
-import { useAppSelector } from '../../app/providers/store';
+import { useAppSelector } from '@/app/providers/store';
 
 interface AddReviewProps {
   productId: string;

@@ -1,4 +1,4 @@
-import { socialMedia } from "../../../mock/footer";
+import { socialMedia } from "@/mock/footer";
 import { Link } from "react-router-dom";
 
 const SocialPart = () => {

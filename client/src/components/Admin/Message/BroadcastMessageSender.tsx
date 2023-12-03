@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useBroadcastMessageMutation } from '../../../apiServices/api/apiMessage';
+import { useBroadcastMessageMutation } from '@/apiServices/api/apiMessage';
 
 const BroadcastMessageSender: React.FC = () => {
   const [broadcastMessage, { isLoading }] = useBroadcastMessageMutation();

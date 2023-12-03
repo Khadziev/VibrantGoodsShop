@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import DiscountCountdown from "../../../UI/discountCountdown/DiscountCountdown";
-import { useWindowDimensions } from "../../../hooks/useWindowDimensions";
-import Text from "../../../UI/Text/Text";
+
+import { useWindowDimensions } from "@/hooks/useWindowDimensions";
+import Text from "@/UI/Text/Text";
+import DiscountCountdown from "@/UI/discountCountdown/DiscountCountdown";
 
 interface Props {
   title: string;
@@ -53,6 +54,5 @@ const BannerBox: React.FC<Props> = ({
 };
 
 export default BannerBox;
-
 
 

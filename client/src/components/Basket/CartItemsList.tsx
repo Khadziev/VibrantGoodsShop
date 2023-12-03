@@ -1,9 +1,10 @@
 import React from "react";
-import { useRemoveFromCartMutation } from "../../apiServices/api/apiCart";
-import { useAppSelector } from "../../app/providers/store";
+import { useRemoveFromCartMutation } from "@/apiServices/api/apiCart";
+import { useAppSelector } from "@/app/providers/store";
 import { NavLink } from "react-router-dom";
-import BackButton from "../../UI/BackButton/BackButton";
-import { CartItem } from "../../apiServices/model/CartTypes";
+import BackButton from "@/UI/BackButton/BackButton";
+import { CartItem } from "@/components/Basket/model/model";
+
 
 interface CartItemsListProps {
   cartItems: CartItem[];

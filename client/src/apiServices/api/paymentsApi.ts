@@ -1,5 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { Pay } from '../model/PayTypes';
+import { Pay } from "@/components/Payments/model/model";
+
 
 
 

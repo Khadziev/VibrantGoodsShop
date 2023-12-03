@@ -1,11 +1,9 @@
-
 import FooterColumns from "./footerContent/FooterColumns";
 import SocialPart from "./footerContent/SocialPart";
 
-
 const Footer = () => {
   return (
-    <footer className="mt-12">
+    <footer className="mt-12 ">
       <div className="border-t-[1px] border-slate-500/30">
         <div className="flex flex-wrap py-4 md:py-8 md:px-4 w-full xl:max-w-[2100px] mx-auto">
           <FooterColumns />
@@ -20,4 +18,3 @@ const Footer = () => {
 };
 
 export default Footer;
-

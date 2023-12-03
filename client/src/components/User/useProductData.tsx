@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { DataAttributesApi } from '../../apiServices/model/ProductTypes';
+import { DataAttributesApi } from "@/components/Admin/product/model/model";
 
 export const useProductData = (data: DataAttributesApi[]) => {
   const [selectedField, setSelectedField] = useState('');

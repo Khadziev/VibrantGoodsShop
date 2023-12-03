@@ -1,12 +1,12 @@
 import React, { memo } from 'react';
-import { useFetchAllProductsQuery } from '../../apiServices/api/userApi';
+import { useFetchAllProductsQuery } from '@/apiServices/api/userApi';
 import SortingFields from '../DataControls/SortingFields';
 import SearchBar from '../DataControls/SearchBar';
 import { useProductData } from '../User/useProductData';
 import ProductItem from './ProductItem';
-import BackButton from '../../UI/BackButton/BackButton';
-import Text from '../../UI/Text/Text';
-import { DataAttributesApi } from '../../apiServices/model/ProductTypes';
+import BackButton from '@/UI/BackButton/BackButton';
+import Text from '@/UI/Text/Text';
+import { DataAttributesApi } from "@/components/Admin/product/model/model";
 
 function shuffleArray (array: Array<DataAttributesApi>) {
   for (let i = array.length - 1; i > 0; i--) {

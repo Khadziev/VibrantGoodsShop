@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import { UserAttributes, LoginData, UserUpdateAttributes } from "../model/types";
 import { clearUserData } from "./authSlice";
+import { LoginData, UserAttributes, UserUpdateAttributes } from "@/components/Auth/model/model";
 
 
 

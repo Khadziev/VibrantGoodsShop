@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAppDispatch, useAppSelector } from "../../app/providers/store";
-import { register } from "../../apiServices/auth/authActions";
-import { UserRole } from "../../apiServices/model/types";
+import { useAppDispatch, useAppSelector } from "@/app/providers/store";
+import { register } from "@/apiServices/auth/authActions";
+
 import styles from "./styles.module.css";
+import { UserRole } from "@/components/Auth/model/model";
 
 const RegistrationForm = () => {
   const [name, setName] = useState("");

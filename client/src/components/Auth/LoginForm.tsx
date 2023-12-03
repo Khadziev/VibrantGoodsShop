@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAppDispatch } from "../../app/providers/store";
-import { login } from "../../apiServices/auth/authActions";
-import { setToken } from "../../apiServices/auth/authSlice";
-import { UserRole } from "../../apiServices/model/types";
+import { useAppDispatch } from "@/app/providers/store";
+import { login } from "@/apiServices/auth/authActions";
+import { setToken } from "@/apiServices/auth/authSlice";
+
 import styles from "./styles.module.css";
+import { UserRole } from "@/components/Auth/model/model";
 
 const LoginForm = () => {
   const [loginValue, setLoginValue] = useState("");

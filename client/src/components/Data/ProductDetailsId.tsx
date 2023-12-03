@@ -1,11 +1,11 @@
 import React, { memo, useState } from "react";
-import { useFetchProductByIdQuery } from "../../apiServices/api/userApi";
+import { useFetchProductByIdQuery } from "@/apiServices/api/userApi";
 import { useParams } from "react-router-dom";
 import AddToCartComponent from "../Basket/AddToCartComponent";
 import ReviewsModal from "../Review/ReviewsModal";
-import BackButton from "../../UI/BackButton/BackButton";
+import BackButton from "@/UI/BackButton/BackButton";
 import SimilarProducts from "../SimilarProducts/SimilarProducts";
-import Loading2 from "../../UI/Loading/Loading2";
+import Loading2 from "@/UI/Loading/Loading2";
 
 const UserProductDetails: React.FC = memo(() => {
   const { id } = useParams<{ id: string }>();

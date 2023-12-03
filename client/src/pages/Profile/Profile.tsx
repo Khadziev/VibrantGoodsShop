@@ -1,5 +1,5 @@
 import React from 'react';
-import UserProfile from '../../components/User/UserProfile/UserProfile';
+import UserProfile from '@/components/User/UserProfile/UserProfile';
 
 
 

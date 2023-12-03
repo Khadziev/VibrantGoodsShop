@@ -18,30 +18,24 @@ const CategorySmBox: React.FC<Props> = ({
 
   return (
     <Link to={`${href}`}>
-      <a>
+
+      <div>
         <div
-          // className={`flex flex-col items-center text-center  ${
-          //   locale === "en"
-          //     ? "w-[10rem] sm:w-[13rem]"
-          //     : "min-w-[7rem] w-[9.3rem] sm:w-[10rem]"
-          // } my-2`}
+          className={`flex items-center justify-center w-[60px] h-[60px] rounded-full bg-palette-${bgc}`}
         >
-          <div
-            className={`flex items-center justify-center w-[60px] h-[60px] rounded-full bg-palette-${bgc}`}
-          >
-            <img
-              src={`/src/assets/category-icon/${imgSrc}`}
-              alt={categoryTitle}
-              width={45}
-              height={45}
-              className="drop-shadow-lg"
-            />
-          </div>
-          <h3 className="text-sm md:text-base font-bold mt-2">
-            {categoryTitle}
-          </h3>
+          <img
+            src={`/src/images/category-icon/${imgSrc}`}
+            alt={categoryTitle}
+            width={45}
+            height={45}
+            className="drop-shadow-lg"
+          />
         </div>
-      </a>
+        <h3 className="text-sm md:text-base font-bold mt-2">
+          {categoryTitle}
+        </h3>
+      </div>
+
     </Link>
   );
 };

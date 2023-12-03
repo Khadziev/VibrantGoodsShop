@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import { useGetCartByUserIdQuery } from "../../apiServices/api/apiCart";
-import { useAppSelector } from "../../app/providers/store";
+import { useGetCartByUserIdQuery } from "@/apiServices/api/apiCart";
+import { useAppSelector } from "@/app/providers/store";
 import CartItemsList from "./CartItemsList";
-import Loading2 from "../../UI/Loading/Loading2";
+import Loading2 from "@/UI/Loading/Loading2";
 
 const CartComponent: React.FC = () => {
   const userId = useAppSelector((state) => state.auth.userId);

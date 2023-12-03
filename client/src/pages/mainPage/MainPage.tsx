@@ -1,8 +1,9 @@
 import { useEffect } from 'react';
 import User from '../userPage/User';
-import { useAppSelector } from '../../app/providers/store';
+import { useAppSelector } from '@/app/providers/store';
 import Admin from '../adminPage/Admin';
-import { UserRole } from '../../apiServices/model/types';
+import { UserRole } from "@/components/Auth/model/model";
+
 
 
 const MainPage = () => {

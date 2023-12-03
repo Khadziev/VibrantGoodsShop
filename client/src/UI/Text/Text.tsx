@@ -59,11 +59,12 @@ const Text: React.FC<TextProps> = ({ text, size = 'md', color, align = 'left', i
     textAlignClass = 'text-left';
     break;
   }
+  const containerStyle = `${textSizeClass} ${textColorClass} ${textAlignClass} ${textAnimationClass} font-cinzel`;
 
   return (
-    <p className={`${textSizeClass} ${textColorClass} ${textAlignClass} ${textAnimationClass} font-cinzel`}>
-      {text}
-    </p>
+    <div className={containerStyle}>
+      <p>{text}</p>
+    </div>
   );
 };
 

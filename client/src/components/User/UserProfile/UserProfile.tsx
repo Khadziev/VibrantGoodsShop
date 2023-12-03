@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { unwrapResult } from "@reduxjs/toolkit";
-
 import UserProfileForm from "./UserProfileForm";
 import UserProfileData from "./UserProfileData";
-import BackButton from "../../../UI/BackButton/BackButton";
-import { loadUser, updateUser, deleteUser } from "../../../apiServices/auth/authActions";
-import { AppDispatch, useAppSelector } from "../../../app/providers/store";
+import BackButton from "@/UI/BackButton/BackButton";
+import { loadUser, updateUser, deleteUser } from "@/apiServices/auth/authActions";
+import { AppDispatch, useAppSelector } from "@/app/providers/store";
 import { useNavigate } from "react-router-dom";
 
 const UserProfile = () => {

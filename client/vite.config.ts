@@ -1,32 +1,39 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import path from 'path';
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import path from "path";
 
 export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/api': {
-        target: 'http://localhost:4000',
+      "/api": {
+        target: "http://localhost:4000",
         changeOrigin: true,
       },
-      '/uploads': {
-        target: 'http://localhost:4000',
+      "/uploads": {
+        target: "http://localhost:4000",
         changeOrigin: true,
       },
     },
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
+      "@": path.resolve(__dirname, "./src"),
     },
   },
   build: {
-    assetsDir: 'assets',
+    minify: "terser",
+    sourcemap: true,
     rollupOptions: {
+      treeshake: true,
       output: {
-        manualChunks: undefined,
+        manualChunks: {
+          react: ["react", "react-dom"],
+        },
       },
     },
+  },
+  optimizeDeps: {
+    include: ["react", "react-dom"],
   },
 });

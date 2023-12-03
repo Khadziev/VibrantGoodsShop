@@ -1,9 +1,8 @@
 import React, { memo, useState } from "react";
 import { NavLink } from "react-router-dom";
-import DiscountIcon from "../../assets/discount-icon/discount.webp";
-
-import { DataAttributesApi } from "../../apiServices/model/ProductTypes";
+import DiscountIcon from "@/images/discount-icon/discount.webp";
 import AddToCartComponent from "../Basket/AddToCartComponent";
+import { DataAttributesApi } from "@/components/Admin/product/model/model";
 
 interface ProductItemProps {
   item: DataAttributesApi;

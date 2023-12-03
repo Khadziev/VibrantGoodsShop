@@ -1,48 +1,50 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { RootState } from '../../app/providers/store';
-import { DataAttributesApi } from '../model/ProductTypes';
-
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { RootState } from "@/app/providers/store";
+import { DataAttributesApi } from "@/components/Admin/product/model/model";
 
 export const userApi = createApi({
-  reducerPath: 'dataApi',
+  reducerPath: "dataApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: '/api/',
+    baseUrl: "/api/",
     prepareHeaders: (headers, { getState }) => {
       const token = (getState() as RootState).auth.token;
       if (token) {
-        headers.set('Authorization', `Bearer ${token}`);
+        headers.set("Authorization", `Bearer ${token}`);
       }
       return headers;
     },
   }),
-  tagTypes: ['data'],
+  tagTypes: ["data"],
   endpoints: (build) => ({
     fetchAllProducts: build.query<DataAttributesApi[], null>({
       query: () => ({
-        url: '/data',
+        url: "/data",
       }),
-      providesTags: ['data'],
+      providesTags: ["data"],
     }),
     fetchProductById: build.query<DataAttributesApi, any>({
       query: (id) => ({
         url: `/data/${id}`,
       }),
-      providesTags: ['data'],
+      providesTags: ["data"],
     }),
     fetchDiscountedProducts: build.query<DataAttributesApi[], null>({
       query: () => ({
-        url: '/discount',
+        url: "/discount",
       }),
-      providesTags: ['data'],
+      providesTags: ["data"],
     }),
     fetchSimilarProducts: build.query<DataAttributesApi[], string>({
       query: (productId) => ({
         url: `/data/${productId}/similar`,
       }),
-      providesTags: ['data'],
+      providesTags: ["data"],
     }),
   }),
-
 });
-
-export const { useFetchAllProductsQuery, useFetchProductByIdQuery, useFetchDiscountedProductsQuery, useFetchSimilarProductsQuery } = userApi;
+export const {
+  useFetchAllProductsQuery,
+  useFetchProductByIdQuery,
+  useFetchDiscountedProductsQuery,
+  useFetchSimilarProductsQuery,
+} = userApi;

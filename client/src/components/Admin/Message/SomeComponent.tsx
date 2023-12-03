@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import { useGetMessagesQuery } from '../../../apiServices/api/apiMessage';
-import BackButton from '../../../UI/BackButton/BackButton';
-import Text from '../../../UI/Text/Text';
+import { useGetMessagesQuery } from '@/apiServices/api/apiMessage';
+import BackButton from '@/UI/BackButton/BackButton';
+import Text from '@/UI/Text/Text';
 
 const SomeComponent: React.FC = () => {
   const { data: messages, refetch } = useGetMessagesQuery();

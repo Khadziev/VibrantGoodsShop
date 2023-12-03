@@ -1,9 +1,9 @@
-import UserGetData from '../../components/User/UserGetData';
+import UserGetData from "@/components/User/UserGetData";
 
 const User = () => {
   return (
-    <div className="mt-10">
-      <UserGetData/>
+    <div className="mt-10 mx-10">
+      <UserGetData />
     </div>
   );
 };

@@ -7,7 +7,7 @@ import { MdOutlineDashboard } from "react-icons/md";
 import { RiSettings4Line } from "react-icons/ri";
 import { AiOutlineHome, AiOutlineMessage } from "react-icons/ai";
 import { FiShoppingCart } from "react-icons/fi";
-import { UserRole } from "../../apiServices/model/types";
+import { UserRole } from "@/components/Auth/model/model";
 
 const Sidebar = () => {
   const userId = useAppSelector((state) => state.auth.userId);
@@ -36,20 +36,20 @@ const Sidebar = () => {
   const menus =
     userRole === UserRole.ADMIN
       ? allMenus.filter(
-        (menu) => menu.name !== "корзина" && menu.name !== "настройки профиля" && menu.name !== "все товары"
-      )
+          (menu) => menu.name !== "корзина" && menu.name !== "настройки профиля" && menu.name !== "все товары"
+        )
       : allMenus;
 
   return (
     <>
-      <div className="flex gap-6 relative z-50 mt-10">
+      <div className="flex gap-6 relative z-50 mt-10 mx-10">
         <HiMenuAlt3
           size={26}
           className="cursor-pointer absolute mt-9 left-4 z-50 text-white"
           onClick={() => setOpen(!open)}
         />
         <div
-          className={`bg-[#0E182F] bg-opacity-50 ${
+          className={`bg-[var(--dark)] bg-opacity-50 ${
             open ? "w-full h-21" : "w-16 h-21"
           } duration-500 text-gray-100 px-4 sticky top-20 left-0 right-0 z-40 overflow-hidden`}
         >

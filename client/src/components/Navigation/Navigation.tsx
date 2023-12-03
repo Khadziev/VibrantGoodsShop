@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 import { MdHome, MdShoppingCart, MdViewList } from 'react-icons/md';
-import { useGetCartByUserIdQuery } from '../../apiServices/api/apiCart';
-import { useAppSelector } from '../../app/providers/store';
-import Button from '../../UI/Button/Button';
+import { useGetCartByUserIdQuery } from '@/apiServices/api/apiCart';
+import { useAppSelector } from '@/app/providers/store';
+import Button from '@/UI/Button/Button';
 import { CgProfile } from 'react-icons/cg';
 import { AiOutlineMessage } from 'react-icons/ai'
-import { useGetMessagesQuery } from '../../apiServices/api/apiMessage';
+import { useGetMessagesQuery } from '@/apiServices/api/apiMessage';
 
 const Navigation = () => {
   const userId = useAppSelector((state) => state.auth.userId);

@@ -1,6 +1,6 @@
 import React from "react";
 import "./BrandList.css";
-import SectionTitle from "../../UI/SectionTitle";
+import SectionTitle from "../../UI/SectionTitle/SectionTitle";
 
 interface Brand {
   id: number;

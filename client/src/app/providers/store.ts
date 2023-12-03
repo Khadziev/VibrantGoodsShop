@@ -1,12 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { useDispatch, useSelector, TypedUseSelectorHook } from 'react-redux';
-import authReducer from '../../apiServices/auth/authSlice';
-import { userApi } from '../../apiServices/api/userApi';
-import apiCart from '../../apiServices/api/apiCart';
-import { reviewApi } from '../../apiServices/api/reviewApi';
-import { AdminApi } from '../../apiServices/api/adminApi';
-import { paymentsApi } from '../../apiServices/api/paymentsApi';
-import { apiMessage } from '../../apiServices/api/apiMessage';
+import authReducer from '@/apiServices/auth/authSlice';
+import { userApi } from '@/apiServices/api/userApi';
+import apiCart from '@/apiServices/api/apiCart';
+import { reviewApi } from '@/apiServices/api/reviewApi';
+import { AdminApi } from '@/apiServices/api/adminApi';
+import { paymentsApi } from '@/apiServices/api/paymentsApi';
+import { apiMessage } from '@/apiServices/api/apiMessage';
 
 
 

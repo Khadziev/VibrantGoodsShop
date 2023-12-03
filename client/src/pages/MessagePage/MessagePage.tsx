@@ -1,4 +1,4 @@
-import SomeComponent from "../../components/Admin/Message/SomeComponent"
+import SomeComponent from "@/components/Admin/Message/SomeComponent"
 
 
 const MessagePage = () => {

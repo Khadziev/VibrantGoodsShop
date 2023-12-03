@@ -1,6 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { RootState } from '../../app/providers/store';
-import { Message } from '../model/MessageTypes';
+import { RootState } from '@/app/providers/store';
+import { Message } from "@/components/Admin/Message/model/model";
+
 
 export const apiMessage = createApi({
   reducerPath: 'apiMessage',

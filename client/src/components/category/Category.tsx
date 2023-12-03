@@ -1,8 +1,8 @@
-import { categorySmContent } from "../../mock/category-sm";
+import { categorySmContent } from "@/mock/Category-sm";
 import CategorySmBox from "./CategorySmBox";
-import { categoryLgContent } from "../../mock/category-lg";
+import { categoryLgContent } from "@/mock/Category-lg";
 import CategoryLgBox from "./CategoryLgBox";
-import SectionTitle from "../../UI/SectionTitle";
+import SectionTitle from "@/UI/SectionTitle/SectionTitle";
 
 const Category = () => {
   return (
