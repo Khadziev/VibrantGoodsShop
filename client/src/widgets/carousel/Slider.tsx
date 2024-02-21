@@ -1,21 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import { Slide } from "@/widgets/carousel/model/model";
 import Frame from "@/UI/Frame/Frame";
+import { useGetAllSidebarQuery } from "@/apiServices/api/apiSlider";
 
-interface SliderProps {
-  items: Slide[];
-}
+const Slider: React.FC = () => {
+  const { data: items = [], isLoading, isError } = useGetAllSidebarQuery();
 
-const Slider: React.FC<SliderProps> = ({ items }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const nextSlide = () => {
-    setCurrentSlide(currentSlide === items.length - 1 ? 0 : currentSlide + 1);
+    setCurrentSlide((prevSlide) => (prevSlide === items.length - 1 ? 0 : prevSlide + 1));
   };
 
   const prevSlide = () => {
-    setCurrentSlide(currentSlide === 0 ? items.length - 1 : currentSlide - 1);
+    setCurrentSlide((prevSlide) => (prevSlide === 0 ? items.length - 1 : prevSlide - 1));
   };
 
   useEffect(() => {
@@ -25,12 +23,15 @@ const Slider: React.FC<SliderProps> = ({ items }) => {
     return () => clearInterval(interval);
   }, [currentSlide, items.length]);
 
+  if (isLoading) return <div>Loading...</div>;
+  if (isError) return <div>Error fetching slides</div>;
+
   return (
     <Frame>
-      <div className="slider-container  mt-17">
+      <div className="slider-container mt-17">
         <div id="default-carousel" className="relative w-full h-[70vh] bg-[#FFFFFF]" data-carousel="slide">
           <div className="relative h-full overflow-hidden rounded-lg">
-            {items.map((item, index) => (
+            {items?.map((item, index) => (
               <div
                 key={index}
                 className={`opacity-75 absolute top-0 left-0 duration-700 ease-in-out w-full h-full flex items-center justify-center transition-transform transform
@@ -43,10 +44,11 @@ const Slider: React.FC<SliderProps> = ({ items }) => {
               }`}
                 data-carousel-item
               >
-                <NavLink to={item.url}>
-                  <img src={item.bgImg} className="max-w-full max-h-full object-contain" />
-                  <div className="absolute inset-0  bg-[#fff7f7] bg-opacity-30 flex flex-col justify-end pb-10">
-                    <div className=" bg-[#422e8a] bg-opacity-50 rounded p-3 text-center w-1/2 mx-auto">
+                <NavLink to={item.url || "/"}>
+
+                  <img src={item.bgImg} className="max-w-full max-h-full object-contain" alt={item.title} />
+                  <div className="absolute inset-0 bg-[#fff7f7] bg-opacity-30 flex flex-col justify-end pb-10">
+                    <div className="bg-[#422e8a] bg-opacity-50 rounded p-3 text-center w-1/2 mx-auto">
                       <h2>{item.title}</h2>
                       <p>{item.description}</p>
                     </div>

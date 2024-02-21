@@ -16,7 +16,6 @@ export const ProductCard: React.FC<{ product: DataAttributesApi, onDelete: (id: 
         </div>
         <div className="p-4">
           <h5 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">{product.name}</h5>
-          {/* <p className="mb-3 text-gray-700 dark:text-gray-400">Цена: {product.price}</p> */}
           <p className="mb-1 text-gray-700 dark:text-gray-400">Категория: {product.category}</p>
         </div>
         <div className="flex justify-end p-4 space-x-2">

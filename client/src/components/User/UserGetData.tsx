@@ -1,18 +1,18 @@
 import React, { lazy, Suspense } from "react";
 import { useFetchAllProductsQuery } from "@/apiServices/api/userApi";
 import Loading from "@/UI/Loading/Loading";
-import { sliderContent } from "@/mock/Slider";
 import { Link } from "react-router-dom";
 import Slider from "@/widgets/carousel/Slider";
 import Frame from "@/UI/Frame/Frame";
-import Sidebars from "@/components/Poster/Sidebar/Sidebars";
-import Poster from "../Poster/Banner/Poster";
-
-const DiscountedProducts = lazy(() => import("../Discounted/DiscountedProducts"));
-const Banners = lazy(() => import("@/components/Poster/Banner/Banners"));
+import Sidebars from "@/widgets/Poster/Sidebar/Sidebars";
+import Poster from "../../widgets/Poster/Banner/Poster";
+import Banner from "@/widgets/banners";
+import BrandList from "@/widgets/Brands/BrandList";
+import ProductItemHome from "@/components/Data/ProductItemHome/ProductItemHome";
+const DiscountedItems = lazy(() => import ("../Discounted/DiscountedItems"));
+const Banners = lazy(() => import("@/widgets/Poster/Banner/Banners"));
 const Category = lazy(() => import("../Category/Category"));
-const Banner = lazy(() => import("../banners"));
-const ProductItem = lazy(() => import("../Data/ProductItem"));
+
 
 const UserGetData: React.FC = () => {
   const { data, isLoading } = useFetchAllProductsQuery(null);
@@ -23,25 +23,25 @@ const UserGetData: React.FC = () => {
 
   return (
     <div className="pt-15">
-      <div className="flex ">
+      <div className=" pt-12 ">
+        <Slider />
+      </div>
+      <div className="flex pt-4 ">
         <Sidebars />
         <Poster />
       </div>
-      <div>
-        <Slider items={sliderContent} />
-      </div>
       <Suspense fallback={<Loading />}>
         <div>
-          <DiscountedProducts />
+          <DiscountedItems/>
         </div>
         <div>
           <Banners />
         </div>
         <Frame>
-          <div className="flex flex-wrap justify-center mt-20">
-            {data.slice(0, 6).map((item, index) => (
-              <div key={index} className="mx-20 mb-5">
-                <ProductItem item={item} />
+          <div className="flex ">
+            {data.slice(0, 4).map((item, index) => (
+              <div key={index}>
+                <ProductItemHome item={item} />
               </div>
             ))}
           </div>
@@ -58,8 +58,12 @@ const UserGetData: React.FC = () => {
           <Banner />
         </div>
       </Suspense>
+      <div>
+        <BrandList/>
+      </div>
     </div>
   );
 };
 
 export default UserGetData;
+

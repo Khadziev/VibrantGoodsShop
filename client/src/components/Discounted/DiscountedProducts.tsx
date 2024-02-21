@@ -8,6 +8,7 @@ import SectionTitle from "@/UI/SectionTitle/SectionTitle";
 import discount from "@/images/discount-icon/discount.webp";
 import Frame from "@/UI/Frame/Frame";
 
+
 const DiscountedProducts: React.FC = () => {
   const { data: products, isLoading, error } = useFetchDiscountedProductsQuery(null);
   const [currentPage, setCurrentPage] = useState(1);

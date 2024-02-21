@@ -1,2 +1,0 @@
-import{j as s,s as e}from"./index-6e2e83f4.js";import"./react-42e63c0c.js";const a=()=>s.jsxs("section",{className:e.banner,children:[s.jsx("div",{className:e.left,children:s.jsxs("p",{className:e.content,children:["СКОРО",s.jsx("span",{children:"АКЦИЯ"})]})}),s.jsx("div",{className:e.right,style:{backgroundImage:"url(/assets/shop-a4d7e38f.jpg)"},children:s.jsxs("p",{className:e.discount,children:["Сэкономьте до ",s.jsx("span",{children:"50%"})]})})]});export{a as default};
-//# sourceMappingURL=Banners-7ec8beb1.js.map

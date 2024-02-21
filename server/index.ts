@@ -5,13 +5,15 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import path from 'path';
 import fs from 'fs';
-
 import usersRoute from './routes/users.route';
 import dataRoute from './routes/data.route';
 import userCart from './routes/cart.route';
 import reviewRoute from './routes/review.route';
 import payProduct from './routes/pay.routes'
 import messageRoute from './routes/message.route'
+import cotegoryRoute from './routes/categoryRoutes.route'
+import sliderRoute from './routes/slider.route'
+import brandRoute from './routes/brand.route'
 
 const app = express();
 
@@ -27,6 +29,9 @@ app.use(baseApiUrl, userCart);
 app.use(baseApiUrl, reviewRoute)
 app.use(baseApiUrl, payProduct)
 app.use(baseApiUrl, messageRoute)
+app.use(baseApiUrl, cotegoryRoute)
+app.use(baseApiUrl, sliderRoute)
+app.use(baseApiUrl, brandRoute)
 
 app.use('/uploads', express.static('uploads'));
 

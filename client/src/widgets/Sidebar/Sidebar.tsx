@@ -36,8 +36,8 @@ const Sidebar = () => {
   const menus =
     userRole === UserRole.ADMIN
       ? allMenus.filter(
-          (menu) => menu.name !== "корзина" && menu.name !== "настройки профиля" && menu.name !== "все товары"
-        )
+        (menu) => menu.name !== "корзина" && menu.name !== "настройки профиля" && menu.name !== "все товары"
+      )
       : allMenus;
 
   return (

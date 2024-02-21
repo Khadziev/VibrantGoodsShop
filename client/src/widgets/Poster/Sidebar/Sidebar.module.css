@@ -1,0 +1,98 @@
+.sidebar {
+  width: 280px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  background: var(--dark);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-family: "Cinzel", var(--font-family);
+  overflow: visible;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+.categoryList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+  left: 0;
+  width: 100%;
+  background: var(--dark);
+}
+
+.sidebar:hover .categoryList {
+  height: auto;
+  opacity: 1;
+}
+
+.categoryList li {
+  margin-bottom: 8px;
+  transform: translateY(-10px);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.categoryList li:hover {
+  transform: translateY(0);
+}
+
+.categoryList a {
+  text-decoration: none;
+  color: var(--white);
+  font-size: 16px;
+  line-height: 50px;
+  transition: color 0.3s ease, width 0.3s ease;
+  display: block;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.categoryList a:hover {
+  color: var(--violet);
+  width: 100%;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--white);
+  margin-bottom: 16px;
+  font-family: "Cinzel", var(--font-family);
+  white-space: nowrap;
+  position: relative;
+  text-align: center;
+}
+
+.title::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent 50%, var(--violet) 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: background-position 0.3s ease;
+}
+
+.title:hover::before {
+  background-position: left bottom;
+}
+
+.unavailable {
+  color: red;
+  font-size: 14px;
+}

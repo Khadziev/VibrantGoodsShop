@@ -10,11 +10,15 @@ interface UserProfileDataProps {
 }
 
 const UserProfileData: FC<UserProfileDataProps> = ({ user }) => (
-  <div className="mb-4">
-    <div className="text-gray-600 font-semibold mb-2">Имя</div>
-    <div className="text-gray-800">{user.name}</div>
-    <div className="text-gray-600 font-semibold mt-4 mb-2">Логин</div>
-    <div className="text-gray-800">{user.login}</div>
+  <div className="mb-6">
+    <div className="text-center">
+      <div className="border rounded-lg border-gray-300 p-3 mb-3 text-gray-800 font-semibold text-lg">
+        Имя: {user.name}
+      </div>
+      <div className="border rounded-lg border-gray-300 p-3 text-gray-800 font-semibold text-lg">
+        Логин: {user.login}
+      </div>
+    </div>
   </div>
 );
 

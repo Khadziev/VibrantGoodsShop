@@ -63,7 +63,7 @@ const Text: React.FC<TextProps> = ({ text, size = 'md', color, align = 'left', i
 
   return (
     <div className={containerStyle}>
-      <p>{text}</p>
+      {text}
     </div>
   );
 };

@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { useAppSelector } from '@/app/providers/store';
-import AddProductForm from '@/components/Admin/product/AddProductForm';
-import GetProductsAdmin from '@/components/Admin/product/GetProductsAdmin';
-import { useGetDataQuery } from '@/apiServices/api/adminApi';
-import BroadcastMessageSender from '@/components/Admin/Message/BroadcastMessageSender';
+import React, { useState } from "react";
+import { useAppSelector } from "@/app/providers/store";
+import AddProductForm from "@/components/Admin/product/AddProductForm";
+import GetProductsAdmin from "@/components/Admin/product/GetProductsAdmin";
+import { useGetDataQuery } from "@/apiServices/api/adminApi";
+import BroadcastMessageSender from "@/components/Admin/Message/BroadcastMessageSender";
 
 const AdminHome: React.FC = () => {
-  const userName = useAppSelector((state) => state.auth.user?.name) || localStorage.getItem('userName');
+  const userName = useAppSelector((state) => state.auth.user?.name) || localStorage.getItem("userName");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isProductListVisible, setIsProductListVisible] = useState(false);
   const [isBroadcastOpen, setIsBroadcastOpen] = useState(false);
@@ -27,30 +27,30 @@ const AdminHome: React.FC = () => {
   };
 
   const handleOpenBroadcast = () => {
-    setIsBroadcastOpen(prevState => !prevState);
+    setIsBroadcastOpen((prevState) => !prevState);
   };
 
   return (
-    <div className="flex flex-col items-center" style={{ maxHeight: 'calc(100vh - размерФутера)', overflowY: 'auto' }}>
+    <div className="flex flex-col items-center" style={{ maxHeight: "calc(100vh - размерФутера)", overflowY: "auto" }}>
       <h1 className="my-4 text-center">Вы вошли как администратор {userName}!</h1>
       <div className="flex space-x-4">
         <button
           onClick={handleOpenModal}
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
         >
-                    Добавить данные
+          Добавить данные
         </button>
         <button
           onClick={handleShowProductList}
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
         >
-                    Список данных
+          Список данных
         </button>
         <button
           onClick={handleOpenBroadcast}
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
         >
-                    Отправить сообщение
+          Отправить сообщение
         </button>
       </div>
       {isBroadcastOpen && (

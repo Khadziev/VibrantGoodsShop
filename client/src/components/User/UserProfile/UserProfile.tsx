@@ -64,30 +64,33 @@ const UserProfile = () => {
   if (!user) {
     return <div>Нет пользовательских данных</div>;
   }
-
   return (
     <>
       <BackButton />
-      <div className="min-h-screen bg-gray-100">
-        <BackButton />
+      <div className="min-h-screen pt-14">
         <div className="max-w-md mx-auto mt-8 p-6 bg-white rounded-lg shadow-md">
-          <h2 className="text-3xl font-semibold mb-4 text-gray-800">Ваш профиль</h2>
+          <h5 className="text-3xl font-semibold mb-4 text-gray-800 text-center">Ваш профиль</h5>
 
           <UserProfileData user={user} />
-          <UserProfileForm
-            newName={newName}
-            newLogin={newLogin}
-            newPassword={newPassword}
-            setNewName={setNewName}
-            setNewLogin={setNewLogin}
-            setNewPassword={setNewPassword}
-            handleUpdateUser={handleUpdateUser}
-            handleDeleteUser={handleDeleteUser}
-          />
+
+          <div className="mt-8 bg-transparent rounded-lg p-6">
+            <h3 className="text-lg font-semibold mb-2 text-gray-800">Настройки профиля</h3>
+            <UserProfileForm
+              newName={newName}
+              newLogin={newLogin}
+              newPassword={newPassword}
+              setNewName={setNewName}
+              setNewLogin={setNewLogin}
+              setNewPassword={setNewPassword}
+              handleUpdateUser={handleUpdateUser}
+              handleDeleteUser={handleDeleteUser}
+            />
+          </div>
         </div>
       </div>
     </>
   );
+
 };
 
 export default UserProfile;

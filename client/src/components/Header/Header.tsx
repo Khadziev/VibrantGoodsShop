@@ -7,6 +7,7 @@ import { logout } from "@/apiServices/auth/authActions";
 import { setToken } from "@/apiServices/auth/authSlice";
 import Button from "@/UI/Button/Button";
 import Text from "@/UI/Text/Text";
+import CenteredMenu from "@/widgets/sidebar/centeredmenu/CenteredMenu";
 
 const Header: React.FC = memo(() => {
   const dispatch = useDispatch<AppDispatch>();
@@ -34,16 +35,21 @@ const Header: React.FC = memo(() => {
   }, [dispatch, location.pathname, navigate]);
 
   return (
-    <div>
+    <div className="fixed top-3 w-full bg-transparent z-10">
       <nav className="flex items-center justify-between flex-wrap bg-transparent mx-10">
+        <div className="flex items-center flex-shrink-0 text-white h-full">
+          <Link to="/" className="font-semibold text-xl tracking-tight">
+            <Text text="VibrantGoods" color="white" />
+          </Link>
+        </div>
+        <div className="flex items-center h-full mt-6">
+          {user && <CenteredMenu />}
+        </div>
         {user && (
-          <div className="flex items-center flex-shrink-0 text-white mr-6">
-            <Link to="/" className="font-semibold text-xl tracking-tight mt-9">
-              <Text text="VibrantGoods" color="white" />
-            </Link>
+          <div className="flex items-center h-full">
+            <Button text="Выйти" color="white" onClick={handleLogout} />
           </div>
         )}
-        <div>{user && <Button text="Выйти" color="white" onClick={handleLogout} />}</div>
       </nav>
       {showLoginForm && <LoginForm />}
     </div>

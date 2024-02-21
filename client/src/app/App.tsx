@@ -3,11 +3,10 @@ import MainRouter from "./routeConfig/MainRouter";
 import { ScrollToTop } from "@/UI/ScrollToTop/ScrollToTop";
 import Footer from "@/components/Footer/Footer";
 import HorizontalLine from "@/UI/HorizontalLine/HorizontalLine";
-import Sidebar from "@/widgets/sidebar/Sidebar";
 import { useAppSelector } from "./providers/store";
 import "./styles/index.css";
 
-function App() {
+function App () {
   const token = useAppSelector((state) => state.auth.token);
 
   return (
@@ -15,7 +14,7 @@ function App() {
       <Header />
       <ScrollToTop />
       <div className="flex-grow ">
-        {token && <Sidebar />}
+
         <div className="mb-10">
           <MainRouter />
         </div>

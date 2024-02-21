@@ -1,43 +1,24 @@
-import { categorySmContent } from "@/mock/Category-sm";
-import CategorySmBox from "./CategorySmBox";
-import { categoryLgContent } from "@/mock/Category-lg";
-import CategoryLgBox from "./CategoryLgBox";
-import SectionTitle from "@/UI/SectionTitle/SectionTitle";
+import SectionTitle from '@/UI/SectionTitle/SectionTitle';
+import { useGetAllCategoriesQuery } from '@/apiServices/api/apiCategory';
+import CategoryLgBox from './CategoryLgBox';
 
 const Category = () => {
+  const { data: categories, isLoading, isError, error } = useGetAllCategoriesQuery();
+
   return (
     <div className="flex flex-col items-center my-4 md:my-8">
       <SectionTitle title="Категория товаров" />
-      <div className="flex flex-wrap justify-around items-center lg:hidden">
-        {categorySmContent.map((categoryItem) => {
-          return (
-            <CategorySmBox
-              bgc={categoryItem.bgc}
-              imgSrc={categoryItem.imgSrc}
-              categoryTitle={categoryItem.categoryTitle}
-              href={categoryItem.href}
-              key={categoryItem.categoryTitle}
-            />
-          );
-        })}
-      </div>
+      {isLoading && <div>Loading...</div>}
+      {isError && <div>Error: {error + 'ошибка'}</div>}
 
       <div className="hidden lg:grid  gap-4 grid-rows-9 grid-cols-2 md:grid-cols-9 w-full xl:max-w-[2100px] mx-auto">
-        {categoryLgContent.map(({ name, title, description, styles, href, imgSrc, imgWidth, imgHeight }) => {
-          return (
-            <CategoryLgBox
-              key={name}
-              name={name}
-              title={title}
-              description={description}
-              styles={styles}
-              href={href}
-              imgSrc={imgSrc}
-              imgWidth={imgWidth}
-              imgHeight={imgHeight}
-            />
-          );
-        })}
+        {categories?.map((categoryItem, index) => (
+          <CategoryLgBox
+            item={categoryItem}
+            key={categoryItem.title}
+            isFirstItem={index === 0}
+          />
+        ))}
       </div>
     </div>
   );

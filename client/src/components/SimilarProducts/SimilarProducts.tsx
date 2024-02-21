@@ -25,8 +25,8 @@ const SimilarProducts: React.FC<{ productId: string }> = memo(({ productId }) =>
         <Text text="возможно вам понравится" size="lg" align="center" color="white" />
         <div className="flex flex-wrap justify-center items-center">
           {displayProducts.map((product) => (
-            <div className="m-4">
-              <ProductItem key={product._id} item={product} />
+            <div className="m-4" key={product._id}>
+              <ProductItem item={product} />
             </div>
           ))}
         </div>

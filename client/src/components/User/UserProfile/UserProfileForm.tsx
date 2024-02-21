@@ -36,7 +36,7 @@ const UserProfileForm: FC<UserProfileFormProps> = ({
   };
 
   return (
-    <div className="p-4">
+    <div className="p-4 bg-transparent">
       <div className="flex flex-wrap mb-6">
         <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-3" value={newName} onChange={handleNameChange} placeholder="изменить имя" />
         <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-3" value={newLogin} onChange={handleLoginChange} placeholder="новый логин" />
