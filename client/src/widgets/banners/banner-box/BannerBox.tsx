@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-import { useWindowDimensions } from "@/hooks/useWindowDimensions";
-import Text from "@/UI/Text/Text";
-import DiscountCountdown from "@/UI/discountCountdown/DiscountCountdown";
+import { useWindowDimensions } from '@/shared/hooks/useWindowDimensions';
+import Text from '@/shared/ui/Text/Text';
+import DiscountCountdown from '@/features/discount-countdown/discountCountdown/DiscountCountdown';
 
 interface Props {
   title: string;
@@ -42,7 +42,10 @@ const BannerBox: React.FC<Props> = ({
         <p className="hidden sm:block text-palette-secondary/80 leading-6 lg:text-[12px] xl:text-base my-2 sm:my-4 lg:my-2 2xl:my-4 rtl:2xl:mt-6 text-white">
           {description}
         </p>
-        <Link to={href} className="py-2 px-3 sm:py-3 lg:py-2 xl:py-3 sm:px-6 rounded-lg bg-palette-primary/90 border border-palette-danger hover:bg-palette-primary/100 transition-all duration-300 shadow-lg 2xl:mt-4 mr-2 ltr:mr-auto sm:mr-14 ltr:sm:ml-14 ltr:sm:mr-0 inline-block text-palette-side text-[12px] rtl:sm:text-sm">
+        <Link
+          to={href}
+          className="py-2 px-3 sm:py-3 lg:py-2 xl:py-3 sm:px-6 rounded-lg bg-palette-primary/90 border border-palette-danger hover:bg-palette-primary/100 transition-all duration-300 shadow-lg 2xl:mt-4 mr-2 ltr:mr-auto sm:mr-14 ltr:sm:ml-14 ltr:sm:mr-0 inline-block text-palette-side text-[12px] rtl:sm:text-sm"
+        >
           <Text text="перейти" color="blue" size="xl" isBlinking={true} />
         </Link>
       </div>
@@ -52,5 +55,3 @@ const BannerBox: React.FC<Props> = ({
 };
 
 export default BannerBox;
-
-

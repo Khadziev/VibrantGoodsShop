@@ -1,0 +1,2197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1764517526149" clover="3.2.0">
+  <project timestamp="1764517526149" name="All files">
+    <metrics statements="1651" coveredstatements="290" conditionals="515" coveredconditionals="77" methods="438" coveredmethods="43" elements="2604" coveredelements="410" complexity="0" loc="1651" ncloc="1651" packages="68" files="112" classes="112"/>
+    <package name="src">
+      <metrics statements="11" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="main.tsx" path="D:\VibrantGoodsShop\client\src\main.tsx">
+        <metrics statements="11" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.app">
+      <metrics statements="9" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="App.tsx" path="D:\VibrantGoodsShop\client\src\app\App.tsx">
+        <metrics statements="9" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.app.providers">
+      <metrics statements="17" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="store.ts" path="D:\VibrantGoodsShop\client\src\app\providers\store.ts">
+        <metrics statements="17" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="23" count="3" type="stmt"/>
+        <line num="37" count="3" type="stmt"/>
+        <line num="52" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.app.routeConfig">
+      <metrics statements="33" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <file name="MainRouter.tsx" path="D:\VibrantGoodsShop\client\src\app\routeConfig\MainRouter.tsx">
+        <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+      </file>
+      <file name="RouteConfig.tsx" path="D:\VibrantGoodsShop\client\src\app\routeConfig\RouteConfig.tsx">
+        <metrics statements="26" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.entities.cart.api">
+      <metrics statements="12" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="5" coveredmethods="0"/>
+      <file name="apiCart.ts" path="D:\VibrantGoodsShop\client\src\entities\cart\api\apiCart.ts">
+        <metrics statements="12" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.entities.cart.ui.Basket">
+      <metrics statements="108" coveredstatements="0" conditionals="55" coveredconditionals="0" methods="31" coveredmethods="0"/>
+      <file name="AddToCartComponent.tsx" path="D:\VibrantGoodsShop\client\src\entities\cart\ui\Basket\AddToCartComponent.tsx">
+        <metrics statements="28" coveredstatements="0" conditionals="15" coveredconditionals="0" methods="7" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="17" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="53" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="57" count="0" type="stmt"/>
+        <line num="88" count="0" type="stmt"/>
+      </file>
+      <file name="CartComponent.tsx" path="D:\VibrantGoodsShop\client\src\entities\cart\ui\Basket\CartComponent.tsx">
+        <metrics statements="18" coveredstatements="0" conditionals="9" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="11" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="13" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="21" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="29" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+      </file>
+      <file name="CartItemsList.tsx" path="D:\VibrantGoodsShop\client\src\entities\cart\ui\Basket\CartItemsList.tsx">
+        <metrics statements="30" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="10" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="38" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="62" count="0" type="stmt"/>
+        <line num="76" count="0" type="stmt"/>
+        <line num="109" count="0" type="stmt"/>
+        <line num="154" count="0" type="stmt"/>
+        <line num="173" count="0" type="stmt"/>
+      </file>
+      <file name="CheckoutPage.tsx" path="D:\VibrantGoodsShop\client\src\entities\cart\ui\Basket\CheckoutPage.tsx">
+        <metrics statements="32" coveredstatements="0" conditionals="29" coveredconditionals="0" methods="12" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="62" count="0" type="stmt"/>
+        <line num="70" count="0" type="stmt"/>
+        <line num="101" count="0" type="stmt"/>
+        <line num="121" count="0" type="stmt"/>
+        <line num="129" count="0" type="stmt"/>
+        <line num="139" count="0" type="stmt"/>
+        <line num="203" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="204" count="0" type="stmt"/>
+        <line num="225" count="0" type="stmt"/>
+        <line num="226" count="0" type="stmt"/>
+        <line num="252" count="0" type="stmt"/>
+        <line num="253" count="0" type="stmt"/>
+        <line num="272" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.entities.category.api">
+      <metrics statements="13" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="6" coveredmethods="0"/>
+      <file name="apiCategory.ts" path="D:\VibrantGoodsShop\client\src\entities\category\api\apiCategory.ts">
+        <metrics statements="13" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.entities.category.ui.category">
+      <metrics statements="27" coveredstatements="0" conditionals="14" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="Category.tsx" path="D:\VibrantGoodsShop\client\src\entities\category\ui\category\Category.tsx">
+        <metrics statements="13" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="9" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="17" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="18" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+      </file>
+      <file name="CategoryLgBox.tsx" path="D:\VibrantGoodsShop\client\src\entities\category\ui\category\CategoryLgBox.tsx">
+        <metrics statements="8" coveredstatements="0" conditionals="8" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="14" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="57" count="0" type="stmt"/>
+      </file>
+      <file name="CategorySmBox.tsx" path="D:\VibrantGoodsShop\client\src\entities\category\ui\category\CategorySmBox.tsx">
+        <metrics statements="6" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.entities.product.api">
+      <metrics statements="12" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="6" coveredmethods="0"/>
+      <file name="userApi.ts" path="D:\VibrantGoodsShop\client\src\entities\product\api\userApi.ts">
+        <metrics statements="12" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.entities.product.model">
+      <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="fields.ts" path="D:\VibrantGoodsShop\client\src\entities\product\model\fields.ts">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.entities.product.ui">
+      <metrics statements="80" coveredstatements="12" conditionals="41" coveredconditionals="9" methods="15" coveredmethods="2"/>
+      <file name="GetAllProducts.tsx" path="D:\VibrantGoodsShop\client\src\entities\product\ui\GetAllProducts.tsx">
+        <metrics statements="19" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="13" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="15" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="23" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="87" count="0" type="stmt"/>
+        <line num="104" count="0" type="stmt"/>
+        <line num="116" count="0" type="stmt"/>
+      </file>
+      <file name="ProductDetailsId.tsx" path="D:\VibrantGoodsShop\client\src\entities\product\ui\ProductDetailsId.tsx">
+        <metrics statements="33" coveredstatements="0" conditionals="15" coveredconditionals="0" methods="7" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="17" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="25" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="29" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="71" count="0" type="stmt"/>
+        <line num="75" count="0" type="stmt"/>
+        <line num="94" count="0" type="stmt"/>
+        <line num="129" count="0" type="stmt"/>
+      </file>
+      <file name="ProductItem.tsx" path="D:\VibrantGoodsShop\client\src\entities\product\ui\ProductItem.tsx">
+        <metrics statements="13" coveredstatements="12" conditionals="13" coveredconditionals="9" methods="3" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="17" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="18" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="79" count="1" type="stmt"/>
+      </file>
+      <file name="SimilarProducts.tsx" path="D:\VibrantGoodsShop\client\src\entities\product\ui\SimilarProducts.tsx">
+        <metrics statements="15" coveredstatements="0" conditionals="7" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="21" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="29" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="62" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.entities.product.ui.ProductItemHome">
+      <metrics statements="6" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="ProductItemHome.tsx" path="D:\VibrantGoodsShop\client\src\entities\product\ui\ProductItemHome\ProductItemHome.tsx">
+        <metrics statements="6" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.entities.review.api">
+      <metrics statements="10" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="reviewApi.ts" path="D:\VibrantGoodsShop\client\src\entities\review\api\reviewApi.ts">
+        <metrics statements="10" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.entities.review.ui.Review">
+      <metrics statements="44" coveredstatements="0" conditionals="9" coveredconditionals="0" methods="10" coveredmethods="0"/>
+      <file name="AddReview.tsx" path="D:\VibrantGoodsShop\client\src\entities\review\ui\Review\AddReview.tsx">
+        <metrics statements="17" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+      </file>
+      <file name="Reviews.tsx" path="D:\VibrantGoodsShop\client\src\entities\review\ui\Review\Reviews.tsx">
+        <metrics statements="15" coveredstatements="0" conditionals="7" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="21" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="29" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="37" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="69" count="0" type="stmt"/>
+      </file>
+      <file name="ReviewsModal.tsx" path="D:\VibrantGoodsShop\client\src\entities\review\ui\Review\ReviewsModal.tsx">
+        <metrics statements="12" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.entities.user.api">
+      <metrics statements="12" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="6" coveredmethods="0"/>
+      <file name="userApi.ts" path="D:\VibrantGoodsShop\client\src\entities\user\api\userApi.ts">
+        <metrics statements="12" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.entities.user.ui">
+      <metrics statements="30" coveredstatements="0" conditionals="7" coveredconditionals="0" methods="12" coveredmethods="0"/>
+      <file name="UserGetData.tsx" path="D:\VibrantGoodsShop\client\src\entities\user\ui\UserGetData.tsx">
+        <metrics statements="20" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="8" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="19" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="69" count="0" type="stmt"/>
+      </file>
+      <file name="useProductData.tsx" path="D:\VibrantGoodsShop\client\src\entities\user\ui\useProductData.tsx">
+        <metrics statements="10" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="12" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.entities.user.ui.UserProfile">
+      <metrics statements="65" coveredstatements="0" conditionals="19" coveredconditionals="0" methods="16" coveredmethods="0"/>
+      <file name="UserProfile.tsx" path="D:\VibrantGoodsShop\client\src\entities\user\ui\UserProfile\UserProfile.tsx">
+        <metrics statements="59" coveredstatements="0" conditionals="19" coveredconditionals="0" methods="14" coveredmethods="0"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="31" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="35" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="53" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="62" count="0" type="stmt"/>
+        <line num="65" count="0" type="stmt"/>
+        <line num="66" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="67" count="0" type="stmt"/>
+        <line num="71" count="0" type="stmt"/>
+        <line num="72" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="76" count="0" type="stmt"/>
+        <line num="77" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="78" count="0" type="stmt"/>
+        <line num="79" count="0" type="stmt"/>
+        <line num="82" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="83" count="0" type="stmt"/>
+        <line num="86" count="0" type="stmt"/>
+        <line num="89" count="0" type="stmt"/>
+        <line num="90" count="0" type="stmt"/>
+        <line num="91" count="0" type="stmt"/>
+        <line num="94" count="0" type="stmt"/>
+        <line num="95" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="99" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="100" count="0" type="stmt"/>
+        <line num="112" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="113" count="0" type="stmt"/>
+        <line num="130" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="131" count="0" type="stmt"/>
+        <line num="148" count="0" type="stmt"/>
+        <line num="316" count="0" type="stmt"/>
+      </file>
+      <file name="UserProfileData.tsx" path="D:\VibrantGoodsShop\client\src\entities\user\ui\UserProfile\UserProfileData.tsx">
+        <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+      </file>
+      <file name="UserProfileForm.tsx" path="D:\VibrantGoodsShop\client\src\entities\user\ui\UserProfile\UserProfileForm.tsx">
+        <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="69" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.features.add-to-cart">
+      <metrics statements="28" coveredstatements="17" conditionals="13" coveredconditionals="7" methods="7" coveredmethods="3"/>
+      <file name="AddToCartComponent.tsx" path="D:\VibrantGoodsShop\client\src\features\add-to-cart\AddToCartComponent.tsx">
+        <metrics statements="28" coveredstatements="17" conditionals="13" coveredconditionals="7" methods="7" coveredmethods="3"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="17" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="28" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="53" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="57" count="1" type="stmt"/>
+        <line num="72" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.features.admin-product-management.AdminHome">
+      <metrics statements="25" coveredstatements="0" conditionals="8" coveredconditionals="0" methods="9" coveredmethods="0"/>
+      <file name="AdminHome.tsx" path="D:\VibrantGoodsShop\client\src\features\admin-product-management\AdminHome\AdminHome.tsx">
+        <metrics statements="25" coveredstatements="0" conditionals="8" coveredconditionals="0" methods="9" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="112" count="0" type="stmt"/>
+        <line num="129" count="0" type="stmt"/>
+        <line num="165" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.features.admin-product-management.product">
+      <metrics statements="83" coveredstatements="0" conditionals="18" coveredconditionals="0" methods="23" coveredmethods="0"/>
+      <file name="AddProductForm.tsx" path="D:\VibrantGoodsShop\client\src\features\admin-product-management\product\AddProductForm.tsx">
+        <metrics statements="19" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="67" count="0" type="stmt"/>
+      </file>
+      <file name="FieldRenderer.tsx" path="D:\VibrantGoodsShop\client\src\features\admin-product-management\product\FieldRenderer.tsx">
+        <metrics statements="13" coveredstatements="0" conditionals="7" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="30" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+      </file>
+      <file name="GetProductsAdmin.tsx" path="D:\VibrantGoodsShop\client\src\features\admin-product-management\product\GetProductsAdmin.tsx">
+        <metrics statements="25" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="28" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+      </file>
+      <file name="ProductCard.tsx" path="D:\VibrantGoodsShop\client\src\features\admin-product-management\product\ProductCard.tsx">
+        <metrics statements="8" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="24" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="29" count="0" type="stmt"/>
+      </file>
+      <file name="ProductEditModal.tsx" path="D:\VibrantGoodsShop\client\src\features\admin-product-management\product\ProductEditModal.tsx">
+        <metrics statements="18" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="8" coveredmethods="0"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="24" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="68" count="0" type="stmt"/>
+        <line num="76" count="0" type="stmt"/>
+        <line num="89" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.features.admin-product-management.product.model">
+      <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="fields.ts" path="D:\VibrantGoodsShop\client\src\features\admin-product-management\product\model\fields.ts">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.features.admin-product-management.product.utils">
+      <metrics statements="18" coveredstatements="0" conditionals="12" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="path.ts" path="D:\VibrantGoodsShop\client\src\features\admin-product-management\product\utils\path.ts">
+        <metrics statements="18" coveredstatements="0" conditionals="12" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="27" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="28" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.features.auth.login">
+      <metrics statements="36" coveredstatements="24" conditionals="5" coveredconditionals="3" methods="6" coveredmethods="4"/>
+      <file name="LoginForm.tsx" path="D:\VibrantGoodsShop\client\src\features\auth\login\LoginForm.tsx">
+        <metrics statements="36" coveredstatements="24" conditionals="5" coveredconditionals="3" methods="6" coveredmethods="4"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="22" count="1" type="cond" truecount="2" falsecount="1"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="53" count="3" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="58" count="3" type="stmt"/>
+        <line num="68" count="0" type="stmt"/>
+        <line num="80" count="1" type="stmt"/>
+        <line num="92" count="1" type="stmt"/>
+        <line num="122" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.features.auth.model">
+      <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <file name="model.ts" path="D:\VibrantGoodsShop\client\src\features\auth\model\model.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.features.auth.register">
+      <metrics statements="27" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="7" coveredmethods="0"/>
+      <file name="RegistrationForm.tsx" path="D:\VibrantGoodsShop\client\src\features\auth\register\RegistrationForm.tsx">
+        <metrics statements="27" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="7" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="68" count="0" type="stmt"/>
+        <line num="80" count="0" type="stmt"/>
+        <line num="106" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.features.broadcast-message.Message">
+      <metrics statements="34" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="8" coveredmethods="0"/>
+      <file name="BroadcastMessageSender.tsx" path="D:\VibrantGoodsShop\client\src\features\broadcast-message\Message\BroadcastMessageSender.tsx">
+        <metrics statements="22" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="62" count="0" type="stmt"/>
+      </file>
+      <file name="SomeComponent.tsx" path="D:\VibrantGoodsShop\client\src\features\broadcast-message\Message\SomeComponent.tsx">
+        <metrics statements="12" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.features.discount-countdown.discountCountdown">
+      <metrics statements="23" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="DateTimeDisplay.tsx" path="D:\VibrantGoodsShop\client\src\features\discount-countdown\discountCountdown\DateTimeDisplay.tsx">
+        <metrics statements="5" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+      </file>
+      <file name="DiscountCountdown.tsx" path="D:\VibrantGoodsShop\client\src\features\discount-countdown\discountCountdown\DiscountCountdown.tsx">
+        <metrics statements="10" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+      </file>
+      <file name="ExpiredNotice.tsx" path="D:\VibrantGoodsShop\client\src\features\discount-countdown\discountCountdown\ExpiredNotice.tsx">
+        <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+      </file>
+      <file name="ShowCounter.tsx" path="D:\VibrantGoodsShop\client\src\features\discount-countdown\discountCountdown\ShowCounter.tsx">
+        <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.features.product-pagination">
+      <metrics statements="22" coveredstatements="0" conditionals="10" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="Pagination.tsx" path="D:\VibrantGoodsShop\client\src\features\product-pagination\Pagination.tsx">
+        <metrics statements="22" coveredstatements="0" conditionals="10" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="21" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="30" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="31" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="35" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="69" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.features.product-review">
+      <metrics statements="17" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
+      <file name="AddReview.tsx" path="D:\VibrantGoodsShop\client\src\features\product-review\AddReview.tsx">
+        <metrics statements="17" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.features.product-search.DataControls">
+      <metrics statements="46" coveredstatements="0" conditionals="15" coveredconditionals="0" methods="14" coveredmethods="0"/>
+      <file name="Pagination.tsx" path="D:\VibrantGoodsShop\client\src\features\product-search\DataControls\Pagination.tsx">
+        <metrics statements="22" coveredstatements="0" conditionals="10" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="19" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="28" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="29" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="33" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="67" count="0" type="stmt"/>
+      </file>
+      <file name="SearchBar.tsx" path="D:\VibrantGoodsShop\client\src\features\product-search\DataControls\SearchBar.tsx">
+        <metrics statements="17" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="7" coveredmethods="0"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="11" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+      </file>
+      <file name="SortingFields.tsx" path="D:\VibrantGoodsShop\client\src\features\product-search\DataControls\SortingFields.tsx">
+        <metrics statements="7" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.features.product-sort">
+      <metrics statements="7" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <file name="SortingFields.tsx" path="D:\VibrantGoodsShop\client\src\features\product-sort\SortingFields.tsx">
+        <metrics statements="7" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.pages.MessagePage">
+      <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <file name="Message.async.tsx" path="D:\VibrantGoodsShop\client\src\pages\MessagePage\Message.async.tsx">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+      </file>
+      <file name="MessagePage.tsx" path="D:\VibrantGoodsShop\client\src\pages\MessagePage\MessagePage.tsx">
+        <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.pages.adminPage">
+      <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <file name="Admin.async.tsx" path="D:\VibrantGoodsShop\client\src\pages\adminPage\Admin.async.tsx">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+      </file>
+      <file name="Admin.tsx" path="D:\VibrantGoodsShop\client\src\pages\adminPage\Admin.tsx">
+        <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.pages.discount.Discounted">
+      <metrics statements="83" coveredstatements="0" conditionals="24" coveredconditionals="0" methods="18" coveredmethods="0"/>
+      <file name="DiscountedItems.tsx" path="D:\VibrantGoodsShop\client\src\pages\discount\Discounted\DiscountedItems.tsx">
+        <metrics statements="55" coveredstatements="0" conditionals="17" coveredconditionals="0" methods="10" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="53" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="56" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="61" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="62" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="64" count="0" type="stmt"/>
+        <line num="71" count="0" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
+        <line num="75" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="76" count="0" type="stmt"/>
+        <line num="77" count="0" type="stmt"/>
+        <line num="80" count="0" type="stmt"/>
+        <line num="81" count="0" type="stmt"/>
+        <line num="82" count="0" type="stmt"/>
+        <line num="88" count="0" type="stmt"/>
+        <line num="89" count="0" type="stmt"/>
+        <line num="91" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="92" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="93" count="0" type="stmt"/>
+        <line num="96" count="0" type="stmt"/>
+        <line num="131" count="0" type="stmt"/>
+        <line num="132" count="0" type="stmt"/>
+        <line num="205" count="0" type="stmt"/>
+      </file>
+      <file name="DiscountedProducts.tsx" path="D:\VibrantGoodsShop\client\src\pages\discount\Discounted\DiscountedProducts.tsx">
+        <metrics statements="28" coveredstatements="0" conditionals="7" coveredconditionals="0" methods="8" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="15" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="16" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="20" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="125" count="0" type="stmt"/>
+        <line num="127" count="0" type="stmt"/>
+        <line num="140" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.pages.mainPage">
+      <metrics statements="17" coveredstatements="0" conditionals="10" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="MainPage.tsx" path="D:\VibrantGoodsShop\client\src\pages\mainPage\MainPage.tsx">
+        <metrics statements="17" coveredstatements="0" conditionals="10" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="11" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="23" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.pages.userPage">
+      <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <file name="User.async.tsx" path="D:\VibrantGoodsShop\client\src\pages\userPage\User.async.tsx">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+      </file>
+      <file name="User.tsx" path="D:\VibrantGoodsShop\client\src\pages\userPage\User.tsx">
+        <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.shared.api">
+      <metrics statements="98" coveredstatements="37" conditionals="8" coveredconditionals="0" methods="42" coveredmethods="9"/>
+      <file name="adminApi.ts" path="D:\VibrantGoodsShop\client\src\shared\api\adminApi.ts">
+        <metrics statements="12" coveredstatements="4" conditionals="1" coveredconditionals="0" methods="6" coveredmethods="1"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="46" count="3" type="stmt"/>
+      </file>
+      <file name="apiBrand.ts" path="D:\VibrantGoodsShop\client\src\shared\api\apiBrand.ts">
+        <metrics statements="11" coveredstatements="4" conditionals="1" coveredconditionals="0" methods="4" coveredmethods="1"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="35" count="3" type="stmt"/>
+      </file>
+      <file name="apiCart.ts" path="D:\VibrantGoodsShop\client\src\shared\api\apiCart.ts">
+        <metrics statements="12" coveredstatements="5" conditionals="1" coveredconditionals="0" methods="5" coveredmethods="1"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="45" count="3" type="stmt"/>
+        <line num="50" count="3" type="stmt"/>
+      </file>
+      <file name="apiCategory.ts" path="D:\VibrantGoodsShop\client\src\shared\api\apiCategory.ts">
+        <metrics statements="13" coveredstatements="4" conditionals="1" coveredconditionals="0" methods="6" coveredmethods="1"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="46" count="3" type="stmt"/>
+      </file>
+      <file name="apiMessage.ts" path="D:\VibrantGoodsShop\client\src\shared\api\apiMessage.ts">
+        <metrics statements="11" coveredstatements="4" conditionals="1" coveredconditionals="0" methods="4" coveredmethods="1"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="33" count="3" type="stmt"/>
+      </file>
+      <file name="apiSlider.ts" path="D:\VibrantGoodsShop\client\src\shared\api\apiSlider.ts">
+        <metrics statements="11" coveredstatements="4" conditionals="1" coveredconditionals="0" methods="4" coveredmethods="1"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="35" count="3" type="stmt"/>
+      </file>
+      <file name="paymentsApi.ts" path="D:\VibrantGoodsShop\client\src\shared\api\paymentsApi.ts">
+        <metrics statements="6" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="29" count="3" type="stmt"/>
+      </file>
+      <file name="reviewApi.ts" path="D:\VibrantGoodsShop\client\src\shared\api\reviewApi.ts">
+        <metrics statements="10" coveredstatements="4" conditionals="1" coveredconditionals="0" methods="4" coveredmethods="1"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="24" count="3" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="37" count="3" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="53" count="3" type="stmt"/>
+      </file>
+      <file name="userApi.ts" path="D:\VibrantGoodsShop\client\src\shared\api\userApi.ts">
+        <metrics statements="12" coveredstatements="4" conditionals="1" coveredconditionals="0" methods="6" coveredmethods="1"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="46" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.shared.api.auth">
+      <metrics statements="102" coveredstatements="22" conditionals="7" coveredconditionals="6" methods="32" coveredmethods="3"/>
+      <file name="authActions.ts" path="D:\VibrantGoodsShop\client\src\shared\api\auth\authActions.ts">
+        <metrics statements="28" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="1"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="31" count="3" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="46" count="3" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="59" count="3" type="stmt"/>
+        <line num="62" count="0" type="stmt"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="68" count="0" type="stmt"/>
+        <line num="74" count="3" type="stmt"/>
+        <line num="77" count="0" type="stmt"/>
+        <line num="78" count="0" type="stmt"/>
+        <line num="83" count="0" type="stmt"/>
+      </file>
+      <file name="authSlice.ts" path="D:\VibrantGoodsShop\client\src\shared\api\auth\authSlice.ts">
+        <metrics statements="74" coveredstatements="11" conditionals="7" coveredconditionals="6" methods="26" coveredmethods="2"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="10" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="44" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="51" count="3" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="57" count="0" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="62" count="0" type="stmt"/>
+        <line num="65" count="1" type="stmt"/>
+        <line num="66" count="1" type="stmt"/>
+        <line num="69" count="0" type="stmt"/>
+        <line num="70" count="0" type="stmt"/>
+        <line num="71" count="0" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
+        <line num="73" count="0" type="stmt"/>
+        <line num="74" count="0" type="stmt"/>
+        <line num="75" count="0" type="stmt"/>
+        <line num="76" count="0" type="stmt"/>
+        <line num="80" count="0" type="stmt"/>
+        <line num="83" count="0" type="stmt"/>
+        <line num="84" count="0" type="stmt"/>
+        <line num="87" count="0" type="stmt"/>
+        <line num="88" count="0" type="stmt"/>
+        <line num="89" count="0" type="stmt"/>
+        <line num="90" count="0" type="stmt"/>
+        <line num="91" count="0" type="stmt"/>
+        <line num="92" count="0" type="stmt"/>
+        <line num="93" count="0" type="stmt"/>
+        <line num="96" count="0" type="stmt"/>
+        <line num="100" count="0" type="stmt"/>
+        <line num="101" count="0" type="stmt"/>
+        <line num="104" count="0" type="stmt"/>
+        <line num="105" count="0" type="stmt"/>
+        <line num="106" count="0" type="stmt"/>
+        <line num="107" count="0" type="stmt"/>
+        <line num="111" count="0" type="stmt"/>
+        <line num="112" count="0" type="stmt"/>
+        <line num="115" count="0" type="stmt"/>
+        <line num="116" count="0" type="stmt"/>
+        <line num="119" count="0" type="stmt"/>
+        <line num="120" count="0" type="stmt"/>
+        <line num="121" count="0" type="stmt"/>
+        <line num="122" count="0" type="stmt"/>
+        <line num="126" count="0" type="stmt"/>
+        <line num="127" count="0" type="stmt"/>
+        <line num="130" count="0" type="stmt"/>
+        <line num="131" count="0" type="stmt"/>
+        <line num="134" count="0" type="stmt"/>
+        <line num="135" count="0" type="stmt"/>
+        <line num="136" count="0" type="stmt"/>
+        <line num="137" count="0" type="stmt"/>
+        <line num="138" count="0" type="stmt"/>
+        <line num="140" count="0" type="stmt"/>
+        <line num="141" count="0" type="stmt"/>
+        <line num="142" count="0" type="stmt"/>
+        <line num="143" count="0" type="stmt"/>
+        <line num="144" count="0" type="stmt"/>
+        <line num="148" count="0" type="stmt"/>
+        <line num="149" count="0" type="stmt"/>
+        <line num="155" count="3" type="stmt"/>
+        <line num="156" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.shared.hooks">
+      <metrics statements="66" coveredstatements="0" conditionals="10" coveredconditionals="0" methods="15" coveredmethods="0"/>
+      <file name="useCountdown.tsx" path="D:\VibrantGoodsShop\client\src\shared\hooks\useCountdown.tsx">
+        <metrics statements="22" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+      </file>
+      <file name="useLocalStorage.ts" path="D:\VibrantGoodsShop\client\src\shared\hooks\useLocalStorage.ts">
+        <metrics statements="29" coveredstatements="0" conditionals="8" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="33" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="34" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="50" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+      </file>
+      <file name="useWindowDimensions.tsx" path="D:\VibrantGoodsShop\client\src\shared\hooks\useWindowDimensions.tsx">
+        <metrics statements="15" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="5" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.shared.lib">
+      <metrics statements="59" coveredstatements="11" conditionals="26" coveredconditionals="0" methods="16" coveredmethods="3"/>
+      <file name="errorHandler.ts" path="D:\VibrantGoodsShop\client\src\shared\lib\errorHandler.ts">
+        <metrics statements="30" coveredstatements="5" conditionals="12" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="24" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="41" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="57" count="0" type="stmt"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="67" count="1" type="stmt"/>
+        <line num="71" count="0" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
+        <line num="73" count="0" type="stmt"/>
+        <line num="75" count="0" type="stmt"/>
+        <line num="76" count="0" type="stmt"/>
+      </file>
+      <file name="logger.ts" path="D:\VibrantGoodsShop\client\src\shared\lib\logger.ts">
+        <metrics statements="27" coveredstatements="4" conditionals="14" coveredconditionals="0" methods="11" coveredmethods="2"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="42" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="49" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="55" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="61" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="62" count="0" type="stmt"/>
+        <line num="66" count="2" type="cond" truecount="0" falsecount="1"/>
+        <line num="67" count="0" type="stmt"/>
+        <line num="68" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="69" count="0" type="stmt"/>
+        <line num="74" count="0" type="stmt"/>
+        <line num="75" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="76" count="0" type="stmt"/>
+        <line num="80" count="0" type="stmt"/>
+        <line num="84" count="0" type="stmt"/>
+        <line num="88" count="2" type="stmt"/>
+      </file>
+      <file name="utils.ts" path="D:\VibrantGoodsShop\client\src\shared\lib\utils.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="30" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.shared.ui">
+      <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="5"/>
+      <file name="index.ts" path="D:\VibrantGoodsShop\client\src\shared\ui\index.ts">
+        <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="5"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="4" count="8" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="13" count="5" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.shared.ui.Alert">
+      <metrics statements="8" coveredstatements="5" conditionals="5" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="Alert.tsx" path="D:\VibrantGoodsShop\client\src\shared\ui\Alert\Alert.tsx">
+        <metrics statements="8" coveredstatements="5" conditionals="5" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="71" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.shared.ui.BackButton">
+      <metrics statements="7" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="BackButton.tsx" path="D:\VibrantGoodsShop\client\src\shared\ui\BackButton\BackButton.tsx">
+        <metrics statements="7" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.shared.ui.Badge">
+      <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="Badge.tsx" path="D:\VibrantGoodsShop\client\src\shared\ui\Badge\Badge.tsx">
+        <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="47" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.shared.ui.Button">
+      <metrics statements="8" coveredstatements="8" conditionals="14" coveredconditionals="12" methods="1" coveredmethods="1"/>
+      <file name="Button.tsx" path="D:\VibrantGoodsShop\client\src\shared\ui\Button\Button.tsx">
+        <metrics statements="8" coveredstatements="8" conditionals="14" coveredconditionals="12" methods="1" coveredmethods="1"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="26" count="10" type="stmt"/>
+        <line num="28" count="10" type="stmt"/>
+        <line num="37" count="10" type="stmt"/>
+        <line num="43" count="10" type="stmt"/>
+        <line num="90" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.shared.ui.Card">
+      <metrics statements="7" coveredstatements="7" conditionals="5" coveredconditionals="3" methods="1" coveredmethods="1"/>
+      <file name="Card.tsx" path="D:\VibrantGoodsShop\client\src\shared\ui\Card\Card.tsx">
+        <metrics statements="7" coveredstatements="7" conditionals="5" coveredconditionals="3" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
+        <line num="25" count="4" type="stmt"/>
+        <line num="32" count="4" type="stmt"/>
+        <line num="48" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.shared.ui.Container">
+      <metrics statements="6" coveredstatements="6" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="Container.tsx" path="D:\VibrantGoodsShop\client\src\shared\ui\Container\Container.tsx">
+        <metrics statements="6" coveredstatements="6" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="24" count="3" type="stmt"/>
+        <line num="38" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.shared.ui.ErrorBoundary">
+      <metrics statements="12" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="5" coveredmethods="0"/>
+      <file name="ErrorBoundary.tsx" path="D:\VibrantGoodsShop\client\src\shared\ui\ErrorBoundary\ErrorBoundary.tsx">
+        <metrics statements="12" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="30" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.shared.ui.IconButton">
+      <metrics statements="7" coveredstatements="4" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="IconButton.tsx" path="D:\VibrantGoodsShop\client\src\shared\ui\IconButton\IconButton.tsx">
+        <metrics statements="7" coveredstatements="4" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="48" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.shared.ui.Input">
+      <metrics statements="7" coveredstatements="7" conditionals="22" coveredconditionals="14" methods="1" coveredmethods="1"/>
+      <file name="Input.tsx" path="D:\VibrantGoodsShop\client\src\shared\ui\Input\Input.tsx">
+        <metrics statements="7" coveredstatements="7" conditionals="22" coveredconditionals="14" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="28" count="6" type="cond" truecount="1" falsecount="1"/>
+        <line num="30" count="6" type="stmt"/>
+        <line num="79" count="2" type="stmt"/>
+        <line num="81" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.shared.ui.Loading">
+      <metrics statements="8" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="Loading.tsx" path="D:\VibrantGoodsShop\client\src\shared\ui\Loading\Loading.tsx">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="31" count="2" type="stmt"/>
+      </file>
+      <file name="Loading2.tsx" path="D:\VibrantGoodsShop\client\src\shared\ui\Loading\Loading2.tsx">
+        <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.shared.ui.Modal">
+      <metrics statements="16" coveredstatements="6" conditionals="12" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="Modal.tsx" path="D:\VibrantGoodsShop\client\src\shared\ui\Modal\Modal.tsx">
+        <metrics statements="16" coveredstatements="6" conditionals="12" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="34" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="84" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.shared.ui.Scroll">
+      <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="Scrollable.tsx" path="D:\VibrantGoodsShop\client\src\shared\ui\Scroll\Scrollable.tsx">
+        <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.shared.ui.ScrollToTop">
+      <metrics statements="9" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="ScrollToTop.tsx" path="D:\VibrantGoodsShop\client\src\shared\ui\ScrollToTop\ScrollToTop.tsx">
+        <metrics statements="9" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.shared.ui.Select">
+      <metrics statements="8" coveredstatements="5" conditionals="14" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="Select.tsx" path="D:\VibrantGoodsShop\client\src\shared\ui\Select\Select.tsx">
+        <metrics statements="8" coveredstatements="5" conditionals="14" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="31" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="74" count="2" type="stmt"/>
+        <line num="76" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.shared.ui.SuccessNotification">
+      <metrics statements="13" coveredstatements="0" conditionals="7" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="SuccessNotification.tsx" path="D:\VibrantGoodsShop\client\src\shared\ui\SuccessNotification\SuccessNotification.tsx">
+        <metrics statements="13" coveredstatements="0" conditionals="7" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="64" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.shared.ui.Text">
+      <metrics statements="33" coveredstatements="18" conditionals="20" coveredconditionals="8" methods="1" coveredmethods="1"/>
+      <file name="Text.tsx" path="D:\VibrantGoodsShop\client\src\shared\ui\Text\Text.tsx">
+        <metrics statements="33" coveredstatements="18" conditionals="20" coveredconditionals="8" methods="1" coveredmethods="1"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="23" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="25" count="2" type="cond" truecount="2" falsecount="3"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="41" count="2" type="cond" truecount="1" falsecount="4"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="49" count="2" type="stmt"/>
+        <line num="50" count="2" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="58" count="2" type="cond" truecount="2" falsecount="2"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="61" count="0" type="stmt"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="64" count="0" type="stmt"/>
+        <line num="67" count="2" type="stmt"/>
+        <line num="68" count="2" type="stmt"/>
+        <line num="71" count="2" type="stmt"/>
+        <line num="73" count="2" type="stmt"/>
+        <line num="80" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.widgets.Brands">
+      <metrics statements="11" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="BrandList.tsx" path="D:\VibrantGoodsShop\client\src\widgets\Brands\BrandList.tsx">
+        <metrics statements="11" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="13" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="14" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.widgets.Poster">
+      <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="HeroSection.tsx" path="D:\VibrantGoodsShop\client\src\widgets\Poster\HeroSection.tsx">
+        <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.widgets.Poster.Banner">
+      <metrics statements="13" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="Banners.tsx" path="D:\VibrantGoodsShop\client\src\widgets\Poster\Banner\Banners.tsx">
+        <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="64" count="0" type="stmt"/>
+        <line num="86" count="0" type="stmt"/>
+      </file>
+      <file name="Poster.tsx" path="D:\VibrantGoodsShop\client\src\widgets\Poster\Banner\Poster.tsx">
+        <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.widgets.Poster.Sidebar">
+      <metrics statements="9" coveredstatements="0" conditionals="10" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="Sidebars.tsx" path="D:\VibrantGoodsShop\client\src\widgets\Poster\Sidebar\Sidebars.tsx">
+        <metrics statements="9" coveredstatements="0" conditionals="10" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="44" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="72" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.widgets.Sidebar.centeredmenu">
+      <metrics statements="19" coveredstatements="10" conditionals="11" coveredconditionals="0" methods="5" coveredmethods="0"/>
+      <file name="CenteredMenu.tsx" path="D:\VibrantGoodsShop\client\src\widgets\Sidebar\centeredmenu\CenteredMenu.tsx">
+        <metrics statements="19" coveredstatements="10" conditionals="11" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="14" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="69" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.widgets.banners.banner-box">
+      <metrics statements="9" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="BannerBox.tsx" path="D:\VibrantGoodsShop\client\src\widgets\banners\banner-box\BannerBox.tsx">
+        <metrics statements="9" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.widgets.carousel">
+      <metrics statements="34" coveredstatements="0" conditionals="24" coveredconditionals="0" methods="12" coveredmethods="0"/>
+      <file name="Slider.tsx" path="D:\VibrantGoodsShop\client\src\widgets\carousel\Slider.tsx">
+        <metrics statements="34" coveredstatements="0" conditionals="24" coveredconditionals="0" methods="12" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="17" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="41" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="42" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="136" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.widgets.footer.Footer">
+      <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="Footer.tsx" path="D:\VibrantGoodsShop\client\src\widgets\footer\Footer\Footer.tsx">
+        <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.widgets.footer.Footer.footerContent">
+      <metrics statements="14" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="0"/>
+      <file name="FooterColumns.tsx" path="D:\VibrantGoodsShop\client\src\widgets\footer\Footer\footerContent\FooterColumns.tsx">
+        <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+      </file>
+      <file name="SocialPart.tsx" path="D:\VibrantGoodsShop\client\src\widgets\footer\Footer\footerContent\SocialPart.tsx">
+        <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.widgets.header.Header">
+      <metrics statements="35" coveredstatements="25" conditionals="12" coveredconditionals="5" methods="4" coveredmethods="3"/>
+      <file name="Header.tsx" path="D:\VibrantGoodsShop\client\src\widgets\header\Header\Header.tsx">
+        <metrics statements="35" coveredstatements="25" conditionals="12" coveredconditionals="5" methods="4" coveredmethods="3"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="33" count="1" type="cond" truecount="3" falsecount="1"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="36" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="43" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="47" count="1" type="stmt"/>
+        <line num="94" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.widgets.navigation.Navigation">
+      <metrics statements="20" coveredstatements="20" conditionals="12" coveredconditionals="8" methods="2" coveredmethods="2"/>
+      <file name="Navigation.tsx" path="D:\VibrantGoodsShop\client\src\widgets\navigation\Navigation\Navigation.tsx">
+        <metrics statements="20" coveredstatements="20" conditionals="12" coveredconditionals="8" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="17" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="18" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="58" count="1" type="stmt"/>
+        <line num="60" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

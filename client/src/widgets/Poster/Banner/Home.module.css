@@ -82,7 +82,7 @@
 
 .left:before,
 .left:after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
 }

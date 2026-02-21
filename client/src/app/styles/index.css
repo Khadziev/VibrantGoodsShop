@@ -1,76 +1,176 @@
-@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap");
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+/* ============================================================================
+   Global Styles & Design System
+   ============================================================================ */
+
+/* Import design system */
+@import '@/shared/ui/tokens.css';
+@import '@/shared/ui/animations.css';
+
+/* Tailwind imports */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* ============================================================================
+   Typography & Fonts
+   ============================================================================ */
+
+/* Apple uses system fonts - no external imports needed */
+
+/* ============================================================================
+   Base Styles
+   ============================================================================ */
 
 @layer base {
-  :root {
-    --color-primary: 167, 27, 74; /* #A71B4A*/
-    --color-secondary: 74, 76, 90; /* #4a4c5a*/
-    --color-bg: 243, 244, 245; /* #f3f4f5*/
-    --color-bg-side: 252, 251, 255; /* #fcfdff*/
-    --color-bg-black: 0, 0, 0;
-    --digital-category-bgc: #ade8f4;
-    --fashion-category-bgc: #ffddd2;
-    --beauty-category-bgc: #ddd92a;
-    --sport-category-bgc: #ffd60a;
-    --house-category-bgc: #ccd5ae;
-    --toy-category-bgc: #cce3de;
-    --stationery-category-bgc: #fbb13c;
-    --color-text-base: 66, 71, 80; /* #424750 */
-    --color-text-muted: 107, 114, 128; /*#6b7280*/
-    --color-text-side: 255, 231, 231; /*#fff*/
-    --font-family: iranyekan, "IRANSans", "Tahoma";
-    /*sidebars*/
-    --bg: #212123;
-    --dark: #131212;
-    --dark-sea: #576067;
-    --grey: #b8b8b8;
-    --white: #fff;
-    --violet: #8b57c6;
-    --violet-dark: #6c3eb8;
-    --light: #f6f6f7;
-    --sea: #616e74;
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-family-base);
+    background-color: rgb(var(--color-bg));
+    color: rgb(var(--color-text-base));
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.47059;
+    letter-spacing: -0.022em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
   }
 
-  .dark {
-    --color-bg: 15, 23, 42; /* #0f172a*/
-    --color-bg-side: 30, 41, 59; /* #1e293b*/
-    --digital-category-bgc: #0d4c76;
-    --fashion-category-bgc: #892a19;
-    --beauty-category-bgc: #6d305f;
-    --sport-category-bgc: #650606;
-    --house-category-bgc: #164c4b;
-    --toy-category-bgc: #6d3d4b;
-    --stationery-category-bgc: #6a4202;
-
-    --color-text-base: 226, 232, 240; /*#e2e8f0*/
-    --color-text-muted: 140, 154, 175; /*#8c9aaf*/
-    --color-text-side: 255, 231, 231; /*#fff*/
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-family-display);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: -0.022em;
+    margin: 0;
+    line-height: 1.2;
   }
 
-  html[dir="ltr"] {
-    --font-family: "Poppins", "Roboto", "sans-serif";
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: color var(--transition-base) var(--easing-ease-out);
+  }
+
+  a:hover {
+    color: rgb(var(--color-primary));
+    text-decoration: none;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  /* Form elements */
+  input,
+  select,
+  textarea {
+    font-family: inherit;
+    color: rgb(var(--color-text-base));
+    font-size: var(--font-size-base);
+    background-color: rgb(var(--color-bg));
+    border: 1px solid rgb(var(--color-border));
+    border-radius: var(--radius-md);
+    padding: var(--spacing-sm) var(--spacing-base);
+    transition: all var(--transition-base) var(--easing-ease-out);
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: none;
+    border-color: rgb(var(--color-primary));
+    box-shadow: 0 0 0 4px rgba(var(--color-primary), 0.1);
+  }
+
+  ::placeholder {
+    color: rgb(var(--color-text-muted));
+    opacity: 0.8;
+  }
+
+  /* Apple-style Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.3);
   }
 }
 
-html,
-body {
-  padding: 0;
-  font-family: var(--font-family);
-  background: var(--bg);
-  /*color: rgb(var(--color-text-base));*/
+/* ============================================================================
+   Components
+   ============================================================================ */
+
+@layer components {
+  /* Button resets */
+  button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0;
+    transition: all var(--transition-base) var(--easing-ease-out);
+  }
+
+  button:active {
+    transform: scale(0.98);
+  }
+
+  /* Container */
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 var(--spacing-base);
+  }
+
+  /* Apple-style Card */
+  .card {
+    background: rgb(var(--color-bg-card));
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-base) var(--easing-apple);
+    border: 1px solid rgba(var(--color-border), 0.5);
+  }
+
+  .card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+
+  /* Badge */
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    background-color: rgb(var(--color-primary));
+    color: white;
+  }
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
+/* ============================================================================
+   Utility overrides for slick carousel
+   ============================================================================ */
 
 .slick-dots li button::before {
   font-size: 12px !important;
@@ -83,62 +183,76 @@ a {
 
 .slick-prev:before,
 .slick-next:before {
-  opacity: 9 !important;
-  content: "" !important;
+  opacity: 1 !important;
+  content: '' !important;
 }
 
 @media (min-width: 1024px) {
   .slick-dots li button:before {
     font-size: 12px;
   }
+
   .slick-dots {
     padding-bottom: 40px !important;
   }
 }
 
-::-webkit-scrollbar {
-  width: 0.5rem;
-  height: 0.5rem;
+/* ============================================================================
+   Input styling
+   ============================================================================ */
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='number'],
+input[type='search'],
+input[type='date'],
+input[type='time'],
+textarea {
+  width: 100%;
+  max-width: 100%;
 }
 
-::-webkit-scrollbar-track {
-  background-color: rgb(var(--color-bg));
+input[type='checkbox'],
+input[type='radio'] {
+  width: 1.25rem;
+  height: 1.25rem;
+  cursor: pointer;
+  accent-color: rgb(var(--color-primary));
 }
 
-::-webkit-scrollbar-thumb {
-  background-color: #a71b4a;
-  border-radius: 100vw;
+/* ============================================================================
+   Responsive utilities
+   ============================================================================ */
+
+@media (max-width: 640px) {
+  html,
+  body {
+    font-size: var(--font-size-sm);
+  }
+
+  h1 {
+    font-size: var(--font-size-2xl);
+  }
+
+  h2 {
+    font-size: var(--font-size-xl);
+  }
+
+  h3 {
+    font-size: var(--font-size-lg);
+  }
 }
 
-/* input */
+/* ============================================================================
+   Dark mode support
+   ============================================================================ */
 
-input,
-select {
-  font-family: inherit;
-  color: inherit;
-  font-size: inherit;
-}
-
-input:focus,
-select:focus {
-  background-color: transparent;
-}
-
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover,
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
-  box-shadow: 0 0 0px 1000px transparent inset;
-  transition: background-color 5000s ease-in-out 0s;
-}
-
-::placeholder {
-  color: #b9b9b9;
-  font-size: 14px;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: 15, 23, 42;
+    --color-bg-secondary: 30, 41, 59;
+    --color-text-base: 226, 232, 240;
+    --color-text-muted: 140, 154, 175;
+  }
 }

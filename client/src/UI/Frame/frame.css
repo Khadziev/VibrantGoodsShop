@@ -1,9 +1,0 @@
-.frame {
-    padding: 20px;
-    margin-top: 16px;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    background: var(--dark);
-    overflow-y: auto;
-}

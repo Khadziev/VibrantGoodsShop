@@ -1,14 +1,23 @@
-import { bannerContent } from "@/mock/banner";
-import SectionTitle from "@/UI/SectionTitle/SectionTitle";
-import BannerBox from "./banner-box/BannerBox";
+import { bannerContent } from '@/shared/lib/mock/banner';
+import BannerBox from './banner-box/BannerBox';
+import Text from '@/shared/ui/Text/Text';
 
 const Banner = () => {
   return (
     <div className="flex items-center flex-col w-full xl:max-w-[2100px] my-4 md:my-8 mx-auto">
-      <SectionTitle title="специальная распродажа" />
+      <Text text="специальная распродажа" />
       <div className="grid gap-4 grid-cols-6 lg:grid-cols-12">
         {bannerContent.map(
-          ({ title, description, numberOfDiscountDate, href, imgHeight, imgSrc, imgWidth, buttonText }) => {
+          ({
+            title,
+            description,
+            numberOfDiscountDate,
+            href,
+            imgHeight,
+            imgSrc,
+            imgWidth,
+            buttonText,
+          }) => {
             return (
               <BannerBox
                 title={title}

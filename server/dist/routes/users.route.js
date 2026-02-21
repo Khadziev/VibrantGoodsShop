@@ -6,6 +6,8 @@ const verifyTokenMiddleware_1 = require("../middlewares/verifyTokenMiddleware");
 const router = (0, express_1.Router)();
 router.get("/users", verifyTokenMiddleware_1.verifyTokenMiddleware, users_controller_1.usersController.getAllUsers);
 router.get("/users/:id", verifyTokenMiddleware_1.verifyTokenMiddleware, users_controller_1.usersController.getUserById);
+router.get('/auth/google', users_controller_1.usersController.googleAuthRedirect);
+router.get('/auth/google/callback', users_controller_1.usersController.googleAuthCallback);
 router.post("/registration", users_controller_1.usersController.registerUser);
 router.post("/login", users_controller_1.usersController.login);
 router.put("/users/:id", verifyTokenMiddleware_1.verifyTokenMiddleware, users_controller_1.usersController.updateUser);

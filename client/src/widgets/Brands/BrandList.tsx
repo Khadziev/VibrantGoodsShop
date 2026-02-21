@@ -1,7 +1,8 @@
-import React from "react";
-import "./BrandList.css";
-import SectionTitle from "../../UI/SectionTitle/SectionTitle";
-import { useGetAllBrandQuery } from "@/apiServices/api/apiBrand";
+import React from 'react';
+import './BrandList.css';
+
+import { useGetAllBrandQuery } from '@/shared/api/apiBrand';
+import Text from '@/shared/ui/Text/Text';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface BrandListProps {}
@@ -14,7 +15,7 @@ const BrandList: React.FC<BrandListProps> = () => {
 
   return (
     <div className="brand-container">
-      <SectionTitle title="Популярные бренды" />
+      <Text text="Популярные бренды" />
       <div className="brand-items">
         {brands?.map((brand) => (
           <div key={brand.name} className="brand-item">

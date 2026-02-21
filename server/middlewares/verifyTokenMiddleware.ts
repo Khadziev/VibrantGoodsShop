@@ -1,32 +1,31 @@
 import { Request, Response, NextFunction } from 'express';
 import jwt, { Secret } from 'jsonwebtoken';
-import User, { UserAttributes } from '../model/User.model';
+import User from '../model/User.model';
 
 export const verifyTokenMiddleware = async (req: Request, res: Response, next: NextFunction) => {
   try {
-    const token = req.headers.authorization?.split(' ')[1];
+    const authHeader = req.headers.authorization;
+    if (!authHeader) return res.status(401).json({ message: 'Токен не предоставлен' });
 
-    if (!token) {
-      throw new Error('Токен не предоставлен');
-    }
+    const parts = authHeader.split(' ');
+    if (parts.length !== 2 || parts[0] !== 'Bearer') return res.status(401).json({ message: 'Неверный формат токена' });
 
-    const decoded = jwt.verify(token, process.env.SECRET_JWT_KEY as Secret) as {
-      id: string;
-      login: string;
-      role: string;
-    };
+    const token = parts[1];
+    const secret = process.env.SECRET_JWT_KEY as Secret;
+    if (!secret) return res.status(500).json({ message: 'Не настроен SECRET_JWT_KEY' });
 
-    const user = await User.findOne({ _id: decoded.id });
+    const decoded = jwt.verify(token, secret) as { id: string; login: string; role?: string };
 
-    if (!user) {
-      throw new Error('Пользователь не найден');
-    }
+    if (!decoded?.id) return res.status(401).json({ message: 'Неверный токен' });
 
-    (req as any).userId = decoded.id; 
+    const user = await User.findById(decoded.id).select('-password');
+    if (!user) return res.status(401).json({ message: 'Пользователь не найден' });
+
+    (req as any).userId = decoded.id;
     (req as any).user = user;
 
     next();
-  } catch (error) {
-    res.status(401).json({ message: 'Ошибка аутентификации' });
+  } catch (err: any) {
+    return res.status(401).json({ message: 'Ошибка аутентификации', detail: err?.message });
   }
 };
